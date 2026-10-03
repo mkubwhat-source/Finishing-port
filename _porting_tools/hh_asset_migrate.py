@@ -467,7 +467,7 @@ class Migrator:
     def lang(self):
         hh_lang = self.hh_files("lang")
         merged = set(MERGED_ITEMS) | DROPPED
-        fd_keys_wanted = re.compile(r"^(block|item)\.farmersdelight\.(%s)$" % "|".join(sorted(map(re.escape, self.items | self.blocks))))
+        fd_keys_wanted = re.compile(r"^(block|item)\.farmersdelight\.(%s)(\.[a-z_.]+)?$" % "|".join(sorted(map(re.escape, self.items | self.blocks))))
         fd_lang_dirs = [os.path.join(b, "lang") for b in self.fdr_assets]
         extra_fd_prefixes = ("container.farmersdelight.", "farmersdelight.container.", "farmersdelight.tooltip.",
                              "effect.farmersdelight.", "farmersdelight.block.", "farmersdelight.jei.", "jei.farmersdelight.", "farmersdelight.emi.",

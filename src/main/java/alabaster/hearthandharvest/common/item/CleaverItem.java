@@ -64,7 +64,7 @@ public class CleaverItem extends KnifeItem {
 
     @Override
     public ItemUseAnimation getUseAnimation(ItemStack stack) {
-        return ItemUseAnimation.SPEAR;
+        return ItemUseAnimation.TRIDENT; // 1.21.1 "SPEAR" = 26.3 TRIDENT; 26.3 SPEAR is the kinetic spear animation
     }
 
     @Override

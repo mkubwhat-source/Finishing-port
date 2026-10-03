@@ -653,9 +653,10 @@ def migrate_structure(src, dst):
             if item:
                 be["Plant"] = Compound({"id": String(item), "count": Int(1)})
                 if "grape" in plant:
-                    # HH grape age 0..4 (ripe at 4) -> BF stage 0..5 (ripe at stages=5)
+                    # HH grape age 0..4 (ripe at 4) -> BF trellis stage 1..5 (BF stages start at 1;
+                    # the renderer uses texture <crop>_<stage>, ripe at stages=5)
                     age = int(props.get("age", "0"))
-                    be["Stage"] = Int(5 if age >= 4 else age)
+                    be["Stage"] = Int(min(age + 1, 5))
             extra_be[idx] = be
             REPORT["structure trellis"].append("%s %s -> facing %s plant %s" % (name, sides, sides[0], plant))
             continue

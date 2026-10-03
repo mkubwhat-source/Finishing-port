@@ -82,7 +82,10 @@ public class KnifeItem extends Item
                         Tool.Rule.deniesDrops(blocks.getOrThrow(material.incorrectBlocksForDrops())),
                         Tool.Rule.minesAndDrops(blocks.getOrThrow(FDTags.Blocks.MINEABLE_WITH_KNIFE), material.speed()),
                         Tool.Rule.overrideSpeed(blocks.getOrThrow(FDTags.Blocks.KNIFE_INSTANTLY_MINES), Float.MAX_VALUE)
-                ), 1.0F, 1, false));
+                ), 1.0F, 1, false))
+                // FarmersDelightRefabricated 26.3: knives are weapons (2 durability per hit, like 1.21.1's
+                // DiggerItem#hurtEnemy); without it attacks never wear the cleaver down.
+                .component(DataComponents.WEAPON, new net.minecraft.world.item.component.Weapon(2));
     }
 
     public static ItemAttributeModifiers createAttributes(ToolMaterial material, float attackDamage, float attackSpeed) {

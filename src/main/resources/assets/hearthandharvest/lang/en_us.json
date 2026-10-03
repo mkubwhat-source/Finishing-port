@@ -793,5 +793,8 @@
   "tag.item.sereneseasons.spring_crops": "Spring Crops",
   "tag.item.sereneseasons.summer_crops": "Summer Crops",
   "tag.item.sereneseasons.winter_crops": "Winter Crops",
-  "tag.item.supplementaries.jar_cookies": "Jar Cookies"
+  "tag.item.supplementaries.jar_cookies": "Jar Cookies",
+  "block.hearthandharvest.cutting_board.invalid_item": "This doesn't seem cuttable...",
+  "block.hearthandharvest.cutting_board.invalid_tool": "Maybe with a different tool...",
+  "block.hearthandharvest.cutting_board.remaining_items": "%s remaining..."
 }

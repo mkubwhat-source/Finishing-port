@@ -41,7 +41,7 @@ public class HotSauceItem extends Item {
 
     @Override
     public ItemUseAnimation getUseAnimation(ItemStack stack) {
-        return ItemUseAnimation.SPEAR;
+        return ItemUseAnimation.TRIDENT; // 1.21.1 "SPEAR" = 26.3 TRIDENT
     }
 
     @Override

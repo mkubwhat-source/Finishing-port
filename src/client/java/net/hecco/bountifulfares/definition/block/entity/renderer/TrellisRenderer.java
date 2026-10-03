@@ -83,7 +83,10 @@ public class TrellisRenderer implements BlockEntityRenderer<TrellisBlockEntity, 
                 if (TrellisBlock.CROPS.get(entity.getPlant()).model().equalsIgnoreCase("inverted")) {
                     state.inverted = true;
                 }
-                state.texture = TrellisBlock.CROPS.get(entity.getPlant()).texture().withSuffix("_" + entity.getStage());
+                // stages are 1..stages; clamp so stale/converted block entities (e.g. stage 0) still
+                // name an existing texture
+                int stage = Math.max(1, Math.min(entity.getStage(), TrellisBlock.CROPS.get(entity.getPlant()).stages()));
+                state.texture = TrellisBlock.CROPS.get(entity.getPlant()).texture().withSuffix("_" + stage);
             }
             // Datapack trellis definitions name block-atlas sprite ids (e.g.
             // "bountifulfares:block/vine_trellis"); binding the PNG directly as an entity texture

@@ -466,5 +466,8 @@
   "jei.hearthandharvest.info.wild_onions": "On trouve couramment des oignons \u00e0 l'\u00e9tat sauvage dans les r\u00e9gions temp\u00e9r\u00e9es, comme les plaines et les for\u00eats.",
   "jei.hearthandharvest.info.wild_potatoes": "On trouve couramment des pommes de terre \u00e0 l'\u00e9tat sauvage dans les r\u00e9gions froides, comme les montagnes et la ta\u00efga.",
   "jei.hearthandharvest.info.wild_tomatoes": "On trouve couramment des tomates \u00e0 l'\u00e9tat sauvage dans les r\u00e9gions arides, comme les savanes et les d\u00e9serts.",
-  "jei.hearthandharvest.info.wild_rice": "On trouve couramment du riz \u00e0 l'\u00e9tat sauvage dans les \u00e9tangs des zones humides, comme les marais et les jungles."
+  "jei.hearthandharvest.info.wild_rice": "On trouve couramment du riz \u00e0 l'\u00e9tat sauvage dans les \u00e9tangs des zones humides, comme les marais et les jungles.",
+  "block.hearthandharvest.cutting_board.invalid_item": "Cela ne semble pas pouvoir \u00eatre coup\u00e9...",
+  "block.hearthandharvest.cutting_board.invalid_tool": "Peut-\u00eatre avec un autre outil...",
+  "block.hearthandharvest.cutting_board.remaining_items": "%s restants..."
 }

@@ -82,6 +82,12 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 			level.playSound(null, centerPos.x(), centerPos.y(), centerPos.z(), HHModSounds.BLOCK_CUTTING_BOARD_REMOVE.get(), SoundSource.BLOCKS, 0.25F, 0.5F);
 			return InteractionResult.SUCCESS;
 		}
+		// A tool clicked on an empty board does nothing: tools go on the board only by sneak-placing
+		// (ToolCarvingEvent). Otherwise the next click after the last cut (or a held right-click)
+		// put the knife/cleaver itself on the board, out of the player's hand.
+		if (cuttingBoard.isEmpty() && isCuttingTool(mainHandStack)) {
+			return InteractionResult.CONSUME;
+		}
 		if (cuttingBoard.canAddItem(mainHandStack)) {
 			if (level.isClientSide()) {
 				return InteractionResult.CONSUME;
@@ -206,6 +212,11 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 				level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, stack.getItem()), pos.getX() + 0.5F, pos.getY() + 0.1F, pos.getZ() + 0.5F, vec3d.x, vec3d.y + 0.05D, vec3d.z);
 			}
 		}
+	}
+
+	private static boolean isCuttingTool(ItemStack stack) {
+		return stack.has(DataComponents.TOOL) || stack.is(FDTags.Items.TOOLS_KNIFE)
+				|| stack.getItem() instanceof TridentItem || stack.getItem() instanceof ShearsItem;
 	}
 
 	public static class ToolCarvingEvent
