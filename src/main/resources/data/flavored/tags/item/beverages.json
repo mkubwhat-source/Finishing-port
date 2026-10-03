@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "flavored:sweet_berry_wine",
+    "flavored:glow_berry_wine",
+    "flavored:cider",
+    "flavored:beer"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bountifulfares:ceramic_tiles",
+  "result": {
+    "id": "bountifulfares:ceramic_tile_pillar"
+  }
+}

@@ -1,0 +1,47 @@
+package alabaster.hearthandharvest.common.fd.utility;
+
+import alabaster.hearthandharvest.HearthAndHarvest;
+import alabaster.hearthandharvest.Config;
+import alabaster.hearthandharvest.common.registry.*;
+import alabaster.hearthandharvest.common.fd.FDTags;
+
+import net.minecraft.world.item.ItemStack;
+import org.jspecify.annotations.Nullable;
+import alabaster.hearthandharvest.platform.inventory.ItemStackHandler;
+
+import java.util.Random;
+
+/**
+ * Util for providing and calculating math-related objects across the mod.
+ */
+public class MathUtils
+{
+	public static final Random RAND = new Random();
+
+	/**
+	 * Calculates a comparator signal using an IItemHandler inventory, instead of IInventory.
+	 * Employing a RecipeWrapper would have caused a divide-by-zero, hence why this method was made.
+	 *
+	 * @param handler The inventory to compare.
+	 * @return The redstone signal strength.
+	 */
+	public static int calcRedstoneFromItemHandler(@Nullable ItemStackHandler handler) {
+		if (handler == null) {
+			return 0;
+		} else {
+			int i = 0;
+			float f = 0.0F;
+
+			for (int j = 0; j < handler.getSlotCount(); ++j) {
+				ItemStack itemstack = handler.getStackInSlot(j);
+				if (!itemstack.isEmpty()) {
+					f += (float) itemstack.getCount() / (float) Math.min(handler.getSlotLimit(j), itemstack.getMaxStackSize());
+					++i;
+				}
+			}
+
+			f = f / (float) handler.getSlotCount();
+			return net.minecraft.util.Mth.floor(f * 14.0F) + (i > 0 ? 1 : 0);
+		}
+	}
+}

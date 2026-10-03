@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "minecraft:milk_bucket",
+  "particle_color": 16180691,
+  "result": {
+    "id": "flavored:soft_cheese"
+  },
+  "result_count": 1
+}

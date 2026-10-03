@@ -1,0 +1,11 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "fermenter": "#flavored:fungi",
+  "ingredient": "minecraft:milk_bucket",
+  "particle_color": "f6e5d3",
+  "result": {
+    "count": 1,
+    "id": "flavored:soft_cheese"
+  }
+}

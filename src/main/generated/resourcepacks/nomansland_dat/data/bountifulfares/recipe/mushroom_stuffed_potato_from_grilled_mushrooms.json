@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:baked_potato",
+    "nomansland:grilled_mushrooms",
+    "nomansland:grilled_mushrooms"
+  ],
+  "result": {
+    "id": "bountifulfares:mushroom_stuffed_potato"
+  }
+}

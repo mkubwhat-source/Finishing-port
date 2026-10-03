@@ -1,0 +1,13 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "#c:flour",
+    "#c:flour",
+    "#c:flour"
+  ],
+  "liquid": "minecraft:water_bucket",
+  "result": {
+    "count": 1,
+    "id": "flavored:dough"
+  }
+}

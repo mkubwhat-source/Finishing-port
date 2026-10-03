@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#c:foods/walnuts",
+    "H": "minecraft:honeycomb",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "S",
+    "H",
+    "#"
+  ],
+  "result": {
+    "id": "bountifulfares:walnut_candle"
+  }
+}

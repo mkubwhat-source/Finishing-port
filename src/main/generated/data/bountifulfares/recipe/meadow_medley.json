@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:cooked_mutton",
+    "#bountifulfares:beetroot_ingredients",
+    "bountifulfares:violet_bellflower",
+    "bountifulfares:leek"
+  ],
+  "result": {
+    "id": "bountifulfares:meadow_medley"
+  }
+}

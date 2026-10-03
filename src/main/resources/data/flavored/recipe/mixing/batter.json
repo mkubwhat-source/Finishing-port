@@ -1,0 +1,15 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "#c:flour",
+    "#c:flour",
+    "minecraft:egg",
+    "minecraft:sugar"
+  ],
+  "liquid": "minecraft:milk_bucket",
+  "result": {
+    "count": 1,
+    "id": "flavored:batter"
+  },
+  "vessel": "minecraft:bowl"
+}

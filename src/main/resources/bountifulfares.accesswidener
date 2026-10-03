@@ -1,0 +1,42 @@
+classTweaker v2 official
+
+accessible class net/minecraft/client/gui/Hud$HeartType
+accessible class net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$FirstFloorRoomCollection
+accessible class net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$SecondFloorRoomCollection
+accessible class net/minecraft/world/level/block/state/properties/NoteBlockInstrument$Type
+accessible method net/minecraft/world/level/block/state/properties/WoodType register (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/world/level/block/state/properties/WoodType;
+
+# 26.3 turned CauldronInteraction.EMPTY/WATER/etc from public maps into
+# CauldronInteraction$Dispatcher instances whose put() methods are package-private;
+# widen them so mods can still register their own cauldron interactions.
+accessible method net/minecraft/core/cauldron/CauldronInteraction$Dispatcher put (Lnet/minecraft/world/item/Item;Lnet/minecraft/core/cauldron/CauldronInteraction;)V
+accessible method net/minecraft/core/cauldron/CauldronInteraction$Dispatcher put (Lnet/minecraft/tags/TagKey;Lnet/minecraft/core/cauldron/CauldronInteraction;)V
+
+# 26.3 removed FoodData.setExhaustion(float) entirely (only addExhaustion(float), which only
+# clamps to a max of 40 with no floor, remains) - our effects (GorgingEffect etc.) need to reset
+# exhaustion to exactly 0 each tick, which isn't possible through addExhaustion alone, so widen
+# the private backing field directly instead of drifting it arbitrarily negative.
+accessible field net/minecraft/world/food/FoodData exhaustionLevel F
+# Flavored (bundled): its recipe book components fill ghost slots like vanilla's own components
+accessible method net/minecraft/client/gui/screens/recipebook/GhostSlots setInput (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/util/context/ContextMap;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)V
+accessible method net/minecraft/client/gui/screens/recipebook/GhostSlots setResult (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/util/context/ContextMap;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)V
+
+# Hearth and Harvest recipe books (cooking pot, keg, cask): enum constants added at runtime by
+# hearthandharvest RecipeBookTypeMixin / SearchRecipeBookCategoryMixin, as FarmersDelightRefabricated does.
+transitive-extend-enum net/minecraft/world/inventory/RecipeBookType HEARTHANDHARVEST_COOKING
+transitive-extend-enum net/minecraft/world/inventory/RecipeBookType HEARTHANDHARVEST_FERMENTING
+transitive-extend-enum net/minecraft/world/inventory/RecipeBookType HEARTHANDHARVEST_AGING
+transitive-extend-enum net/minecraft/client/gui/screens/recipebook/SearchRecipeBookCategory HEARTHANDHARVEST_COOKING
+transitive-extend-enum net/minecraft/client/gui/screens/recipebook/SearchRecipeBookCategory HEARTHANDHARVEST_FERMENTING
+transitive-extend-enum net/minecraft/client/gui/screens/recipebook/SearchRecipeBookCategory HEARTHANDHARVEST_AGING
+
+# Hearth and Harvest: goals added to vanilla mobs on load (pungent/tempting effects, fox berries, chicken nests, salt licks)
+accessible field net/minecraft/world/entity/Mob goalSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
+accessible field net/minecraft/world/entity/Mob targetSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
+# Hearth and Harvest: crows leave the player's shoulder to fetch items
+accessible method net/minecraft/server/level/ServerPlayer setShoulderEntityLeft (Lnet/minecraft/nbt/CompoundTag;)V
+accessible method net/minecraft/server/level/ServerPlayer setShoulderEntityRight (Lnet/minecraft/nbt/CompoundTag;)V
+# Hearth and Harvest keg/cask screens are taller than the default 176x166 and extend AbstractRecipeBookScreen,
+# whose constructor fixes the size (1.21.1 assigned imageWidth/imageHeight in the screen constructor).
+mutable field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen imageWidth I
+mutable field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen imageHeight I

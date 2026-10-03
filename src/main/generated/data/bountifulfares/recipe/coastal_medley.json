@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#bountifulfares:spongekin_ingredients",
+    "minecraft:dried_kelp",
+    "minecraft:dried_kelp",
+    "#bountifulfares:cooked_fishes"
+  ],
+  "result": {
+    "id": "bountifulfares:coastal_medley"
+  }
+}

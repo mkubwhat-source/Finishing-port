@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "bountifulfares:green_jack_o_straw",
+            "state": {
+              "half": "lower"
+            }
+          },
+          "name": "bountifulfares:green_jack_o_straw"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

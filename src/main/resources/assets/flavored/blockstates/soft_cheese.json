@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0,waxed=false": {
+      "model": "flavored:block/soft_cheese_stage0"
+    },
+    "age=1,waxed=false": {
+      "model": "flavored:block/soft_cheese_stage1"
+    },
+    "age=0,waxed=true": {
+      "model": "flavored:block/soft_cheese_stage0"
+    },
+    "age=1,waxed=true": {
+      "model": "flavored:block/soft_cheese_stage1"
+    }
+  }
+}

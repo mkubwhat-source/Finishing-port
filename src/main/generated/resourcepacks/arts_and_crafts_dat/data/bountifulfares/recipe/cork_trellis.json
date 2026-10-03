@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "trellis",
+  "key": {
+    "#": "minecraft:stick",
+    "P": "arts_and_crafts:cork_planks"
+  },
+  "pattern": [
+    "# #",
+    " P ",
+    "# #"
+  ],
+  "result": {
+    "id": "arts_and_crafts:cork_trellis"
+  }
+}

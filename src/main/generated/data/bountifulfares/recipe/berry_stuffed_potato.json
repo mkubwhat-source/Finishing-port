@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:baked_potato",
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries"
+  ],
+  "result": {
+    "id": "bountifulfares:berry_stuffed_potato"
+  }
+}

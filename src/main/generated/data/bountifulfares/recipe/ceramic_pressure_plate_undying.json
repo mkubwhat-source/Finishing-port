@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:ceramic_pressure_plate"
+  ],
+  "result": {
+    "id": "bountifulfares:ceramic_pressure_plate"
+  }
+}

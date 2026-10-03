@@ -1,0 +1,11 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "minecraft:beetroot",
+  "fermenter": "minecraft:sugar",
+  "particle_color": "b92c40",
+  "result": {
+    "count": 2,
+    "id": "bountifulfares:pickled_beetroot"
+  }
+}

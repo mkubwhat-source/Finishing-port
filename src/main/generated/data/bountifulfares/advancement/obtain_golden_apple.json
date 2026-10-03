@@ -1,0 +1,35 @@
+{
+  "parent": "bountifulfares:obtain_golden_apple_sapling",
+  "criteria": {
+    "obtain_golden_apple": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "bountifulfares:hanging_golden_apple"
+            }
+          }
+        }
+      },
+      "trigger": "bountifulfares:pick_fruit"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_golden_apple.description"
+    },
+    "icon": {
+      "id": "minecraft:golden_apple"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_golden_apple"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_golden_apple"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

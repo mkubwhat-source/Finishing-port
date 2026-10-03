@@ -1,0 +1,6 @@
+{
+  "plant": "minecraft:weeping_vines",
+  "model": "default",
+  "texture": "bountifulfares:block/weeping_trellis",
+  "can_duplicate": true
+}

@@ -1,0 +1,50 @@
+{
+  "required": true,
+  "package": "net.hecco.bountifulfares.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "gameplay.ArmorStandMixin",
+    "gameplay.BlockItemMixin",
+    "gameplay.CampfireBlockEntityMixin",
+    "gameplay.LivingEntityMixin",
+    "gameplay.PumpkinPieItemMixin",
+    "gameplay.RunOneAccessor",
+    "gameplay.ServerPlayerEntityMixin",
+    "gameplay.ShufflingListAccessor",
+    "gameplay.SweetBerryBushMixin",
+    "gameplay.ThrownPotionMixin",
+    "gameplay.VillagerGoalPackagesMixin",
+    "gameplay.VillagerMixin",
+    "misc.ChestBlockEntityMixin",
+    "misc.FlintSteelDispMixin",
+    "misc.OceanMonumentPiecesMixin",
+    "misc.PlayerMixin",
+    "misc.SecondaryPoiSensorMixin",
+    "misc.ShearsDispenseMixin",
+    "misc.StonecutterScreenHandlerMixin",
+    "misc.WoodlandMansionFirstFloorMixin",
+    "misc.WoodlandMansionSecondFloorMixin",
+    "compat.SinglePoolElementMixin",
+    "render.AbstractBlockStateMixin",
+    "render.LivingEntityMixin",
+    "util.BlockEntityAccessor",
+    "util.FeatureElementMixin",
+    "util.FireBlockSetFlammableInvoker",
+    "util.TrunkPlacerInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "misc.SplashTextMixin",
+    "misc.StonecutterScreenMixin",
+    "render.AcidifiedEffectBackgroundMixin",
+    "render.AcidifiedInventoryEffectBackgroundMixin",
+    "render.BlockDustParticleMixin",
+    "render.ClientTooltipComponentMixin",
+    "render.GuiHeartsMixin",
+    "util.HandledScreenMixin",
+    "util.ItemStackRenderStateAccessor",
+    "util.LayerRenderStateAccessor"
+  ]
+}

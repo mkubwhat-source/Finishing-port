@@ -1,0 +1,13 @@
+{
+  "gives": {
+    "count": 8,
+    "id": "flavored:cinnamon"
+  },
+  "max_uses": 1,
+  "reputation_discount": 0.2,
+  "wants": {
+    "count": 16,
+    "id": "minecraft:emerald"
+  },
+  "xp": 10
+}

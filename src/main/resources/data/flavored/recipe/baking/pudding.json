@@ -1,0 +1,18 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 3.0,
+  "key": {
+    "#": "flavored:batter",
+    "*": "minecraft:egg",
+    "X": "flavored:chocolate"
+  },
+  "pattern": [
+    "X*X",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:pudding"
+  }
+}

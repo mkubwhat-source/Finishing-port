@@ -1,0 +1,10 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "bountifulfares:spongekin_slice",
+  "particle_color": 3916203,
+  "result": {
+    "count": 2,
+    "id": "bountifulfares:pickled_spongekin"
+  },
+  "result_count": 2
+}

@@ -1,0 +1,11 @@
+{
+  "type": "flavored:fermenting",
+  "category": "misc",
+  "ingredient": "minecraft:rotten_flesh",
+  "fermenter": "#flavored:fungi",
+  "particle_color": "41291f",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:foul_flesh"
+  }
+}

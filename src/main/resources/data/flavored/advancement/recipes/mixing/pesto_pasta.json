@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:mixing/pesto_pasta"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "pasta": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:pasta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "pasta"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:mixing/pesto_pasta"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "trellis",
+  "key": {
+    "#": "minecraft:stick",
+    "P": "frontiers:blighted_birch_planks"
+  },
+  "pattern": [
+    "# #",
+    " P ",
+    "# #"
+  ],
+  "result": {
+    "id": "frontiers:blighted_birch_trellis"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "flavored:tipped_pillar",
+  "height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 2,
+    "max_inclusive": 8
+  },
+  "pillar_provider": {
+    "id": "flavored:cinnamon_stalk"
+  },
+  "tip_provider": {
+    "id": "flavored:cinnamon_sprout"
+  }
+}

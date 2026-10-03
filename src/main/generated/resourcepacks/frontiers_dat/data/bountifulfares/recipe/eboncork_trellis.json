@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "trellis",
+  "key": {
+    "#": "minecraft:stick",
+    "P": "frontiers:eboncork_planks"
+  },
+  "pattern": [
+    "# #",
+    " P ",
+    "# #"
+  ],
+  "result": {
+    "id": "frontiers:eboncork_trellis"
+  }
+}

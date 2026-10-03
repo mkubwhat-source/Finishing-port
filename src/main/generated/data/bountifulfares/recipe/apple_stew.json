@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:apple",
+    "#c:foods/elderberries",
+    "#c:foods/elderberries",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:apple_stew"
+  }
+}

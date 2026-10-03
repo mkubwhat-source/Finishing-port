@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "trellis",
+  "key": {
+    "#": "minecraft:stick",
+    "P": "natures_spirit:maple_planks"
+  },
+  "pattern": [
+    "# #",
+    " P ",
+    "# #"
+  ],
+  "result": {
+    "id": "natures_spirit:maple_trellis"
+  }
+}

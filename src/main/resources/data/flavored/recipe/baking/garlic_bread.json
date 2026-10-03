@@ -1,0 +1,18 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 1.0,
+  "key": {
+    "#": "flavored:dough",
+    "*": "flavored:butter",
+    "X": "flavored:garlic"
+  },
+  "pattern": [
+    "X*X",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:garlic_bread"
+  }
+}

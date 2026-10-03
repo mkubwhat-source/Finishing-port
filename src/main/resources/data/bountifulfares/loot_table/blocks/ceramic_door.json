@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bountifulfares:ceramic_door",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "bountifulfares:ceramic_door",
+            "state": {
+              "half": "lower"
+            }
+          },
+          "modifier": [
+            {
+              "type": "minecraft:explosion_decay"
+            },
+            {
+              "include": [
+                "minecraft:dyed_color"
+              ],
+              "source": "block_entity",
+              "type": "minecraft:copy_components"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

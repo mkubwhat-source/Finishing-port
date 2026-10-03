@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:tea_shrub",
+        "state": {
+          "berries": "true"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:tea_berries"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

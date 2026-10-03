@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:lapisberries",
+    "#c:flour",
+    "minecraft:egg",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "bountifulfares:lapisberry_tart"
+  }
+}

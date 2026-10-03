@@ -1,0 +1,15 @@
+{
+  "seeds": "hearthandharvest:green_grapes",
+  "produce": "hearthandharvest:green_grapes",
+  "texture": "hearthandharvest:block/green_grape_trellis",
+  "model": "default",
+  "stages": 5,
+  "grow_chance": 0.2,
+  "min_drops": 1,
+  "max_drops": 3,
+  "spreading": {
+    "chance": 0.142857,
+    "max_height": 6,
+    "soil": "c:villager_farmlands"
+  }
+}

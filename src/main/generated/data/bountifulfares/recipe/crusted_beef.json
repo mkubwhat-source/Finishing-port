@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:cooked_beef",
+    "#c:foods/walnuts",
+    "#c:foods/walnuts",
+    "minecraft:potato",
+    "#c:foods/elderberries",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:crusted_beef"
+  }
+}

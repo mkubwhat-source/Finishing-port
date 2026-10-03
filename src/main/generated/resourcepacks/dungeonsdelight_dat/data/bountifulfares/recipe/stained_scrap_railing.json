@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "dungeonsdelight:stained_scrap",
+    "S": "dungeonsdelight:stained_scrap_fragment"
+  },
+  "pattern": [
+    "#S#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "dungeonsdelight:stained_scrap_railing"
+  }
+}

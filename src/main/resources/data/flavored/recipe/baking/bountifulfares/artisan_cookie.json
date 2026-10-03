@@ -1,0 +1,18 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 1.0,
+  "key": {
+    "E": "#c:foods/elderberries",
+    "S": "minecraft:sugar",
+    "#": "flavored:dough"
+  },
+  "pattern": [
+    "ESE",
+    " # "
+  ],
+  "result": {
+    "count": 8,
+    "id": "bountifulfares:artisan_cookie"
+  }
+}

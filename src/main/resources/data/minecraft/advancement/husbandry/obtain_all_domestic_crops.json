@@ -1,0 +1,139 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "obtain_tomato": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#flavored:tomatoes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_corn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bountifulfares:maize"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "flavored:pepper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_garlic": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "flavored:garlic"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_spinach": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "flavored:spinach"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_potato": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potato"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_carrot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:carrot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obtain_beetroot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:beetroot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.flavored.husbandry.obtain_all_domestic_crops.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "flavored:red_tomato"
+    },
+    "title": {
+      "translate": "advancements.flavored.husbandry.obtain_all_domestic_crops.title"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_tomato"
+    ],
+    [
+      "obtain_corn"
+    ],
+    [
+      "obtain_garlic"
+    ],
+    [
+      "obtain_pepper"
+    ],
+    [
+      "obtain_spinach"
+    ],
+    [
+      "obtain_beetroot"
+    ],
+    [
+      "obtain_carrot"
+    ],
+    [
+      "obtain_potato"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

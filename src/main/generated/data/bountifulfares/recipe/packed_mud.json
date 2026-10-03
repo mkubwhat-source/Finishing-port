@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "packed_mud",
+  "ingredients": [
+    "minecraft:mud",
+    "bountifulfares:coconut_coir"
+  ],
+  "result": {
+    "id": "minecraft:packed_mud"
+  }
+}

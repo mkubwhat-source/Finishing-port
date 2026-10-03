@@ -1,0 +1,6 @@
+{
+  "plant": "minecraft:sunflower",
+  "model": "default",
+  "texture": "bountifulfares:block/sunflower_trellis",
+  "can_duplicate": true
+}

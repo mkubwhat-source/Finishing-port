@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:violet_bellflower",
+    "bountifulfares:water_cup"
+  ],
+  "result": {
+    "id": "bountifulfares:bellflower_tea_bottle"
+  }
+}

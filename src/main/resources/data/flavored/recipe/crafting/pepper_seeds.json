@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "flavored:pepper"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:pepper_seeds"
+  }
+}

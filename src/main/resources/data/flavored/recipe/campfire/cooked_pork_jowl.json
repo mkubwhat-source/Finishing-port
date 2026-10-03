@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": "flavored:pork_jowl",
+  "result": {
+    "id": "flavored:cooked_pork_jowl"
+  }
+}

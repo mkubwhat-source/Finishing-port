@@ -1,0 +1,80 @@
+{
+  "block.chocolate.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "flavored:block/chocolate/break1",
+      "flavored:block/chocolate/break2",
+      "flavored:block/chocolate/break3",
+      "flavored:block/chocolate/break4",
+      "flavored:block/chocolate/break5",
+      "flavored:block/chocolate/break6"
+
+    ]
+  },
+  "block.chocolate.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "flavored:block/chocolate/step1",
+      "flavored:block/chocolate/step2",
+      "flavored:block/chocolate/step3",
+      "flavored:block/chocolate/step4",
+      "flavored:block/chocolate/step5",
+      "flavored:block/chocolate/step6"
+
+    ]
+  },
+  "block.chocolate.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "flavored:block/chocolate/break1",
+      "flavored:block/chocolate/break2",
+      "flavored:block/chocolate/break3",
+      "flavored:block/chocolate/break4",
+      "flavored:block/chocolate/break5",
+      "flavored:block/chocolate/break6"
+    ]
+  },
+  "block.chocolate.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "flavored:block/chocolate/step1",
+      "flavored:block/chocolate/step2",
+      "flavored:block/chocolate/step3",
+      "flavored:block/chocolate/step4",
+      "flavored:block/chocolate/step5",
+      "flavored:block/chocolate/step6"
+
+    ]
+  },
+  "block.chocolate.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "flavored:block/chocolate/step1",
+      "flavored:block/chocolate/step2",
+      "flavored:block/chocolate/step3",
+      "flavored:block/chocolate/step4",
+      "flavored:block/chocolate/step5",
+      "flavored:block/chocolate/step6"
+
+    ]
+  },
+  "block.oven.bake": {
+    "subtitle": "subtitles.flavored.block.oven.bake",
+    "sounds": [
+      "flavored:block/oven/oven1",
+      "flavored:block/oven/oven2",
+      "flavored:block/oven/oven3",
+      "flavored:block/oven/oven4",
+      "flavored:block/oven/oven5"
+
+    ]
+  },
+  "block.keg.ferment": {
+    "subtitle": "subtitles.flavored.block.keg.ferment",
+    "sounds": [
+      "flavored:block/keg/ferment1",
+      "flavored:block/keg/ferment2"
+
+    ]
+  }
+}

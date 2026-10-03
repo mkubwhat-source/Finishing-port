@@ -1,0 +1,20 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 3.0,
+  "key": {
+    "#": "minecraft:bowl",
+    "*": "flavored:mutton_shank",
+    "C": "#flavored:wines",
+    "X": "minecraft:carrot"
+  },
+  "pattern": [
+    " X ",
+    "*C*",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:ossobuco"
+  }
+}

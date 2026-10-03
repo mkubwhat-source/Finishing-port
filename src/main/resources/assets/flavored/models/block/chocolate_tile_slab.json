@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "flavored:block/chocolate_tiles",
+    "side": "flavored:block/chocolate_tiles",
+    "top": "flavored:block/chocolate_tiles"
+  }
+}

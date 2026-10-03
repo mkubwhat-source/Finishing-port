@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "alabaster.hearthandharvest.common.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractHorseMixin",
+    "AlterGroundDecoratorMixin",
+    "AnimalBreedMixin",
+    "FarmlandMulchMixin",
+    "HorseHurtMixin",
+    "ItemEntityPickupMixin",
+    "ItemEntityTickMixin",
+    "LivingEntityHooksMixin",
+    "PlayerTickMixin",
+    "ServerPlayerShoulderMixin",
+    "SheepGrassManureMixin",
+    "WaterBottleMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

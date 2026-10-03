@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:coconut_halves",
+    "#c:coconut_halves",
+    "bountifulfares:leek",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:coconut_stew"
+  }
+}

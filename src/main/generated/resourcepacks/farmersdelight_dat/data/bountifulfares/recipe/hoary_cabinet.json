@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": "bountifulfares:hoary_trapdoor",
+    "_": "bountifulfares:hoary_slab"
+  },
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "result": {
+    "id": "farmersdelight:hoary_cabinet"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "X": "bountifulfares:lapisberries",
+    "#": "flavored:pastry_dough"
+  },
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:lapisberry_tart"
+  }
+}

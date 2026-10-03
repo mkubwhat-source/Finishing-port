@@ -1,0 +1,30 @@
+{
+  "parent": "bountifulfares:obtain_tiffin",
+  "criteria": {
+    "fill_tiffin": {
+      "conditions": {
+        "fullness": {
+          "min": 0.999
+        }
+      },
+      "trigger": "bountifulfares:fill_tiffin"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.fill_tiffin.description"
+    },
+    "icon": {
+      "id": "bountifulfares:purple_shulker_tiffin"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.fill_tiffin"
+    }
+  },
+  "requirements": [
+    [
+      "fill_tiffin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

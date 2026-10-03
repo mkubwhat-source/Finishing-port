@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "#": "flavored:pastry_dough",
+    "X": "flavored:chocolate"
+  },
+  "pattern": [
+    "XXX",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:chocolate_pastry"
+  }
+}

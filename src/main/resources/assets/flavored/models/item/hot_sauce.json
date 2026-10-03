@@ -1,0 +1,6 @@
+{
+  "parent": "flavored:item/handheld_hot_sauce",
+  "textures": {
+    "layer0": "flavored:item/hot_sauce"
+  }
+}

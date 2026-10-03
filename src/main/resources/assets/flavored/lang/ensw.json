@@ -1,0 +1,149 @@
+{
+  "creativetab.flavored.flavored": "Flavored",
+
+  "entity.flavored.tomato": "Tomato",
+
+  "block.flavored.tomato_bush": "Tomato Bush",
+
+  "block.flavored.cinnamon_stalk": "Stalk Of Cinnamon",
+  "block.flavored.stripped_cinnamon_stalk": "Hulled Stalk Of Cinnamon",
+  "block.flavored.waxed_stripped_cinnamon_stalk": "Waxed Hulled Of Cinnamon",
+  "block.flavored.cinnamon_sprout": "Cinnamon Sprout",
+  "item.flavored.cinnamon": "Cinnamon",
+
+  "item.flavored.green_tomato": "Glaucous Tomato",
+  "item.flavored.yellow_tomato": "Gambogi Tomato",
+  "item.flavored.red_tomato": "Vermilio Tomato",
+
+  "item.flavored.tomato_seeds": "Tomato Seeds",
+
+  "block.flavored.chocolate_block": "Block of Chocolate",
+  "block.flavored.chocolate_tiles": "Chocolate Tyles",
+  "block.flavored.chocolate_tile_slab": "Chocolate Tyle Slab",
+  "block.flavored.chocolate_tile_stairs": "Chocolate Tyle Stairs",
+
+  "item.flavored.chocolate": "Chocolate",
+  "item.flavored.chocolate_egg": "Chocolate Egg",
+  "item.flavored.chocken_spawn_egg": "Adder Stone O' Chocken ",
+  "entity.flavored.chocken": "Chocken",
+  "entity.flavored.chocolate_egg": "Chocolate Egg",
+
+  "effect.flavored.sugar_rush": "Sugar Rush",
+  "effect.flavored.sugar_crave": "Sugar Crave",
+  "effect.flavored.popped": "Inflation",
+  "effect.flavored.heat": "Scorching",
+  "effect.flavored.boozed": "Inebriated",
+  "effect.flavored.hangover": "Crapulous ",
+
+  "item.flavored.soft_cheese_slice": "Soft Cheese Slice",
+  "item.flavored.aged_cheese_slice": "Cheese Slice",
+
+  "block.flavored.soft_cheese": "Soft Cheese",
+  "block.flavored.aged_cheese": "Aged Cheese",
+
+  "item.flavored.ground_beef": "Ground Beef",
+  "item.flavored.cooked_ground_beef": "Roasted Ground Beef",
+  "item.flavored.chicken_drumstick": "Raw Chicken Drumstick",
+  "item.flavored.cooked_chicken_drumstick": "Roasted Chicken Drumstick",
+  "item.flavored.mutton_shank": "Raw Mutton Shanks",
+  "item.flavored.cooked_mutton_shank": "Roasted Mutton Shanks",
+  "item.flavored.pork_jowl": "Raw Pork Jowl",
+  "item.flavored.cooked_pork_jowl": "Roasted Pork Jowl",
+
+  "item.flavored.knife": "Cleaver",
+  "block.flavored.keg": "Keg",
+
+  "block.flavored.corn_bush": "Corn Bush",
+  "item.flavored.corn": "Corn",
+  "item.flavored.corn_seeds": "Corn Seeds",
+
+  "block.flavored.mixing_bowl": "Mixing Bowl",
+  "item.flavored.whisk": "Whisk",
+  "item.flavored.flour": "Flour",
+  "item.flavored.dough": "Dough",
+
+  "block.flavored.oven": "Oven",
+  "item.flavored.batter": "Batter",
+  "item.flavored.butter": "Butter",
+
+  "container.oven": "Oven",
+  "stat.flavored.interact_with_oven": "Interactions with Oven",
+  "stat.flavored.interact_with_keg": "Interactions with Keg",
+  "stat.flavored.interact_with_mixing_bowl": "Interactions with Mixing Bowl",
+  "stat.flavored.mix_item": "Items Fully Mixed",
+  "stat.flavored.eat_pudding_slice": "Pudding Slices Eaten",
+  "stat.flavored.take_pizza_slice": "Pizza Slices Taken",
+  "stat.flavored.crave_chocolate": "Minutes Craved for Chocolate",
+
+  "item.flavored.garlic": "Garlic",
+  "block.flavored.garlics": "Garlics",
+
+  "item.flavored.pepper": "Pepper",
+  "item.flavored.dried_pepper": "Dried Pepper",
+  "item.flavored.spinach": "Spinach",
+  "item.flavored.pepper_seeds": "Pepper Seeds",
+  "item.flavored.spinach_seeds": "Spinach Seeds",
+  "item.flavored.pastry_dough": "Pastry Dough",
+  "item.flavored.cookie_dough": "Cookie Dough",
+
+  "enchantment.flavored.butchery": "Butchery",
+  "block.flavored.pudding": "Pudding",
+  "block.flavored.pizza": "Pizza",
+  "item.flavored.pizza_slice": "Pizza Slice",
+
+  "item.flavored.cereal": "Cereal",
+  "item.flavored.salad": "Salad",
+  "item.flavored.polenta": "Polenta",
+  "item.flavored.porridge": "Porridge",
+  "item.flavored.tomato_pasta": "Tomato Pasta",
+  "item.flavored.pesto_pasta": "Pesto Pasta",
+  "item.flavored.carbonara_pasta": "Carbonara Pasta",
+  "item.flavored.cream_pasta": "Cream Pasta",
+  "item.flavored.ragu_pasta": "Ragu Pasta",
+  "item.flavored.shakshouka": "Shakshouka",
+  "item.flavored.ossobuco": "Ossobuco",
+  "item.flavored.hamburger": "Hamburger",
+  "item.flavored.shawarma": "Shawarma",
+  "item.flavored.chicken_sandwich": "Chicken Sandwich",
+  "item.flavored.cheese_sandwich": "Cheese Sandwich",
+  "item.flavored.ham_sandwich": "Ham Sandwich",
+  "item.flavored.butter_pastry": "Butter Pastry",
+  "item.flavored.cinnamon_pastry": "Cinnamon Pastry",
+  "item.flavored.honey_pastry": "Honey Pastry",
+  "item.flavored.chocolate_pastry": "Chocolate Pastry",
+  "item.flavored.garlic_bread": "Garlic Bread",
+  "item.flavored.grilled_corn": "Grilled Corn",
+
+  "item.flavored.sweet_berry_juice": "Sweet Berry Juice",
+  "item.flavored.glow_berry_juice": "Glow Berry Juice",
+  "item.flavored.wort": "Wort",
+  "item.flavored.apple_juice": "Apple Juice",
+  "item.flavored.sweet_berry_wine": "Sweet Berry Wine",
+  "item.flavored.glow_berry_wine": "Glow Berry Wine",
+  "item.flavored.beer": "Beer",
+  "item.flavored.cider": "Cider",
+
+  "item.flavored.pasta": "Pasta",
+
+  "subtitles.flavored.block.oven.bake": "Oven baking",
+  "subtitles.flavored.block.keg.ferment": "Keg fermenting",
+
+  "advancements.flavored.husbandry.obtain_pizza.title": "The Peak of The Culinary Mound",
+  "advancements.flavored.husbandry.obtain_pizza.description": "Procure yourself a pizza, A culinary feat of the greatest magnitude.",
+  "advancements.flavored.husbandry.obtain_oven.title": "If Crafters And Smelters Were To Breed",
+  "advancements.flavored.husbandry.obtain_oven.description": "Acquire an Oven.",
+  "advancements.flavored.husbandry.obtain_all_domestic_crops.title": "Agrarian Community",
+  "advancements.flavored.husbandry.obtain_all_domestic_crops.description": "Obtain all crops cultivated by Villagers.",
+  "spiciness.flavored.level1": "Mild Spiciness",
+  "spiciness.flavored.level2": "Medium Spiciness",
+  "spiciness.flavored.level3": "Extreme Spiciness",
+
+
+  "gui.recipebook.toggleRecipes.fermentable": "Showing Fermentable",
+  "gui.recipebook.toggleRecipes.mixable": "Showing Mixable",
+  "gui.recipebook.toggleRecipes.bakable": "Showing Bakeable",
+  "block.flavored.baking": "Baking",
+  "gui.jei.category.flavored.mixing": "Mixing",
+  "gui.jei.category.flavored.baking": "Baking",
+  "gui.jei.category.flavored.fermenting": "Fermenting"
+}

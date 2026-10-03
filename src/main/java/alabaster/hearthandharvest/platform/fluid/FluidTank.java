@@ -1,0 +1,138 @@
+package alabaster.hearthandharvest.platform.fluid;
+
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
+
+import java.util.function.Predicate;
+
+/**
+ * NeoForge's {@code FluidTank} (1.21.1), same fill/drain rules. Saving moved from
+ * {@code writeToNBT/readFromNBT} to 26.3's {@link ValueOutput}/{@link ValueInput}, under the same
+ * {@code "Fluid"} key (and the same id/amount shape) NeoForge used.
+ */
+public class FluidTank implements IFluidHandler {
+    protected Predicate<FluidStack> validator;
+    protected FluidStack fluid = FluidStack.EMPTY;
+    protected int capacity;
+
+    public FluidTank(int capacity) {
+        this(capacity, e -> true);
+    }
+
+    public FluidTank(int capacity, Predicate<FluidStack> validator) {
+        this.capacity = capacity;
+        this.validator = validator;
+    }
+
+    public FluidTank setCapacity(int capacity) {
+        this.capacity = capacity;
+        return this;
+    }
+
+    public FluidTank setValidator(Predicate<FluidStack> validator) {
+        if (validator != null) this.validator = validator;
+        return this;
+    }
+
+    public boolean isFluidValid(FluidStack stack) {
+        return validator.test(stack);
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public FluidStack getFluid() {
+        return fluid;
+    }
+
+    public int getFluidAmount() {
+        return fluid.getAmount();
+    }
+
+    public void serialize(ValueOutput output) {
+        if (!fluid.isEmpty()) output.store("Fluid", FluidStack.CODEC, fluid);
+    }
+
+    public void deserialize(ValueInput input) {
+        fluid = input.read("Fluid", FluidStack.CODEC).orElse(FluidStack.EMPTY);
+    }
+
+    @Override
+    public int getTanks() {
+        return 1;
+    }
+
+    @Override
+    public FluidStack getFluidInTank(int tank) {
+        return getFluid();
+    }
+
+    @Override
+    public int getTankCapacity(int tank) {
+        return getCapacity();
+    }
+
+    @Override
+    public boolean isFluidValid(int tank, FluidStack stack) {
+        return isFluidValid(stack);
+    }
+
+    @Override
+    public int fill(FluidStack resource, FluidAction action) {
+        if (resource.isEmpty() || !isFluidValid(resource)) return 0;
+        if (action.simulate()) {
+            if (fluid.isEmpty()) return Math.min(capacity, resource.getAmount());
+            if (!FluidStack.isSameFluidSameComponents(fluid, resource)) return 0;
+            return Math.min(capacity - fluid.getAmount(), resource.getAmount());
+        }
+        if (fluid.isEmpty()) {
+            fluid = resource.copyWithAmount(Math.min(capacity, resource.getAmount()));
+            onContentsChanged();
+            return fluid.getAmount();
+        }
+        if (!FluidStack.isSameFluidSameComponents(fluid, resource)) return 0;
+        int filled = capacity - fluid.getAmount();
+        if (resource.getAmount() < filled) {
+            fluid.grow(resource.getAmount());
+            filled = resource.getAmount();
+        } else {
+            fluid.setAmount(capacity);
+        }
+        if (filled > 0) onContentsChanged();
+        return filled;
+    }
+
+    @Override
+    public FluidStack drain(FluidStack resource, FluidAction action) {
+        if (resource.isEmpty() || !FluidStack.isSameFluidSameComponents(resource, fluid)) return FluidStack.EMPTY;
+        return drain(resource.getAmount(), action);
+    }
+
+    @Override
+    public FluidStack drain(int maxDrain, FluidAction action) {
+        int drained = Math.min(maxDrain, fluid.getAmount());
+        FluidStack stack = fluid.copyWithAmount(drained);
+        if (action.execute() && drained > 0) {
+            fluid.shrink(drained);
+            if (fluid.getAmount() <= 0) fluid = FluidStack.EMPTY;
+            onContentsChanged();
+        }
+        return stack;
+    }
+
+    protected void onContentsChanged() {
+    }
+
+    public void setFluid(FluidStack stack) {
+        this.fluid = stack;
+    }
+
+    public boolean isEmpty() {
+        return fluid.isEmpty();
+    }
+
+    public int getSpace() {
+        return Math.max(0, capacity - fluid.getAmount());
+    }
+}

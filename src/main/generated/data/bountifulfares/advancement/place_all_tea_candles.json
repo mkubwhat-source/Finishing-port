@@ -1,0 +1,103 @@
+{
+  "parent": "bountifulfares:obtain_tea_blends",
+  "criteria": {
+    "bellflower": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:bellflower_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "black": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:black_tea_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "chamomile": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:chamomile_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "green": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:green_tea_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "honeysuckle": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:honeysuckle_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "torchflower": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:torchflower_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "walnut": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:walnut_candle"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.place_all_tea_candles.description"
+    },
+    "icon": {
+      "id": "bountifulfares:green_tea_candle"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.place_all_tea_candles"
+    }
+  },
+  "requirements": [
+    [
+      "green"
+    ],
+    [
+      "black"
+    ],
+    [
+      "chamomile"
+    ],
+    [
+      "honeysuckle"
+    ],
+    [
+      "bellflower"
+    ],
+    [
+      "torchflower"
+    ],
+    [
+      "walnut"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

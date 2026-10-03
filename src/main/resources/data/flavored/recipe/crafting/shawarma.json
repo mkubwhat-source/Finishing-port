@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bread",
+    "flavored:spinach",
+    "flavored:red_tomato",
+    "flavored:garlic",
+    "flavored:cooked_mutton_shank",
+    "flavored:cooked_mutton_shank"
+  ],
+  "result": {
+    "count": 2,
+    "id": "flavored:shawarma"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_dye",
+  "dye": "#minecraft:dyes",
+  "group": "dyed_ceramic",
+  "result": {
+    "id": "bountifulfares:solid_ceramic"
+  },
+  "target": "bountifulfares:solid_ceramic"
+}

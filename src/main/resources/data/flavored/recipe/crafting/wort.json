@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:glass_bottle",
+    "X": "minecraft:wheat"
+  },
+  "pattern": [
+    " X ",
+    "X#X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:wort"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.3,
+  "group": "cracked_ceramic_tiles",
+  "ingredient": "bountifulfares:ceramic_tiles",
+  "result": {
+    "id": "bountifulfares:cracked_ceramic_tiles"
+  }
+}

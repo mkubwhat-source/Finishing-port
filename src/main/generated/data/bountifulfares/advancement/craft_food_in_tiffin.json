@@ -1,0 +1,25 @@
+{
+  "parent": "bountifulfares:obtain_tiffin",
+  "criteria": {
+    "craft_food_in_tiffin": {
+      "trigger": "bountifulfares:craft_food_in_tiffin"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.craft_food_in_tiffin.description"
+    },
+    "icon": {
+      "id": "bountifulfares:white_shulker_tiffin"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.craft_food_in_tiffin"
+    }
+  },
+  "requirements": [
+    [
+      "craft_food_in_tiffin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

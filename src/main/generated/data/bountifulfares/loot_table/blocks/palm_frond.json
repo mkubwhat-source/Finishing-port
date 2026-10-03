@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_frond",
+        "state": {
+          "size": "0"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_frond"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_frond",
+        "state": {
+          "size": "1"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_frond"
+        }
+      ],
+      "rolls": 2
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_frond",
+        "state": {
+          "size": "2"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_frond"
+        }
+      ],
+      "rolls": 3
+    }
+  ]
+}

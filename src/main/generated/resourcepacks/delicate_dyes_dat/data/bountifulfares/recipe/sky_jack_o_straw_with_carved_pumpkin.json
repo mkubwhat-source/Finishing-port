@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:sun_hat",
+    "minecraft:carved_pumpkin",
+    "delicate_dyes:sky_wool",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "delicate_dyes:sky_jack_o_straw"
+  }
+}

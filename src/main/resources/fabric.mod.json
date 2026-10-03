@@ -1,0 +1,80 @@
+{
+	"schemaVersion": 1,
+	"id": "bountifulfares",
+	"version": "${version}",
+	"name": "Bountiful Fares",
+	"description": "Adds new content to the food and farming side of Minecraft! Bundles Flavored by CodenamedSuper and Hearth and Harvest by AlabasterLeking (with the Farmer's Delight pieces it needs).",
+	"authors": [
+		"Hecco"
+	],
+	"contact": {
+		"homepage": "https://linktr.ee/thehecco",
+		"sources": "https://github.com/Heccology/Bountiful-Fares",
+		"issues": "https://github.com/Heccology/Bountiful-Fares/issues"
+	},
+	"license": "Custom License",
+	"icon": "assets/bountifulfares/icon.png",
+	"environment": "*",
+	"accessWidener": "bountifulfares.accesswidener",
+	"entrypoints": {
+		"main": [
+			"net.hecco.bountifulfares.FabricBountifulFares",
+			"com.sidden.flavored.Flavored",
+			"alabaster.hearthandharvest.HearthAndHarvest"
+		],
+		"client": [
+			"net.hecco.bountifulfares.FabricBountifulFaresClient",
+			"com.sidden.flavored.client.FlavoredClient",
+			"alabaster.hearthandharvest.client.HearthAndHarvestClient"
+		],
+		"fabric-datagen": [
+			"net.hecco.bountifulfares.FabricBountifulFaresDatagen"
+		],
+		"modmenu": [
+			"net.hecco.bountifulfares.config.BountifulFaresModMenu"
+		],
+		"jei_mod_plugin": [
+			"net.hecco.bountifulfares.definition.compat.jei.JEIPlugin",
+			"com.sidden.flavored.client.compat.jei.FlavoredJeiPlugin"
+		],
+		"emi": [
+			"net.hecco.bountifulfares.definition.compat.emi.BFEmiPlugin",
+			"com.sidden.flavored.client.compat.emi.FlavoredEmiPlugin"
+		]
+	},
+	"mixins": [
+		"bountifulfares.mixins.json",
+		"bountifulfares.fabric.mixins.json",
+		"flavored.mixins.json",
+		"hearthandharvest.mixins.json",
+		"hearthandharvest.fd.mixins.json",
+		"hearthandharvest.client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"cloth-config": ">=26.3",
+		"modmenu": "*",
+		"emi": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/yrDsSeNkWu"
+			}
+		}
+	},
+	"provides": [
+		"flavored",
+		"hearthandharvest"
+	],
+	"contributors": [
+		"CodenamedSuper (Flavored)",
+		"AlabasterLeking (Hearth and Harvest)",
+		"vectorwing / MehVahdJukaar (Farmer's Delight / Refabricated: cooking pot, cutting board and other pieces bundled for Hearth and Harvest)"
+	]
+}

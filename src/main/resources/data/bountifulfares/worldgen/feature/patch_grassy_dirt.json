@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:disk",
+  "half_height": 3,
+  "radius": {
+    "type": "minecraft:weighted_list",
+    "distribution": [
+      {
+        "weight": 1,
+        "data": 3
+      },
+      {
+        "weight": 1,
+        "data": 5
+      },
+      {
+        "weight": 1,
+        "data": 8
+      }
+    ]
+  },
+  "state_provider": {
+    "type": "minecraft:weighted",
+    "entries": [
+      {
+        "data": "minecraft:coarse_dirt",
+        "weight": 5
+      },
+      {
+        "data": "bountifulfares:grassy_dirt",
+        "weight": 4
+      },
+      {
+        "data": "minecraft:grass_block",
+        "weight": 8
+      }
+    ]
+  },
+  "target": {
+    "type": "minecraft:matching_blocks",
+    "blocks": [
+      "minecraft:grass_block"
+    ]
+  }
+}

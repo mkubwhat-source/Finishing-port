@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "#": "flavored:pastry_dough",
+    "X": "minecraft:pumpkin"
+  },
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:pumpkin_pie"
+  }
+}

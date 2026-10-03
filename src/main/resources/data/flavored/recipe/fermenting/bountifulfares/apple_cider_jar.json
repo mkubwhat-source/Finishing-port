@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "minecraft:apple",
+  "fermenter": "bountifulfares:jar",
+  "particle_color": "ffe8a5",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:apple_cider_jar"
+  },
+  "fermenter_required": true
+}

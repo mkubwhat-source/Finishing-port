@@ -1,0 +1,11 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "fermenter": "minecraft:sugar",
+  "ingredient": "flavored:wort",
+  "particle_color": "c99f4e",
+  "result": {
+    "count": 1,
+    "id": "flavored:beer"
+  }
+}

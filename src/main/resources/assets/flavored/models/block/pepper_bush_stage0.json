@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "flavored:block/pepper_bush_stage0"
+  }
+}

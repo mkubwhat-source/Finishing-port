@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "flavored:glow_berry_juice",
+  "particle_color": 16756788,
+  "result": {
+    "id": "flavored:glow_berry_wine"
+  },
+  "result_count": 1
+}

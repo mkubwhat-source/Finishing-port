@@ -1,0 +1,17 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "flavored:cinnamon",
+    "flavored:cinnamon",
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:sugar"
+  ],
+  "liquid": "minecraft:milk_bucket",
+  "result": {
+    "count": 1,
+    "id": "flavored:cereal"
+  },
+  "vessel": "minecraft:bowl"
+}

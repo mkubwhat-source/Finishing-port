@@ -1,0 +1,13 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "minecraft:red_mushroom",
+    "minecraft:brown_mushroom"
+  ],
+  "liquid": "minecraft:water_bucket",
+  "result": {
+    "count": 1,
+    "id": "minecraft:mushroom_stew"
+  },
+  "vessel": "minecraft:bowl"
+}

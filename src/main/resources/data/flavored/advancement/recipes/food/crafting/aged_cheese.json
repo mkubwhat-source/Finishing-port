@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aged_cheese_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:aged_cheese_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:crafting/aged_cheese"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aged_cheese_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:crafting/aged_cheese"
+    ]
+  }
+}

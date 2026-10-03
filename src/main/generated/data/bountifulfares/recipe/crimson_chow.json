@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:cooked_porkchop",
+    "minecraft:crimson_fungus",
+    "minecraft:crimson_fungus",
+    "minecraft:crimson_roots",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:crimson_chow"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:sun_hat",
+    "minecraft:pumpkin",
+    "minecraft:green_wool",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "bountifulfares:green_jack_o_straw"
+  }
+}

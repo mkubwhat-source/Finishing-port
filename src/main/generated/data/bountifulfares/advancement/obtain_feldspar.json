@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:place_gristmill",
+  "criteria": {
+    "obtain_feldspar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:feldspar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_feldspar.description"
+    },
+    "icon": {
+      "id": "bountifulfares:feldspar"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_feldspar"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_feldspar"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

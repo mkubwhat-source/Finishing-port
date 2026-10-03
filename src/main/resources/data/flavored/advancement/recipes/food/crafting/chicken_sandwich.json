@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_chicken_drumstick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:cooked_chicken_drumstick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:crafting/chicken_sandwich"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooked_chicken_drumstick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:crafting/chicken_sandwich"
+    ]
+  }
+}

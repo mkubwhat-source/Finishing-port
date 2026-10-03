@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:cracked_ceramic_tiles"
+  ],
+  "result": {
+    "id": "bountifulfares:cracked_ceramic_tiles"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:coconut_halves",
+    "#c:coconut_halves",
+    "minecraft:cooked_cod",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:coconut_crusted_cod"
+  }
+}

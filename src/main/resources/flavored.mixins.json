@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.sidden.flavored.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ConsumableMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:bountiful_fares",
+  "criteria": {
+    "obtain_sun_hat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:sun_hat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_sun_hat.description"
+    },
+    "icon": {
+      "id": "bountifulfares:sun_hat"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_sun_hat"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_sun_hat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

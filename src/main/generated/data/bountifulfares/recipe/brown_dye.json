@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:walnut_mulch"
+  ],
+  "result": {
+    "id": "minecraft:brown_dye"
+  }
+}

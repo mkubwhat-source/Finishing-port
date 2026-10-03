@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:milling",
+  "ingredient": "bountifulfares:maize",
+  "result": {
+    "count": 2,
+    "id": "bountifulfares:flour"
+  },
+  "result_count": 2
+}

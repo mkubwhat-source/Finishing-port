@@ -1,0 +1,15 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "minecraft:baked_potato",
+    "minecraft:cooked_rabbit",
+    "minecraft:carrot",
+    "minecraft:brown_mushroom"
+  ],
+  "liquid": "minecraft:water_bucket",
+  "result": {
+    "count": 1,
+    "id": "minecraft:rabbit_stew"
+  },
+  "vessel": "minecraft:bowl"
+}

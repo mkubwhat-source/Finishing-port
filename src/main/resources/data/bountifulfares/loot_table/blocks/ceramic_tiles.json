@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bountifulfares:ceramic_tiles"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "modifier": {
+    "source": "block_entity",
+    "include": [
+      "minecraft:dyed_color"
+    ],
+    "type": "minecraft:copy_components"
+  }
+}

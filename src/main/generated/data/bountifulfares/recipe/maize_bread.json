@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#c:foods/corn"
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "id": "bountifulfares:maize_bread"
+  }
+}

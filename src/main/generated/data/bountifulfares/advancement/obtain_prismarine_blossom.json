@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:obtain_spongekin",
+  "criteria": {
+    "obtain_prismarine_blossom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:prismarine_blossom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_prismarine_blossom.description"
+    },
+    "icon": {
+      "id": "bountifulfares:prismarine_blossom"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_prismarine_blossom"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_prismarine_blossom"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

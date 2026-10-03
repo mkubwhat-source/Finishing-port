@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:foods/lemons",
+    "#bountifulfares:sugar_ingredients"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bountifulfares:candied_lemon"
+  }
+}

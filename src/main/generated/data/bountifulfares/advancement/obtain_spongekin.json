@@ -1,0 +1,35 @@
+{
+  "parent": "bountifulfares:obtain_spongekin_seeds",
+  "criteria": {
+    "obtain_spongekin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bountifulfares:spongekin_slice",
+              "bountifulfares:spongekin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_spongekin.description"
+    },
+    "icon": {
+      "id": "bountifulfares:spongekin"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_spongekin"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_spongekin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

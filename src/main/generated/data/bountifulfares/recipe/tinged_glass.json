@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "F": "bountifulfares:feldspar",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    " F ",
+    "FGF",
+    " F "
+  ],
+  "result": {
+    "id": "bountifulfares:tinged_glass"
+  }
+}

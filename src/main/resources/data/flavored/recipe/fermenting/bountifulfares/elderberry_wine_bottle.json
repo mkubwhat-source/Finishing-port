@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "bountifulfares:elderberries",
+  "fermenter": "minecraft:glass_bottle",
+  "particle_color": "d29fc1",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:elderberry_wine_bottle"
+  },
+  "fermenter_required": true
+}

@@ -1,0 +1,8 @@
+{
+  "type": "bountifulfares:milling",
+  "ingredient": "bountifulfares:walnut",
+  "result": {
+    "id": "bountifulfares:walnut_mulch"
+  },
+  "result_count": 1
+}

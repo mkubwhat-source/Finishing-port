@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#flavored:tomatoes",
+    "bountifulfares:maize",
+    "flavored:spinach",
+    "flavored:pepper",
+    "flavored:garlic"
+  ]
+}

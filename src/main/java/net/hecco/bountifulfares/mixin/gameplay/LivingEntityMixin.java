@@ -1,0 +1,184 @@
+package net.hecco.bountifulfares.mixin.gameplay;
+
+import net.hecco.bountifulfares.definition.trigger.AcidifyEffectTrigger;
+import net.hecco.bountifulfares.registry.content.BFEffects;
+import net.hecco.bountifulfares.registry.misc.BFCriteriaTriggers;
+import net.hecco.bountifulfares.registry.tags.BFEffectTags;
+import net.minecraft.core.Holder;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import org.jetbrains.annotations.Nullable;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+@Mixin(LivingEntity.class)
+public abstract class LivingEntityMixin {
+
+    @Shadow @Final
+    private Map<Holder<MobEffect>, MobEffectInstance> activeEffects;
+
+    @Shadow
+    private boolean effectsDirty;
+
+    @Shadow
+    public abstract boolean removeEffect(Holder<MobEffect> effect);
+
+    @Shadow
+    public abstract boolean addEffect(MobEffectInstance effectInstance);
+
+    @Shadow
+    protected abstract void onEffectUpdated(MobEffectInstance effectInstance, boolean forced, @Nullable Entity entity);
+
+    @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", at = @At("HEAD"))
+    private void bountifulfares$acidicApply(MobEffectInstance effectInstance, Entity entity, CallbackInfoReturnable<Boolean> cir) {
+        if (effectInstance.getEffect() == BFEffects.STUPOR) {
+            ArrayList<Holder<MobEffect>> removedEffects = new ArrayList<>();
+            for (Holder<MobEffect> effect : this.activeEffects.keySet()) {
+                if (effect != BFEffects.STUPOR && !effect.is(BFEffectTags.STUPOR_BLACKLIST)) {
+                    removedEffects.add(effect);
+                }
+            }
+
+            for (Holder<MobEffect> effect : removedEffects) {
+                this.removeEffect(effect);
+            }
+            this.effectsDirty = true;
+        } else
+        if (!this.activeEffects.containsKey(BFEffects.ACIDIC) && effectInstance.getEffect() == BFEffects.ACIDIC) {
+            int acidicAmplifier = effectInstance.getAmplifier();
+            Iterator<Map.Entry<Holder<MobEffect>, MobEffectInstance>> iterator = this.activeEffects.entrySet().iterator();
+            ArrayList<MobEffectInstance> newEffects = new ArrayList<>();
+            while (iterator.hasNext()) {
+                Map.Entry<Holder<MobEffect>, MobEffectInstance> entry = iterator.next();
+                if (entry.getKey() != BFEffects.ACIDIC && !entry.getKey().is(BFEffectTags.ACIDIC_BLACKLIST)) {
+                    int amplifier = Math.min(entry.getValue().getAmplifier() + acidicAmplifier + 1, 255);
+                    newEffects.add(new MobEffectInstance(entry.getKey(), entry.getValue().getDuration(), amplifier, entry.getValue().isAmbient(), entry.getValue().isVisible(), entry.getValue().showIcon()));
+                    if (((LivingEntity)(Object)this) instanceof Player player && !player.level().isClientSide()) {
+                        ((AcidifyEffectTrigger) BFCriteriaTriggers.ACIDIFY_EFFECT.get()).trigger((ServerPlayer) player, acidicAmplifier + 1);
+                    }
+                }
+            }
+
+            for (MobEffectInstance instance : newEffects) {
+                this.removeEffect(instance.getEffect());
+                this.addEffect(instance);
+                this.onEffectUpdated(instance, true, null);
+            }
+        } else if (this.activeEffects.containsKey(BFEffects.ACIDIC) && effectInstance.getEffect() == BFEffects.ACIDIC && this.activeEffects.get(BFEffects.ACIDIC).getAmplifier() < effectInstance.getAmplifier()) {
+            int acidicAmplifier = effectInstance.getAmplifier();
+            Iterator<Map.Entry<Holder<MobEffect>, MobEffectInstance>> iterator = this.activeEffects.entrySet().iterator();
+            ArrayList<MobEffectInstance> newEffects = new ArrayList<>();
+            while (iterator.hasNext()) {
+                Map.Entry<Holder<MobEffect>, MobEffectInstance> entry = iterator.next();
+                if (entry.getKey() != BFEffects.ACIDIC && !entry.getKey().is(BFEffectTags.ACIDIC_BLACKLIST)) {
+                    int amplifier = Math.min((entry.getValue().getAmplifier() - (this.activeEffects.get(BFEffects.ACIDIC).getAmplifier() * 2)) + acidicAmplifier, 255);
+                    newEffects.add(new MobEffectInstance(entry.getKey(), entry.getValue().getDuration(), amplifier, entry.getValue().isAmbient(), entry.getValue().isVisible(), entry.getValue().showIcon()));
+                    if (((LivingEntity)(Object)this) instanceof Player player && !player.level().isClientSide()) {
+                        ((AcidifyEffectTrigger) BFCriteriaTriggers.ACIDIFY_EFFECT.get()).trigger((ServerPlayer) player, acidicAmplifier + 1);
+                    }
+                }
+            }
+            this.activeEffects.remove(BFEffects.ACIDIC);
+            for (MobEffectInstance instance : newEffects) {
+                this.removeEffect(instance.getEffect());
+                this.addEffect(instance);
+                this.onEffectUpdated(instance, true, null);
+            }
+        }
+    }
+
+//    @Inject(method = "onStatusEffectUpgraded", at = @At("HEAD"))
+//    private void bountifulfares_acidicUpgrade(StatusEffectInstance effect, boolean reapplyEffect, @Nullable Entity source, CallbackInfo ci) {
+//        if (reapplyEffect && effect.getEffectType() == BFEffects.ACIDIC && this.activeStatusEffects.get(BFEffects.ACIDIC).getAmplifier() != effect.getAmplifier()) {
+//            int acidicAmplifier = effect.getAmplifier();
+//            Iterator<Map.Entry<RegistryEntry<StatusEffect>, StatusEffectInstance>> iterator = this.activeStatusEffects.entrySet().iterator();
+//            ArrayList<StatusEffectInstance> newEffects = new ArrayList<>();
+//            while (iterator.hasNext()) {
+//                Map.Entry<RegistryEntry<StatusEffect>, StatusEffectInstance> entry = iterator.next();
+//                if (entry.getKey() != BFEffects.ACIDIC && !entry.getKey().isIn(BFEffectTags.ACIDIC_BLACKLIST)) {
+//                    int amplifier = Math.min(entry.getValue().getAmplifier() - this.activeStatusEffects.get(BFEffects.ACIDIC).getAmplifier() + acidicAmplifier, 255);
+//                    newEffects.add(new StatusEffectInstance(entry.getKey(), entry.getValue().getDuration(), amplifier, entry.getValue().isAmbient(), entry.getValue().shouldShowParticles(), entry.getValue().shouldShowIcon()));
+//                }
+//            }
+//
+//            for (StatusEffectInstance instance : newEffects) {
+//                this.removeStatusEffect(instance.getEffectType());
+//                this.addStatusEffect(instance);
+//                this.onStatusEffectUpgraded(instance, true, null);
+//            }
+//        }
+//    }
+
+    @ModifyVariable(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", at = @At("HEAD"), argsOnly = true)
+    private MobEffectInstance bountifulfares$ifAcidicPresent(MobEffectInstance effect) {
+         if (activeEffects.containsKey(BFEffects.ACIDIC)) {
+            if (effect.getEffect() != BFEffects.ACIDIC && !effect.getEffect().is(BFEffectTags.ACIDIC_BLACKLIST)) {
+                int amplifier = Math.min(effect.getAmplifier() + activeEffects.get(BFEffects.ACIDIC).getAmplifier() + 1, 255);
+                if (((LivingEntity)(Object)this) instanceof Player player && !player.level().isClientSide()) {
+                    ((AcidifyEffectTrigger) BFCriteriaTriggers.ACIDIFY_EFFECT.get()).trigger((ServerPlayer) player, activeEffects.get(BFEffects.ACIDIC).getAmplifier() + 1);
+                }
+                return new MobEffectInstance(effect.getEffect(), effect.getDuration(), amplifier, effect.isAmbient(), effect.isVisible(), effect.showIcon());
+            }
+        }
+        return effect;
+    }
+    // 26.3: LivingEntity.onEffectRemoved(MobEffectInstance) became onEffectsRemoved(Collection)
+    // (removeEffect() now calls it with List.of(removed); tickEffects batches expired ones) -
+    // confirmed via javap; like before it runs after the effect has left activeEffects. The old
+    // per-effect body is applied to each removed instance.
+    @Inject(method = "onEffectsRemoved", at = @At("HEAD"))
+    private void bountifulfares$acidicRemove(Collection<MobEffectInstance> removedEffects, CallbackInfo ci) {
+        for (MobEffectInstance effect : List.copyOf(removedEffects)) {
+            bountifulfares$onAcidicRemoved(effect);
+        }
+    }
+
+    @Unique
+    private void bountifulfares$onAcidicRemoved(MobEffectInstance effect) {
+        if (effect.getEffect() == BFEffects.ACIDIC && !this.activeEffects.containsKey(BFEffects.ACIDIC)) {
+            int acidicAmplifier = effect.getAmplifier();
+            Iterator<Map.Entry<Holder<MobEffect>, MobEffectInstance>> iterator = this.activeEffects.entrySet().iterator();
+            ArrayList<MobEffectInstance> newEffects = new ArrayList<>();
+            while (iterator.hasNext()) {
+                Map.Entry<Holder<MobEffect>, MobEffectInstance> entry = iterator.next();
+                if (entry.getKey() != BFEffects.ACIDIC && !entry.getKey().is(BFEffectTags.ACIDIC_BLACKLIST)) {
+                    int amplifier = Math.max(entry.getValue().getAmplifier() - acidicAmplifier - 1, 0);
+                    newEffects.add(new MobEffectInstance(entry.getKey(), entry.getValue().getDuration(), amplifier, entry.getValue().isAmbient(), entry.getValue().isVisible(), entry.getValue().showIcon()));
+                }
+            }
+
+            for (MobEffectInstance instance : newEffects) {
+                this.removeEffect(instance.getEffect());
+                this.addEffect(instance);
+                this.onEffectUpdated(instance, true, null);
+            }
+        }
+    }
+
+    @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", at = @At("HEAD"), cancellable = true)
+    private void bountifulfares$stupor(MobEffectInstance effect, @Nullable Entity source, CallbackInfoReturnable<Boolean> cir) {
+        if (activeEffects.containsKey(BFEffects.STUPOR)) {
+            if (effect.getEffect() != BFEffects.STUPOR && !effect.getEffect().is(BFEffectTags.STUPOR_BLACKLIST)) {
+                cir.setReturnValue(false);
+                cir.cancel();
+            }
+        }
+    }
+}

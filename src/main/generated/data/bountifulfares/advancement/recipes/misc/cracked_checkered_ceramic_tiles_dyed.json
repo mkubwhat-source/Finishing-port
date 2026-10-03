@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cracked_checkered_ceramic_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:cracked_checkered_ceramic_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "bountifulfares:cracked_checkered_ceramic_tiles_dyed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cracked_checkered_ceramic_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bountifulfares:cracked_checkered_ceramic_tiles_dyed"
+    ]
+  }
+}

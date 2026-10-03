@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ceramic_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:ceramic_door"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "bountifulfares:ceramic_door_dyed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ceramic_door"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bountifulfares:ceramic_door_dyed"
+    ]
+  }
+}

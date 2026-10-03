@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chocolate_egg": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:chocolate_egg"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:crafting/chocolate_from_egg"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chocolate_egg"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:crafting/chocolate_from_egg"
+    ]
+  }
+}

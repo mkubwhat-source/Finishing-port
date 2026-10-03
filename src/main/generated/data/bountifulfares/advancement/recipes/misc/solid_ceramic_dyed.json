@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_solid_ceramic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:solid_ceramic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "bountifulfares:solid_ceramic_dyed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_solid_ceramic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bountifulfares:solid_ceramic_dyed"
+    ]
+  }
+}

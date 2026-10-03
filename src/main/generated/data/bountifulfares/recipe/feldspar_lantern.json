@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": "bountifulfares:feldspar",
+    "I": "minecraft:iron_nugget",
+    "T": "minecraft:torch"
+  },
+  "pattern": [
+    "III",
+    "FTF",
+    "III"
+  ],
+  "result": {
+    "id": "bountifulfares:feldspar_lantern"
+  }
+}

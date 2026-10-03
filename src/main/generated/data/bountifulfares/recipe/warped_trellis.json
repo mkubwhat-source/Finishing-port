@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "trellis",
+  "key": {
+    "#": "minecraft:stick",
+    "P": "minecraft:warped_planks"
+  },
+  "pattern": [
+    "# #",
+    " P ",
+    "# #"
+  ],
+  "result": {
+    "id": "bountifulfares:warped_trellis"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "#c:flour",
+    "#c:flour",
+    "flavored:chocolate",
+    "flavored:butter",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:cookie_dough"
+  }
+}

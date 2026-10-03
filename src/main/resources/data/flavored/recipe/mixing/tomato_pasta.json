@@ -1,0 +1,14 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "flavored:red_tomato",
+    "flavored:red_tomato",
+    "flavored:garlic",
+    "flavored:pasta"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:tomato_pasta"
+  },
+  "vessel": "minecraft:bowl"
+}

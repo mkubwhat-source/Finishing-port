@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:checkered_ceramic_mosaic_stairs"
+  ],
+  "result": {
+    "id": "bountifulfares:ceramic_mosaic_stairs"
+  }
+}

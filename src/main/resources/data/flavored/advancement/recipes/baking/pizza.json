@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_soft_cheese_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:soft_cheese_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:baking/pizza"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_soft_cheese_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:baking/pizza"
+    ]
+  }
+}

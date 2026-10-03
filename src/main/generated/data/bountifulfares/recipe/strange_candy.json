@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:lapisberries",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "bountifulfares:strange_candy"
+  }
+}

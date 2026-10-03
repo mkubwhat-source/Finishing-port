@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:obtain_ceramic_clay",
+  "criteria": {
+    "obtain_fermentation_vessel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:fermentation_vessel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_fermentation_vessel.description"
+    },
+    "icon": {
+      "id": "bountifulfares:fermentation_vessel"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_fermentation_vessel"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_fermentation_vessel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "flavored:green_tomato",
+    "flavored:yellow_tomato",
+    "flavored:red_tomato"
+  ]
+}

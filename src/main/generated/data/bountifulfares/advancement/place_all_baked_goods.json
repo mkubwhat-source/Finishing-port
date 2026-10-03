@@ -1,0 +1,188 @@
+{
+  "parent": "bountifulfares:obtain_flour",
+  "criteria": {
+    "apple_pie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:apple_pie"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "artisan_bread": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:artisan_bread"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "artisan_cookie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:artisan_cookies"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "cake": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "minecraft:cake"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "cocoa_cake": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:cocoa_cake"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "elderberry_tart": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:elderberry_tart"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "glow_berry_tart": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:glow_berry_tart"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "hoary_pie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:hoary_pie"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "lapisberry_tart": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:lapisberry_tart"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "lemon_pie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:lemon_pie"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "orange_pie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:orange_pie"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "passion_fruit_tart": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:passion_fruit_tart"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "plum_pie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:plum_pie"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "sweet_berry_tart": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:sweet_berry_tart"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.place_all_baked_goods.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "bountifulfares:artisan_bread"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.place_all_baked_goods"
+    }
+  },
+  "requirements": [
+    [
+      "cake"
+    ],
+    [
+      "cocoa_cake"
+    ],
+    [
+      "artisan_bread"
+    ],
+    [
+      "artisan_cookie"
+    ],
+    [
+      "apple_pie"
+    ],
+    [
+      "orange_pie"
+    ],
+    [
+      "lemon_pie"
+    ],
+    [
+      "plum_pie"
+    ],
+    [
+      "hoary_pie"
+    ],
+    [
+      "passion_fruit_tart"
+    ],
+    [
+      "elderberry_tart"
+    ],
+    [
+      "glow_berry_tart"
+    ],
+    [
+      "sweet_berry_tart"
+    ],
+    [
+      "lapisberry_tart"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "delicate_dyes:wasabi_jack_o_straw",
+            "state": {
+              "half": "lower"
+            }
+          },
+          "name": "delicate_dyes:wasabi_jack_o_straw"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

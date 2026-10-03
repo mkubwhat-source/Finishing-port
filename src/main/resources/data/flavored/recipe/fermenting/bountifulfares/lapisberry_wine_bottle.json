@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "bountifulfares:lapisberries",
+  "fermenter": "minecraft:glass_bottle",
+  "particle_color": "626ae2",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:lapisberry_wine_bottle"
+  },
+  "fermenter_required": true
+}

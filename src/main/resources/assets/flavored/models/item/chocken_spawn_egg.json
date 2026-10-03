@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "flavored:item/chocken_spawn_egg_base",
+    "layer1": "flavored:item/chocken_spawn_egg_overlay"
+  }
+}

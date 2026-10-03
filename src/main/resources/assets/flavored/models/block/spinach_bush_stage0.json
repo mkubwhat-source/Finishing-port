@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "flavored:block/spinach_bush_stage0"
+  }
+}

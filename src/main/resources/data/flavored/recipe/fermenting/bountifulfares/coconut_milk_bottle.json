@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "#c:coconut_halves",
+  "fermenter": "minecraft:glass_bottle",
+  "particle_color": "d1c6be",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:coconut_milk_bottle"
+  },
+  "fermenter_required": true
+}

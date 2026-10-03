@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/chest",
+  "textures": {
+    "particle": "bountifulfares:block/ceramic_tiles"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_hanging_sign_rot_0",
+  "textures": {
+    "all": "bountifulfares:block/hoary_hanging_sign",
+    "particle": "bountifulfares:block/stripped_hoary_log"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "bountifulfares:bountiful_fares",
+  "criteria": {
+    "make_first_food": {
+      "conditions": {
+        "item": {
+          "items": "#bountifulfares:meals"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.make_first_food.description"
+    },
+    "icon": {
+      "id": "bountifulfares:leek_stew"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.make_first_food"
+    }
+  },
+  "requirements": [
+    [
+      "make_first_food"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

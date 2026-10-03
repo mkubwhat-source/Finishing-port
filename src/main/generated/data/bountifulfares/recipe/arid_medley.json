@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:cactus",
+    "minecraft:potato",
+    "#c:foods/corn",
+    "minecraft:bread"
+  ],
+  "result": {
+    "id": "bountifulfares:arid_medley"
+  }
+}

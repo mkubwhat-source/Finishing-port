@@ -1,0 +1,6 @@
+{
+  "parent": "flavored:item/handheld_knife",
+  "textures": {
+    "layer0": "flavored:item/knife"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "bountifulfares:violet_bellflower",
+    "H": "minecraft:honeycomb",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "S",
+    "H",
+    "#"
+  ],
+  "result": {
+    "id": "bountifulfares:bellflower_candle"
+  }
+}

@@ -1,0 +1,8 @@
+def mirror = "https://maven-central.storage-download.googleapis.com/maven2/"
+settingsEvaluated { s ->
+  s.pluginManagement.repositories { maven { url mirror } }
+  s.dependencyResolutionManagement.repositories { maven { url mirror } }
+}
+allprojects {
+  repositories { maven { url mirror } }
+}

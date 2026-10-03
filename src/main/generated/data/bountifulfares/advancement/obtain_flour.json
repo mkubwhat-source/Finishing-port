@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:place_gristmill",
+  "criteria": {
+    "obtain_flour": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:flour"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_flour.description"
+    },
+    "icon": {
+      "id": "bountifulfares:flour"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_flour"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_flour"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_dye",
+  "dye": "#minecraft:dyes",
+  "group": "dyed_ceramic",
+  "result": {
+    "id": "bountifulfares:checkered_ceramic_mosaic_slab"
+  },
+  "target": "bountifulfares:checkered_ceramic_mosaic_slab"
+}

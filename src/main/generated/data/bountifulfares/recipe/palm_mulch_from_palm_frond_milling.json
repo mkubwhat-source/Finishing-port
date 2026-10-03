@@ -1,0 +1,8 @@
+{
+  "type": "bountifulfares:milling",
+  "ingredient": "bountifulfares:palm_frond",
+  "result": {
+    "id": "bountifulfares:palm_mulch"
+  },
+  "result_count": 1
+}

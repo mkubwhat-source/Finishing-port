@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "C": "#c:coconut_halves",
+    "#": "flavored:batter"
+  },
+  "pattern": [
+    "CCC",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:coconut_cake"
+  }
+}

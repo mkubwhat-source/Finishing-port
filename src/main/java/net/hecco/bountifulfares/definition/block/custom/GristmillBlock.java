@@ -1,0 +1,127 @@
+package net.hecco.bountifulfares.definition.block.custom;
+
+import com.mojang.serialization.MapCodec;
+import net.hecco.bountifulfares.definition.block.entity.GristmillBlockEntity;
+import net.hecco.bountifulfares.registry.content.BFBlockEntities;
+import net.hecco.bountifulfares.registry.content.BFSounds;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
+
+public class GristmillBlock extends BaseEntityBlock implements EntityBlock {
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty MILLING = BooleanProperty.create("milling");
+    public GristmillBlock(Properties settings) {
+        super(settings);
+        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(MILLING, false));
+    }
+
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, MILLING);
+    }
+
+    public BooleanProperty getMillingState() {
+        return MILLING;
+    }
+
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new GristmillBlockEntity(pos, state);
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
+
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
+    }
+
+    // BlockBehaviour.onRemove(...) is gone in 26.3 (confirmed via javap - see the identical note
+    // on FDCabinetBlock/CeramicChestBlock). GristmillBlockEntity implements WorldlyContainer
+    // (a Container), so the inherited BlockEntity.preRemoveSideEffects default already drops its
+    // contents automatically; the neighbor/comparator update is now the renamed
+    // affectNeighborsAfterRemoval hook.
+    @Override
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean movedByPiston) {
+        Containers.updateNeighboursAfterDestroy(state, world, pos);
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (!world.isClientSide()) {
+            MenuProvider screenHandlerFactory = (MenuProvider) world.getBlockEntity(pos);
+            if (screenHandlerFactory != null) {
+                player.openMenu(screenHandlerFactory);
+            }
+        }
+
+        return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
+        if (state.getValue(MILLING)) {
+            double d = (double)pos.getX() + 0.5;
+            double e = pos.getY();
+            double f = (double)pos.getZ() + 0.5;
+            if (random.nextDouble() < 0.1) {
+                world.playLocalSound(d, e, f, BFSounds.GRISTMILL_GRIND.get(), SoundSource.BLOCKS, 0.5F, 0.5F + random.nextFloat()/2, true);
+            }
+        }
+    }
+
+    protected boolean hasAnalogOutputSignal(BlockState state) {
+        return true;
+    }
+
+    protected int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos, Direction direction) {
+        return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(level.getBlockEntity(pos));
+    }
+
+    @Nullable
+    protected static <T extends BlockEntity> BlockEntityTicker<T> validateTicker(Level world, BlockEntityType<T> givenType) {
+        return world.isClientSide() ? null : createTickerHelper(givenType, BFBlockEntities.GRISTMILL_BLOCK_ENTITY.get(), (level, pos, state, blockEntity) -> blockEntity.tick(level, pos, state, blockEntity));
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type) {
+        return validateTicker(world, type);
+    }
+}

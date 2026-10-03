@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:leek",
+    "bountifulfares:leek",
+    "bountifulfares:leek",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:leek_stew"
+  }
+}

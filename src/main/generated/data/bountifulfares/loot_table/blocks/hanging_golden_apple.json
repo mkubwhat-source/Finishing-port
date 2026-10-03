@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:hanging_golden_apple",
+        "state": {
+          "age": "4"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "minecraft:golden_apple"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:stone_pickaxe",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:rotten_flesh",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:stone_stew"
+  }
+}

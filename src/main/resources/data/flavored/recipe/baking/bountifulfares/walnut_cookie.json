@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 1.0,
+  "key": {
+    "W": "#c:foods/walnuts",
+    "#": "flavored:dough"
+  },
+  "pattern": [
+    " W ",
+    " # "
+  ],
+  "result": {
+    "count": 8,
+    "id": "bountifulfares:walnut_cookie"
+  }
+}

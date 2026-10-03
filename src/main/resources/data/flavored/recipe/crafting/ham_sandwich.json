@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bread",
+    "flavored:spinach",
+    "minecraft:honeycomb",
+    "flavored:cooked_pork_jowl",
+    "flavored:cooked_pork_jowl"
+  ],
+  "result": {
+    "count": 2,
+    "id": "flavored:ham_sandwich"
+  }
+}

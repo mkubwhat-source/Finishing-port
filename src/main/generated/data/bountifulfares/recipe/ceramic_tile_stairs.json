@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ceramic_tiles_stairs",
+  "key": {
+    "#": "bountifulfares:ceramic_tiles"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bountifulfares:ceramic_tile_stairs"
+  }
+}

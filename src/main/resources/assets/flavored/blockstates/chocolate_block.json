@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "flavored:block/chocolate_block"
+    }
+  }
+}

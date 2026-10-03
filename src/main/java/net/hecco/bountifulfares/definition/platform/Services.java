@@ -1,0 +1,29 @@
+package net.hecco.bountifulfares.definition.platform;
+
+import com.google.common.base.Suppliers;
+import net.hecco.bountifulfares.BountifulFares;
+import net.hecco.bountifulfares.definition.platform.services.IPlatformHelper;
+
+import java.lang.ClassLoader;
+import java.util.ServiceLoader;
+import java.util.function.Supplier;
+
+public class Services {
+
+    public static final Supplier<IPlatformHelper> PLATFORM = Suppliers.memoize(() -> load(IPlatformHelper.class));
+    private static ClassLoader classLoader;
+
+    public static void init(final ClassLoader classLoader) {
+        Services.classLoader = classLoader;
+    }
+
+    public static <T> T load(final Class<T> clazz) {
+        final ClassLoader cl = classLoader != null ? classLoader : clazz.getClassLoader();
+        ServiceLoader<T> loader = ServiceLoader.load(clazz, cl);
+        for (T service : loader) {
+            System.out.println("Loaded service: " + service.getClass().getName());
+            return service;
+        }
+        throw new NullPointerException("Failed to load service for " + clazz.getName());
+    }
+}

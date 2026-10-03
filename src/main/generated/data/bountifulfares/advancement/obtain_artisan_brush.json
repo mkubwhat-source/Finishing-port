@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:obtain_ceramic_clay",
+  "criteria": {
+    "obtain_artisan_brush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:artisan_brush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_artisan_brush.description"
+    },
+    "icon": {
+      "id": "bountifulfares:artisan_brush"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_artisan_brush"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_artisan_brush"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

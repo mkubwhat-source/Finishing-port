@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "flavored:block/pudding"
+    },
+    "bites=1": {
+      "model": "flavored:block/pudding_slice1"
+    },
+    "bites=2": {
+      "model": "flavored:block/pudding_slice2"
+    },
+    "bites=3": {
+      "model": "flavored:block/pudding_slice3"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "flavored:spinach"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:spinach_seeds"
+  }
+}

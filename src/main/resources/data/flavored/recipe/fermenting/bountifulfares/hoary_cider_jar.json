@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "bountifulfares:hoary_apple",
+  "fermenter": "bountifulfares:jar",
+  "particle_color": "efc9b2",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:hoary_cider_jar"
+  },
+  "fermenter_required": true
+}

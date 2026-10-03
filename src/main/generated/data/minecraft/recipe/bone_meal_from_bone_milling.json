@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:milling",
+  "ingredient": "minecraft:bone",
+  "result": {
+    "count": 4,
+    "id": "minecraft:bone_meal"
+  },
+  "result_count": 4
+}

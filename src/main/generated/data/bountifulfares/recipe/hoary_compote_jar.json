@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:hoary_apple",
+    "bountifulfares:hoary_apple",
+    "bountifulfares:citrus_essence",
+    "bountifulfares:jar"
+  ],
+  "result": {
+    "id": "bountifulfares:hoary_compote_jar"
+  }
+}

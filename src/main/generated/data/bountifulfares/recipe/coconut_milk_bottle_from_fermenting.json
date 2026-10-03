@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "#c:coconut_halves",
+  "particle_color": 13747902,
+  "result": {
+    "id": "bountifulfares:coconut_milk_bottle"
+  },
+  "result_count": 1
+}

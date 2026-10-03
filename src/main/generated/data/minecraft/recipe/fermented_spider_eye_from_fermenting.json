@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "minecraft:spider_eye",
+  "particle_color": 10250865,
+  "result": {
+    "id": "minecraft:fermented_spider_eye"
+  },
+  "result_count": 1
+}

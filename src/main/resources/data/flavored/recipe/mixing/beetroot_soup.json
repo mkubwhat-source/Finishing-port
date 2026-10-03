@@ -1,0 +1,14 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "minecraft:beetroot",
+    "minecraft:beetroot",
+    "minecraft:beetroot"
+  ],
+  "liquid": "minecraft:water_bucket",
+  "result": {
+    "count": 1,
+    "id": "minecraft:beetroot_soup"
+  },
+  "vessel": "minecraft:bowl"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bountifulfares:ceramic_mosaic",
+  "result": {
+    "id": "bountifulfares:ceramic_mosaic_stairs"
+  }
+}

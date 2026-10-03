@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "flavored:block/chocolate_tile_slab"
+    },
+    "type=double": {
+      "model": "flavored:block/chocolate_tiles"
+    },
+    "type=top": {
+      "model": "flavored:block/chocolate_tile_slab_top"
+    }
+  }
+}

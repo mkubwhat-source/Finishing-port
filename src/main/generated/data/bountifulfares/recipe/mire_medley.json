@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:foods/elderberries",
+    "#c:foods/corn",
+    "bountifulfares:chamomile_flowers",
+    "minecraft:carrot"
+  ],
+  "result": {
+    "id": "bountifulfares:mire_medley"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "1"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "2"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 2
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "3"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 3
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "4"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 4
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "5"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 5
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "6"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 6
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "7"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 7
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "bountifulfares:palm_mulch",
+        "state": {
+          "layers": "8"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:explosion_decay"
+          },
+          "name": "bountifulfares:palm_mulch"
+        }
+      ],
+      "rolls": 8
+    }
+  ]
+}

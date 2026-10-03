@@ -1,0 +1,15 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "flavored:dried_pepper",
+    "flavored:red_tomato",
+    "flavored:red_tomato",
+    "flavored:garlic",
+    "minecraft:egg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:shakshouka"
+  },
+  "vessel": "minecraft:bowl"
+}

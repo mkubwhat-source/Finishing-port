@@ -1,0 +1,33 @@
+{
+  "parent": "bountifulfares:pick_fruit",
+  "criteria": {
+    "obtain_lemon_block": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "bountifulfares:lemon_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.how_easy.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "id": "bountifulfares:lemon"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.how_easy"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_lemon_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

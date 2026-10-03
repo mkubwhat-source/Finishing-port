@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "flavored:wort",
+  "particle_color": 13213518,
+  "result": {
+    "id": "flavored:beer"
+  },
+  "result_count": 1
+}

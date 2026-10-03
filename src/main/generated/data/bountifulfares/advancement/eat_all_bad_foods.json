@@ -1,0 +1,120 @@
+{
+  "parent": "bountifulfares:make_first_food",
+  "criteria": {
+    "chicken": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:chicken"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "elderberry_wine_bottle": {
+      "conditions": {
+        "item": {
+          "items": "bountifulfares:elderberry_wine_bottle"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "foul_flesh": {
+      "conditions": {
+        "item": {
+          "items": "bountifulfares:foul_flesh"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "lapisberry_wine_bottle": {
+      "conditions": {
+        "item": {
+          "items": "bountifulfares:lapisberry_wine_bottle"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mead_bottle": {
+      "conditions": {
+        "item": {
+          "items": "bountifulfares:mead_bottle"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "poisonous_potato": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:poisonous_potato"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "pufferfish": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:pufferfish"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "rotten_flesh": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:rotten_flesh"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "spider_eye": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:spider_eye"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.eat_all_bad_foods.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:chicken"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.eat_all_bad_foods"
+    }
+  },
+  "requirements": [
+    [
+      "pufferfish"
+    ],
+    [
+      "chicken"
+    ],
+    [
+      "rotten_flesh"
+    ],
+    [
+      "spider_eye"
+    ],
+    [
+      "poisonous_potato"
+    ],
+    [
+      "elderberry_wine_bottle"
+    ],
+    [
+      "lapisberry_wine_bottle"
+    ],
+    [
+      "mead_bottle"
+    ],
+    [
+      "foul_flesh"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

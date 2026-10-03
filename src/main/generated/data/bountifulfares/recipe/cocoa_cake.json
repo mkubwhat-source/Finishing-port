@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "minecraft:cocoa_beans",
+    "E": "minecraft:egg",
+    "F": "#c:flour",
+    "M": "#c:foods/milk"
+  },
+  "pattern": [
+    "MMM",
+    "CEC",
+    "FFF"
+  ],
+  "result": {
+    "id": "bountifulfares:cocoa_cake"
+  }
+}

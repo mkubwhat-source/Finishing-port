@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:kelp",
+    "minecraft:kelp",
+    "bountifulfares:leek",
+    "bountifulfares:citrus_essence",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:sea_salad"
+  }
+}

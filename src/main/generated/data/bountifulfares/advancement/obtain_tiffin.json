@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:bountiful_fares",
+  "criteria": {
+    "obtain_tiffin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#bountifulfares:tiffins"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_tiffin.description"
+    },
+    "icon": {
+      "id": "bountifulfares:shulker_tiffin"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_tiffin"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_tiffin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

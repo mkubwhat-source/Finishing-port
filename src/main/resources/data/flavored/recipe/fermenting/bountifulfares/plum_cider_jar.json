@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "#c:foods/plums",
+  "fermenter": "bountifulfares:jar",
+  "particle_color": "ddbfc2",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:plum_cider_jar"
+  },
+  "fermenter_required": true
+}

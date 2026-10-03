@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mutton_shank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:mutton_shank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:baking/ossobuco"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mutton_shank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:baking/ossobuco"
+    ]
+  }
+}

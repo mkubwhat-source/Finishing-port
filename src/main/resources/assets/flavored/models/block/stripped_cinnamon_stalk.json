@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "flavored:block/stripped_cinnamon_stalk_top",
+    "side": "flavored:block/stripped_cinnamon_stalk_side"
+  }
+}

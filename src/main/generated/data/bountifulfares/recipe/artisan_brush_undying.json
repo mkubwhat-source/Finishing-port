@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:artisan_brush"
+  ],
+  "result": {
+    "id": "bountifulfares:artisan_brush"
+  }
+}

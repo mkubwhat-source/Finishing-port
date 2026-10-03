@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dungeonsdelight:wormwood_trellis"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

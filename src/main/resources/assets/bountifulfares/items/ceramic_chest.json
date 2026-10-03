@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "bountifulfares:item/ceramic_chest",
+    "model": {
+      "type": "bountifulfares:ceramic_chest"
+    }
+  }
+}

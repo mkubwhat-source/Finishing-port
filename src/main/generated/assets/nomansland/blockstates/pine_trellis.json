@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "nomansland:block/pine_trellis",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nomansland:block/pine_trellis"
+    },
+    "facing=south": {
+      "model": "nomansland:block/pine_trellis",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nomansland:block/pine_trellis",
+      "y": 270
+    }
+  }
+}

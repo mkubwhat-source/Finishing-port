@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:foods/passion_fruit",
+    "#c:foods/passion_fruit",
+    "minecraft:cooked_salmon",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:passion_glazed_salmon"
+  }
+}

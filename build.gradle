@@ -1,0 +1,140 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+}
+
+version = project.version
+group = project.group
+
+repositories {
+    // exclusiveContent: loom registers Maven Central ahead of these, and this environment's
+    // Maven Central mirror answers 429 for coordinates it doesn't have (e.g. curse.maven,
+    // com.terraformersmc) - which fails resolution outright instead of falling through. Pinning
+    // each group to its real repository avoids ever asking Central for them.
+    exclusiveContent {
+        forRepository { maven { url = "https://cursemaven.com" } }
+        filter { includeGroup("curse.maven") }
+    }
+    exclusiveContent {
+        forRepository { maven { name = "Terraformers"; url = "https://maven.terraformersmc.com/" } }
+        filter { includeGroupAndSubgroups("com.terraformersmc") }
+    }
+    maven { url "https://maven.shedaniel.me/" }
+    // cloth-config's own maven.shedaniel.me hasn't published a 26.3 build (checked directly -
+    // maven-metadata.xml there still tops out at a pre-26.3 version); Modrinth's maven mirror
+    // does have one, under Modrinth's own coordinates.
+    exclusiveContent {
+        forRepository { maven { name = "Modrinth"; url = "https://api.modrinth.com/maven" } }
+        filter { includeGroup("maven.modrinth") }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(java_version.toInteger())
+    }
+    withSourcesJar()
+}
+
+loom {
+    // Minecraft's client and server jars are separate, un-merged artifacts as of 26.3 (see the
+    // gradle.properties comment on loom_version) - Loom now requires client-only code to live
+    // in its own sourceSet with its own classpath, following FabricMC/fabric-example-mod's own
+    // "26.3" branch.
+    splitEnvironmentSourceSets()
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+    accessWidenerPath.set(file("src/main/resources/${mod_id}.accesswidener"))
+    // No refmap: 26.3 ships unobfuscated (see the mappings note in dependencies below), so mixin
+    // targets are already the runtime names and there is nothing for a refmap to remap. Loom
+    // 1.17 no longer runs the mixin annotation processor by default for the same reason; the
+    // "refmap" entries were removed from both *.mixins.json files accordingly.
+    runs {
+        client {
+            client()
+            ideConfigGenerated(true)
+            runDir('runs/client')
+        }
+        server {
+            server()
+            ideConfigGenerated(true)
+            runDir('runs/server')
+        }
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated/")}"
+            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+            runDir "build/datagen"
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir file('src/main/generated/') }
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    // No `mappings` block: Minecraft stopped shipping obfuscated client/server jars as of the
+    // 26.x line (confirmed directly against piston-meta - the 26.3 version JSON has no
+    // client_mappings/server_mappings download entries at all, and Fabric's own intermediary
+    // for 26.3 is the "0.0.0" no-op stub). The jar already uses real Mojang names, so there's
+    // nothing to map. Matches FabricMC/fabric-example-mod's own "26.3" branch, which declares
+    // no mappings dependency either.
+
+    implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+
+    // No more "mod*" configuration family either - those existed purely to let Loom remap a
+    // mod dependency's references between intermediary and named; with no obfuscation there's
+    // nothing to remap, so every dependency (this mod's own, or third-party) just uses the
+    // plain Gradle configurations now.
+
+    // APPLESKIN
+    compileOnly("curse.maven:appleskin-248787:5864741")
+
+    // JEI - updated to the 31.5.0.23 build for Fabric 26.3 (the previous 6075246 curse.maven
+    // file was a pre-26.3 build compiled against intermediary/yarn mappings, causing widespread
+    // class_XXXX-typed method signature mismatches against this project's Mojang-mapped API).
+    // Fetched via Modrinth's maven repo (already configured above for cloth-config) rather than
+    // curse.maven, since this environment's network intermittently 429s requests for
+    // newly-referenced curse.maven coordinates routed through the Maven Central mirror - the
+    // Modrinth API/CDN is a separate host and unaffected. Version ID (not version number) is
+    // used because Modrinth published both a Fabric and a NeoForge build under the identical
+    // version number "31.5.0.23" for this release - the id disambiguates.
+    compileOnlyApi("maven.modrinth:jei:e9fIxppx")
+    // Dev runs only (not published): lets runClient exercise the JEI plugin.
+    localRuntime("maven.modrinth:jei:e9fIxppx")
+
+    // EMI - no official 26.3 build exists. Compiled against the unofficial 26.3 port
+    // (github.com/link-fgfgui/emi, branch 26.3, commit 2fb0d30), built locally into libs/.
+    // compileOnly: EMI stays an optional dependency, exactly like JEI; players install it themselves.
+    compileOnly files("libs/emi-1.1.24-2fb0d30+26.3+fabric.jar")
+    localRuntime files("libs/emi-1.1.24-2fb0d30+26.3+fabric.jar")
+
+    api "maven.modrinth:cloth-config:${cloth_config_version}"
+    implementation("com.terraformersmc:modmenu:${modmenu_version}")
+}
+
+// The multiloader buildSrc's processResources (which this single-loader build replaced) expanded
+// ${version}/${mod_id}/... placeholders in fabric.mod.json - restored here for the ones still used.
+processResources {
+    var expandProps = [
+            'version': project.version,
+            'mod_id' : mod_id,
+    ]
+    inputs.properties(expandProps)
+    filesMatching(['fabric.mod.json', 'pack.mcmeta']) {
+        expand expandProps
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release.set(java_version.toInteger())
+    it.options.compilerArgs.add("-Xmaxerrs")
+    it.options.compilerArgs.add("10000")
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "bountifulfares:bountiful_fares",
+  "criteria": {
+    "plant_on_trellis": {
+      "trigger": "bountifulfares:plant_on_trellis"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.plant_on_trellis.description"
+    },
+    "icon": {
+      "id": "bountifulfares:trellis"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.plant_on_trellis"
+    }
+  },
+  "requirements": [
+    [
+      "plant_on_trellis"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

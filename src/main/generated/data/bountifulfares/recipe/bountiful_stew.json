@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:cooked_porkchop",
+    "minecraft:carrot",
+    "#c:foods/corn",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "bountifulfares:bountiful_stew"
+  }
+}

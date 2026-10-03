@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "obtain_oven": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:oven"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.flavored.husbandry.obtain_oven.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "flavored:oven"
+    },
+    "title": {
+      "translate": "advancements.flavored.husbandry.obtain_oven.title"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_oven"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

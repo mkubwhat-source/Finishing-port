@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "flavored:pepper",
+    "flavored:dried_pepper",
+    "flavored:shakshouka",
+    "flavored:hot_sauce"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "#": "flavored:batter"
+  },
+  "pattern": [
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cake"
+  }
+}

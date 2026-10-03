@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple",
+    "appledog:dogapple"
+  ],
+  "result": {
+    "id": "appledog:appledog_block"
+  }
+}

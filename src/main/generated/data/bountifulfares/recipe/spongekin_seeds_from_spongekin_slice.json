@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:spongekin_slice"
+  ],
+  "result": {
+    "id": "bountifulfares:spongekin_seeds"
+  }
+}

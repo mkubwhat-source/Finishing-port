@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_apple_juice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:apple_juice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:fermenting/cider"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_apple_juice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:fermenting/cider"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:flour",
+    "#c:flour",
+    "#c:flour",
+    "minecraft:egg"
+  ],
+  "result": {
+    "id": "bountifulfares:artisan_bread"
+  }
+}

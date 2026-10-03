@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "walnut_mulch",
+  "ingredients": [
+    "bountifulfares:walnut_mulch_block"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bountifulfares:walnut_mulch"
+  }
+}

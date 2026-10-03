@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "alabaster.hearthandharvest.common.fd.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CuttingBoardDispenserMixin",
+    "FoodDataAccessor",
+    "NourishmentAlwaysEatMixin",
+    "RecipeBookSettingsMixin",
+    "RecipeBookSettingsTypeSettingsInvoker",
+    "RecipeBookTypeMixin",
+    "RecipeManagerMixin",
+    "ServerRecipeBookMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

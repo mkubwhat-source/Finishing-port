@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "nomansland:maple_syrup_bottle",
+  "particle_color": 13529674,
+  "result": {
+    "id": "nomansland:maple_mead_bottle"
+  },
+  "result_count": 1
+}

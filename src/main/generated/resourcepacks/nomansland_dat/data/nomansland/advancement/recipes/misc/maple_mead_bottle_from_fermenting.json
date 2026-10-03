@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_maple_syrup": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nomansland:maple_syrup_bottle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "nomansland:maple_mead_bottle_from_fermenting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_maple_syrup"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomansland:maple_mead_bottle_from_fermenting"
+    ]
+  }
+}

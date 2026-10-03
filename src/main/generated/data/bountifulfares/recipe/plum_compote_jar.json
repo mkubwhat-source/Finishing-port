@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:foods/plums",
+    "#c:foods/plums",
+    "bountifulfares:citrus_essence",
+    "bountifulfares:jar"
+  ],
+  "result": {
+    "id": "bountifulfares:plum_compote_jar"
+  }
+}

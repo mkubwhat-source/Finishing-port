@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:milling",
+  "ingredient": "minecraft:deepslate_copper_ore",
+  "result": {
+    "count": 5,
+    "id": "minecraft:raw_copper"
+  },
+  "result_count": 5
+}

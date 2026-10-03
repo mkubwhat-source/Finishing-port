@@ -1,0 +1,12 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "ingredient": "minecraft:honey_bottle",
+  "fermenter": "minecraft:glass_bottle",
+  "particle_color": "fff3c8",
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:mead_bottle"
+  },
+  "fermenter_required": true
+}

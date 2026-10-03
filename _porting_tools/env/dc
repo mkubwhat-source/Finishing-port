@@ -1,0 +1,10 @@
+#!/bin/bash
+R=/tmp/claude-0/-home-claude/8d4a32d5-4717-506f-9dfd-502b4f3db363/scratchpad/ref
+C=$1; out=$R/dc/$C.java
+if [ ! -f $out ]; then
+  t=$(mktemp -d); mkdir -p $t/in/$(dirname $C)
+  cp $R/cls/$C.class $R/cls/$C\$*.class $t/in/$(dirname $C)/ 2>/dev/null
+  /opt/jdk25/bin/java -jar $R/vf.jar -log=ERROR -e=$R/common.jar -e=$R/client.jar $t/in $t/out >/dev/null 2>&1
+  mkdir -p $(dirname $out); cp $t/out/$C.java $out; rm -rf $t
+fi
+cat $out

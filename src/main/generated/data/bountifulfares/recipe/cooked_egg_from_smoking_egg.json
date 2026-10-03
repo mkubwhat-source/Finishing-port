@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 50,
+  "experience": 0.1,
+  "group": "cooked_egg",
+  "ingredient": "minecraft:egg",
+  "result": {
+    "id": "bountifulfares:cooked_egg"
+  }
+}

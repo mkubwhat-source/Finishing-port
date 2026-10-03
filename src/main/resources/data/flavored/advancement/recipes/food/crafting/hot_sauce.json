@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:dried_pepper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:crafting/hot_sauce"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_pepper"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:crafting/hot_sauce"
+    ]
+  }
+}

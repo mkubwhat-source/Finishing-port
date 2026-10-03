@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "flavored:sweet_berry_juice",
+  "particle_color": 12399434,
+  "result": {
+    "id": "flavored:sweet_berry_wine"
+  },
+  "result_count": 1
+}

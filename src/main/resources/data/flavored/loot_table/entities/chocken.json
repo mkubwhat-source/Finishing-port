@@ -1,0 +1,256 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:feather",
+          "modifier": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 2
+              },
+              "type": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              },
+              "type": "minecraft:enchanted_count_increase"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chicken",
+          "condition": {
+            "term": {
+              "entity": "direct_attacker",
+              "predicate": {
+                "equipment": {
+                  "mainhand": {
+                    "items": [
+                      "flavored:knife"
+                    ]
+                  }
+                }
+              },
+              "type": "minecraft:entity_properties"
+            },
+            "type": "minecraft:inverted"
+          },
+          "modifier": [
+            {
+              "type": "minecraft:furnace_smelt",
+              "condition": {
+                "terms": [
+                  {
+                    "entity": "this",
+                    "predicate": {
+                      "flags": {
+                        "is_on_fire": true
+                      }
+                    },
+                    "type": "minecraft:entity_properties"
+                  },
+                  {
+                    "entity": "direct_attacker",
+                    "predicate": {
+                      "equipment": {
+                        "mainhand": {
+                          "predicates": {
+                            "minecraft:enchantments": [
+                              {
+                                "enchantments": "#minecraft:smelts_loot"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "type": "minecraft:entity_properties"
+                  }
+                ],
+                "type": "minecraft:any_of"
+              }
+            },
+            {
+              "enchantment": "minecraft:looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              },
+              "type": "minecraft:enchanted_count_increase"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "flavored:chicken_drumstick",
+          "condition": {
+            "type": "minecraft:all_of",
+            "terms": [
+              {
+                "entity": "direct_attacker",
+                "predicate": {
+                  "equipment": {
+                    "mainhand": {
+                      "items": [
+                        "flavored:knife"
+                      ]
+                    }
+                  }
+                },
+                "type": "minecraft:entity_properties"
+              },
+              {
+                "term": {
+                  "terms": [
+                    {
+                      "entity": "this",
+                      "predicate": {
+                        "flags": {
+                          "is_on_fire": true
+                        }
+                      },
+                      "type": "minecraft:entity_properties"
+                    },
+                    {
+                      "entity": "direct_attacker",
+                      "predicate": {
+                        "equipment": {
+                          "mainhand": {
+                            "predicates": {
+                              "minecraft:enchantments": [
+                                {
+                                  "enchantments": "#minecraft:smelts_loot"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "type": "minecraft:entity_properties"
+                    }
+                  ],
+                  "type": "minecraft:any_of"
+                },
+                "type": "minecraft:inverted"
+              }
+            ]
+          },
+          "modifier": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              },
+              "type": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              },
+              "type": "minecraft:enchanted_count_increase"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "flavored:cooked_chicken_drumstick",
+          "condition": {
+            "type": "minecraft:all_of",
+            "terms": [
+              {
+                "entity": "direct_attacker",
+                "predicate": {
+                  "equipment": {
+                    "mainhand": {
+                      "items": [
+                        "flavored:knife"
+                      ]
+                    }
+                  }
+                },
+                "type": "minecraft:entity_properties"
+              },
+              {
+                "terms": [
+                  {
+                    "entity": "this",
+                    "predicate": {
+                      "flags": {
+                        "is_on_fire": true
+                      }
+                    },
+                    "type": "minecraft:entity_properties"
+                  },
+                  {
+                    "entity": "direct_attacker",
+                    "predicate": {
+                      "equipment": {
+                        "mainhand": {
+                          "predicates": {
+                            "minecraft:enchantments": [
+                              {
+                                "enchantments": "#minecraft:smelts_loot"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "type": "minecraft:entity_properties"
+                  }
+                ],
+                "type": "minecraft:any_of"
+              }
+            ]
+          },
+          "modifier": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              },
+              "type": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              },
+              "type": "minecraft:enchanted_count_increase"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "flavored:entities/chocken"
+}

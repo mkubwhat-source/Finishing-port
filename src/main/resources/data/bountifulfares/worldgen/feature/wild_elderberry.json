@@ -1,0 +1,6 @@
+{
+  "type": "bountifulfares:wild_vine",
+  "block": "bountifulfares:wild_elderberry_vine",
+  "can_place_on": "#bountifulfares:wild_elderberry_placeable_on",
+  "patch_size": 5
+}

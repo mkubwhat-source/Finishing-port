@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_bed_foot",
+  "textures": {
+    "particle": "bountifulfares:block/stripped_palm_log",
+    "down": "bountifulfares:block/coir_bed_down",
+    "east": "bountifulfares:block/coir_bed_foot_east",
+    "south": "bountifulfares:block/coir_bed_foot_south",
+    "up": "bountifulfares:block/coir_bed_foot_up",
+    "west": "bountifulfares:block/coir_bed_foot_west"
+  }
+}

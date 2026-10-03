@@ -1,0 +1,4 @@
+#!/bin/bash
+# Zip the in-progress source tree (no build outputs) for the user.
+out=/home/claude/bf/hh-port-wip.zip
+cd /home/claude/bf && rm -f $out && zip -qr $out bf-port HANDOFF.md -x 'bf-port/build/*' 'bf-port/.gradle/*' 'bf-port/runs/*' 'bf-port/run/*' && ls -la $out | awk '{print $5}'

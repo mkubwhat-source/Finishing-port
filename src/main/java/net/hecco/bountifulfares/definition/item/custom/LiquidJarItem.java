@@ -1,0 +1,51 @@
+package net.hecco.bountifulfares.definition.item.custom;
+
+import net.hecco.bountifulfares.registry.content.BFItems;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.level.Level;
+
+public class LiquidJarItem extends Item {
+    public LiquidJarItem(Properties settings) {
+        super(settings);
+    }
+    public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+        super.finishUsingItem(stack, world, user);
+        if (user instanceof ServerPlayer serverPlayerEntity) {
+            CriteriaTriggers.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
+            serverPlayerEntity.awardStat(Stats.ITEM_USED.get(this));
+        }
+        if (stack.isEmpty()) {
+            return new ItemStack(BFItems.CUP.get());
+        } else {
+            if (user instanceof Player && !((Player)user).getAbilities().instabuild) {
+                ItemStack itemStack = new ItemStack(BFItems.CUP.get());
+                Player playerEntity = (Player)user;
+                if (!playerEntity.getInventory().add(itemStack)) {
+                    playerEntity.drop(itemStack, false, net.minecraft.util.Prediction.SERVER_ONLY);
+                }
+            }
+
+            return stack;
+        }
+    }
+
+    public ItemUseAnimation getUseAnimation(ItemStack stack) {
+        return ItemUseAnimation.DRINK;
+    }
+
+    public InteractionResult use(Level world, Player user, InteractionHand hand) {
+        return ItemUtils.startUsingInstantly(world, user, hand);
+    }
+}

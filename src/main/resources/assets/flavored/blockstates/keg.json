@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=east,fermenting=false": {
+      "model": "flavored:block/keg",
+      "y": 90
+    },
+    "facing=east,fermenting=true": {
+      "model": "flavored:block/keg_fermenting",
+      "y": 90
+    },
+    "facing=north,fermenting=false": {
+      "model": "flavored:block/keg"
+    },
+    "facing=north,fermenting=true": {
+      "model": "flavored:block/keg_fermenting"
+    },
+    "facing=south,fermenting=false": {
+      "model": "flavored:block/keg",
+      "y": 180
+    },
+    "facing=south,fermenting=true": {
+      "model": "flavored:block/keg_fermenting",
+      "y": 180
+    },
+    "facing=west,fermenting=false": {
+      "model": "flavored:block/keg",
+      "y": 270
+    },
+    "facing=west,fermenting=true": {
+      "model": "flavored:block/keg_fermenting",
+      "y": 270
+    }
+
+  }
+}

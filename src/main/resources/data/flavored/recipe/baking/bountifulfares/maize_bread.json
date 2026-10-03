@@ -1,0 +1,15 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 0.35,
+  "key": {
+    "#": "#c:foods/corn"
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:maize_bread"
+  }
+}

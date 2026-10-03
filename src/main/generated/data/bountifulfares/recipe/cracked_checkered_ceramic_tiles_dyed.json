@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_dye",
+  "dye": "#minecraft:dyes",
+  "group": "dyed_ceramic",
+  "result": {
+    "id": "bountifulfares:cracked_checkered_ceramic_tiles"
+  },
+  "target": "bountifulfares:cracked_checkered_ceramic_tiles"
+}

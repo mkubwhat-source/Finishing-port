@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "flavored:mixing/spinach"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "spinach": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:spinach"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "spinach"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flavored:mixing/spinach"
+    ]
+  }
+}

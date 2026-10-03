@@ -1,0 +1,15 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 1.0,
+  "key": {
+    "#": "flavored:cookie_dough"
+  },
+  "pattern": [
+    "#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "minecraft:cookie"
+  }
+}

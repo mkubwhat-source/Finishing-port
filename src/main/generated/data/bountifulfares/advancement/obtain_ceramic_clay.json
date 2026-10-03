@@ -1,0 +1,32 @@
+{
+  "parent": "bountifulfares:obtain_feldspar",
+  "criteria": {
+    "obtain_ceramic_clay": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:ceramic_clay"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.bountifulfares.obtain_ceramic_clay.description"
+    },
+    "icon": {
+      "id": "bountifulfares:ceramic_clay"
+    },
+    "title": {
+      "translate": "advancement.bountifulfares.obtain_ceramic_clay"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_ceramic_clay"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "flavored:apple_juice",
+  "particle_color": 14326327,
+  "result": {
+    "id": "flavored:cider"
+  },
+  "result_count": 1
+}

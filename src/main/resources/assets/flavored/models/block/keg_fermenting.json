@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "flavored:block/keg",
+    "side": "flavored:block/keg_side",
+    "top": "flavored:block/keg_top_closed",
+    "bottom": "flavored:block/keg_bottom",
+    "particle": "flavored:block/keg"
+
+  }
+}

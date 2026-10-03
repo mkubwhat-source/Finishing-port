@@ -1,0 +1,14 @@
+{
+  "type": "flavored:mixing",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:wheat"
+  ],
+  "liquid": "minecraft:water_bucket",
+  "result": {
+    "count": 1,
+    "id": "flavored:porridge"
+  },
+  "vessel": "minecraft:bowl"
+}

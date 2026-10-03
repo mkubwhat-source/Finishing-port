@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dungeonsdelight:block/wormwood_trellis",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dungeonsdelight:block/wormwood_trellis"
+    },
+    "facing=south": {
+      "model": "dungeonsdelight:block/wormwood_trellis",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dungeonsdelight:block/wormwood_trellis",
+      "y": 270
+    }
+  }
+}

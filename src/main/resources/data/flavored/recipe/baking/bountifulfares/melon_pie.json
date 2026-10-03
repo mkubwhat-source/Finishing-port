@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "X": "minecraft:melon_slice",
+    "#": "flavored:pastry_dough"
+  },
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:melon_pie"
+  }
+}

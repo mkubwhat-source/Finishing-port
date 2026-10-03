@@ -1,0 +1,18 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 3.0,
+  "key": {
+    "#": "flavored:dough",
+    "*": "flavored:soft_cheese_slice",
+    "X": "flavored:red_tomato"
+  },
+  "pattern": [
+    "X*X",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "flavored:pizza"
+  }
+}

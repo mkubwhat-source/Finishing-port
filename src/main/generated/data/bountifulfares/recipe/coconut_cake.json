@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "#c:coconut_halves",
+    "E": "minecraft:egg",
+    "F": "#c:flour",
+    "S": "minecraft:sugar"
+  },
+  "pattern": [
+    "CCC",
+    "SES",
+    "FFF"
+  ],
+  "result": {
+    "id": "bountifulfares:coconut_cake"
+  }
+}

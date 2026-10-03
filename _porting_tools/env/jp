@@ -1,0 +1,4 @@
+#!/bin/bash
+# javap against MC + fabric api
+CP=/tmp/claude-0/-home-claude/8d4a32d5-4717-506f-9dfd-502b4f3db363/scratchpad/ref/common.jar:/tmp/claude-0/-home-claude/8d4a32d5-4717-506f-9dfd-502b4f3db363/scratchpad/ref/client.jar:$(ls /tmp/claude-0/-home-claude/8d4a32d5-4717-506f-9dfd-502b4f3db363/scratchpad/ref/fapijars/*.jar | tr '\n' ':')
+/opt/jdk25/bin/javap -cp $CP "$@" 2>/dev/null

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bountifulfares:dried_tea_leaves",
+    "bountifulfares:water_cup"
+  ],
+  "result": {
+    "id": "bountifulfares:black_tea_bottle"
+  }
+}

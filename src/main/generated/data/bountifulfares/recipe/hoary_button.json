@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    "bountifulfares:hoary_planks"
+  ],
+  "result": {
+    "id": "bountifulfares:hoary_button"
+  }
+}

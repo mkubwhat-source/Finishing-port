@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#c:flour",
+    "#c:foods/elderberries",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bountifulfares:artisan_cookie"
+  }
+}

@@ -1,0 +1,111 @@
+package alabaster.hearthandharvest.common.fd.item;
+
+import alabaster.hearthandharvest.HearthAndHarvest;
+import alabaster.hearthandharvest.Config;
+import alabaster.hearthandharvest.common.registry.*;
+import alabaster.hearthandharvest.common.fd.FDTags;
+
+import net.minecraft.ChatFormatting;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.Prediction;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.level.Level;
+import alabaster.hearthandharvest.common.fd.utility.TextUtils;
+
+import java.util.function.Consumer;
+
+public class ConsumableItem extends Item
+{
+	private final boolean hasFoodEffectTooltip;
+	private final boolean hasCustomTooltip;
+
+	/**
+	 * Items that can be consumed by an entity.
+	 * When consumed, they may affect the consumer somehow, and will give back containers if applicable, regardless of their stack size.
+	 */
+	public ConsumableItem(Properties properties) {
+		super(properties);
+		this.hasFoodEffectTooltip = true;
+		this.hasCustomTooltip = false;
+	}
+
+	public ConsumableItem(Properties properties, boolean hasFoodEffectTooltip) {
+		super(properties);
+		this.hasFoodEffectTooltip = hasFoodEffectTooltip;
+		this.hasCustomTooltip = false;
+	}
+
+	public ConsumableItem(Properties properties, boolean hasFoodEffectTooltip, boolean hasCustomTooltip) {
+		super(properties);
+		this.hasFoodEffectTooltip = hasFoodEffectTooltip;
+		this.hasCustomTooltip = hasCustomTooltip;
+	}
+
+	@Override
+	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity consumer) {
+		if (!level.isClientSide()) {
+			this.affectConsumer(stack, level, consumer);
+		}
+
+		ItemStackTemplate containerStack = stack.getCraftingRemainder();
+
+		if (stack.get(DataComponents.FOOD) != null || stack.get(DataComponents.CONSUMABLE) != null) {
+			super.finishUsingItem(stack, level, consumer);
+		} else {
+			Player player = consumer instanceof Player ? (Player) consumer : null;
+			if (player instanceof ServerPlayer) {
+				CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer) player, stack);
+			}
+			if (player != null) {
+				player.awardStat(Stats.ITEM_USED.get(this));
+				if (!player.getAbilities().instabuild) {
+					stack.shrink(1);
+				}
+			}
+		}
+
+        if (containerStack != null) {
+            if (stack.isEmpty()) {
+                return containerStack.create();
+            } else {
+                if (consumer instanceof Player player && !((Player) consumer).getAbilities().instabuild) {
+                    if (!player.getInventory().add(containerStack.create())) {
+                        player.drop(containerStack.create(), false, Prediction.PREDICTED);
+                    }
+                }
+            }
+        }
+        return stack;
+	}
+
+	/**
+	 * Override this to apply changes to the consumer (e.g. curing effects).
+	 */
+	public void affectConsumer(ItemStack stack, Level level, LivingEntity consumer) {
+	}
+
+	@Override
+	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipAdder, TooltipFlag flag) {
+		if (Config.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
+			if (this.hasCustomTooltip) {
+				MutableComponent textEmpty = TextUtils.tooltip(BuiltInRegistries.ITEM.getKey(this).getPath());
+				tooltipAdder.accept(textEmpty.withStyle(ChatFormatting.BLUE));
+			}
+			if (this.hasFoodEffectTooltip) {
+				TextUtils.addFoodEffectTooltip(stack, tooltipAdder, 1.0F, context.tickRate());
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "model": {
+    "type": "bountifulfares:tiffin",
+    "back": {
+      "type": "minecraft:model",
+      "model": "bountifulfares:item/brown_shulker_tiffin_back"
+    },
+    "front": {
+      "type": "minecraft:model",
+      "model": "bountifulfares:item/brown_shulker_tiffin_front"
+    },
+    "model": {
+      "type": "minecraft:model",
+      "model": "bountifulfares:item/brown_shulker_tiffin"
+    }
+  }
+}

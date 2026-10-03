@@ -1,0 +1,6 @@
+{
+  "plant": "minecraft:twisting_vines",
+  "model": "inverted",
+  "texture": "bountifulfares:block/twisting_trellis",
+  "can_duplicate": true
+}

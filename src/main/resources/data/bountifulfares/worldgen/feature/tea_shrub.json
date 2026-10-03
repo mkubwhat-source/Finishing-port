@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "bountifulfares:tea_shrub",
+    "properties": {
+      "age": "4",
+      "berries": "true"
+    }
+  }
+}

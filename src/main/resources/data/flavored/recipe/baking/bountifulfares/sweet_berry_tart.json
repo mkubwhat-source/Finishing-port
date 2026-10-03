@@ -1,0 +1,17 @@
+{
+  "type": "flavored:baking",
+  "bakingtime": 200,
+  "experience": 2.0,
+  "key": {
+    "X": "minecraft:sweet_berries",
+    "#": "flavored:pastry_dough"
+  },
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:sweet_berry_tart"
+  }
+}

@@ -1,0 +1,229 @@
+package net.hecco.bountifulfares;
+
+import net.fabricmc.fabric.api.recipe.v1.sync.RecipeSynchronization;
+import net.hecco.bountifulfares.registry.misc.BFRecipes;
+
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.hecco.bountifulfares.config.FabricBFConfig;
+import net.hecco.bountifulfares.data.FabricGrassSeedsInteractionResourceLoader;
+import net.hecco.bountifulfares.data.FabricTrellisCropResourceLoader;
+import net.hecco.bountifulfares.data.FabricTrellisPlantResourceLoader;
+import net.hecco.bountifulfares.datagen.DatagenOnlyItems;
+import net.hecco.bountifulfares.definition.block.custom.TrellisBlock;
+import net.hecco.bountifulfares.definition.data.trellis.TrellisCropDefinition;
+import net.hecco.bountifulfares.definition.data.trellis.TrellisPlantDefinition;
+import net.hecco.bountifulfares.definition.networking.payload.TrellisSyncPayload;
+import net.hecco.bountifulfares.definition.platform.Services;
+import net.hecco.bountifulfares.mixin.util.BlockEntityAccessor;
+import net.hecco.bountifulfares.registry.BFFabricLootTableModifiers;
+import net.hecco.bountifulfares.registry.BFFoliageGeneration;
+import net.hecco.bountifulfares.registry.BFMessages;
+import net.hecco.bountifulfares.registry.BFTreeGeneration;
+import net.hecco.bountifulfares.registry.content.BFBlocks;
+import net.hecco.bountifulfares.registry.misc.BFItemGroupAdditions;
+import net.hecco.bountifulfares.registry.misc.BFResourcePacks;
+import net.hecco.bountifulfares.registry.util.BFRegistries;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.CookingFuel;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CakeBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntityTypes;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt;
+
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class FabricBountifulFares implements ModInitializer {
+
+    public static FabricBFConfig CONFIG = new FabricBFConfig();
+
+    @Override
+    public void onInitialize() {
+        FabricBountifulFares.CONFIG = FabricBFConfig.load();
+        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new FabricTrellisPlantResourceLoader());
+        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new FabricTrellisCropResourceLoader());
+        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new FabricGrassSeedsInteractionResourceLoader());
+        BountifulFares.init(this.getClass());
+        BFFoliageGeneration.generateFlowers();
+        BFTreeGeneration.generateTrees();
+        BFRegistries.registerFlammables();
+        BFRegistries.registerCeramicCheckeredConversions();
+        BFRegistries.registerTillables();
+        BFRegistries.registerPathables();
+        BFRegistries.registerStrippables();
+        BFRegistries.registerModCompostables();
+        BFRegistries.registerUntintedParticleBlocks();
+        BFRegistries.registerCauldronBehaviors();
+        BFRegistries.registerFuels();
+        registerFuels();
+        BFFabricLootTableModifiers.modifyLootTables();
+        if (Services.PLATFORM.get().getBoolConfigValue("addItemsToVanillaTabs")) {
+            BFItemGroupAdditions.registerItemGroupAdditions();
+        }
+        BFMessages.registerPayloads();
+        DatagenOnlyItems.registerDatagenItems();
+        
+        UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
+            if (player.canEat(false) && Services.PLATFORM.get().getBoolConfigValue("cakeEatSounds") && !player.isSpectator()) {
+                BlockPos pos = hitResult.getBlockPos();
+                BlockState state = world.getBlockState(pos);
+                Block target = state.getBlock();
+                Identifier identifier = BuiltInRegistries.BLOCK.getKey(target);
+                if (
+                        target instanceof CakeBlock &&
+                        (identifier.getPath().contains("_cake") || identifier.equals(BuiltInRegistries.BLOCK.getKey(Blocks.CAKE))) &&
+                        target.defaultBlockState().hasProperty(BlockStateProperties.BITES)
+                ) {
+                    world.playSound(null, pos, SoundEvents.GENERIC_EAT.value(), SoundSource.BLOCKS, 0.5f, 1.0f);
+                    if (state.getValue(BlockStateProperties.BITES) == 6) {
+                        world.playSound(null, pos, SoundEvents.PLAYER_BURP, SoundSource.BLOCKS, 0.5f, 1.0f);
+                    }
+                }
+            }
+            return InteractionResult.PASS;
+        });
+
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+            Map<Identifier, TrellisCropDefinition> crops =
+                    TrellisBlock.CROPS.values().stream()
+                            .collect(Collectors.toMap(
+                                    def -> BuiltInRegistries.ITEM.getKey(def.seeds()),
+                                    def -> def
+                            ));
+
+            Map<Identifier, TrellisPlantDefinition> plants =
+                    TrellisBlock.PLANTS.values().stream()
+                            .collect(Collectors.toMap(
+                                    def -> BuiltInRegistries.ITEM.getKey(def.plant()),
+                                    def -> def
+                            ));
+
+            TrellisSyncPayload payload = new TrellisSyncPayload(crops, plants);
+            sender.sendPacket(payload);
+        });
+
+        Set<Block> signs = new HashSet<>(((BlockEntityAccessor) BlockEntityTypes.SIGN).getValidBlocks());
+        signs.add(BFBlocks.WALNUT_SIGN.get());
+        signs.add(BFBlocks.WALNUT_WALL_SIGN.get());
+        signs.add(BFBlocks.HOARY_SIGN.get());
+        signs.add(BFBlocks.HOARY_WALL_SIGN.get());
+        ((BlockEntityAccessor) BlockEntityTypes.SIGN).setValidBlocks(signs);
+
+        Set<Block> hangingSigns = new HashSet<>(((BlockEntityAccessor) BlockEntityTypes.HANGING_SIGN).getValidBlocks());
+        hangingSigns.add(BFBlocks.WALNUT_HANGING_SIGN.get());
+        hangingSigns.add(BFBlocks.WALNUT_WALL_HANGING_SIGN.get());
+        hangingSigns.add(BFBlocks.HOARY_HANGING_SIGN.get());
+        hangingSigns.add(BFBlocks.HOARY_WALL_HANGING_SIGN.get());
+        ((BlockEntityAccessor) BlockEntityTypes.HANGING_SIGN).setValidBlocks(hangingSigns);
+
+
+        BFResourcePacks.registerBuiltinResourcePacks();
+
+        // 26.3: clients no longer receive the full recipe set (the client RecipeManager is gone;
+        // ClientLevel only has recipe-book displays). Fabric API's recipe sync is opt-in per
+        // serializer, and JEI (confirmed via javap on mezz.jei.fabric.JustEnoughItems) only opts
+        // in the "minecraft" namespace - so the mod's own milling/fermenting recipes must be
+        // registered for sync here for JEI (or anything else client-side) to be able to see them.
+        RecipeSynchronization.synchronizeRecipeSerializer(BFRecipes.MILLING_SERIALIZER.get());
+        RecipeSynchronization.synchronizeRecipeSerializer(BFRecipes.FERMENTING_SERIALIZER.get());
+        // Special crafting recipes too, so recipe viewers (EMI) can find them on the client.
+        RecipeSynchronization.synchronizeRecipeSerializer(BFRecipes.CERAMIC_MASS_DYEING.get());
+        RecipeSynchronization.synchronizeRecipeSerializer(BFRecipes.TIFFIN_COLORING.get());
+        RecipeSynchronization.synchronizeRecipeSerializer(BFRecipes.TIFFIN_FOOD_CRAFTING.get());
+    }
+
+    public static void registerFuels() {
+        // Fabric's old FuelRegistry was removed entirely in 26.3 - furnace burn time is now
+        // just the DataComponents.COOKING_FUEL component on the ItemStack (confirmed via javap
+        // on AbstractFurnaceBlockEntity.getBurnDuration()), so we set it through
+        // DefaultItemComponentEvents.MODIFY (fabric-item-api-v1's replacement for per-item
+        // default-component overrides) instead of a registry.
+        DefaultItemComponentEvents.MODIFY.register(context -> {
+            for (ItemLike itemlike : BFBlocks.FUELS.keySet()) {
+                int burnTime = BFBlocks.FUELS.get(itemlike);
+                context.modify(itemlike.asItem(), builder -> builder.set(
+                        net.minecraft.core.component.DataComponents.COOKING_FUEL,
+                        new CookingFuel(new ResolvableInt.Constant(burnTime), new ResolvableFloat.Constant(1.0F))));
+            }
+
+            for (TagKey<Item> tag : BFBlocks.TAG_FUELS.keySet()) {
+                int burnTime = BFBlocks.TAG_FUELS.get(tag);
+                context.modify(item -> item.builtInRegistryHolder().is(tag), (builder, item) -> builder.set(
+                        net.minecraft.core.component.DataComponents.COOKING_FUEL,
+                        new CookingFuel(new ResolvableInt.Constant(burnTime), new ResolvableFloat.Constant(1.0F))));
+            }
+        });
+
+//        registry.add(MintBlocks.ACORN_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.AMBER_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.ARTICHOKE_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.BANANA_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.CERULEAN_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.FUCHSIA_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.GRAPE_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.INDIGO_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.MAROON_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.MAUVE_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.MINT_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.MOLD_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.NAVY_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.PEACH_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.PERIWINKLE_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.SAGE_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.SAP_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.SHAMROCK_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.VELVET_JACK_O_STRAW, 400);
+//        registry.add(MintBlocks.VERMILION_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.MAROON_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.ROSE_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.CORAL_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.GINGER_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.TAN_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.BEIGE_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.AMBER_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.OLIVE_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.FOREST_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.VERDANT_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.TEAL_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.MINT_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.AQUA_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.SLATE_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.NAVY_JACK_O_STRAW, 400);
+//        registry.add(DyeDepotBlocks.INDIGO_JACK_O_STRAW, 400);
+//        registry.add(ExcessiveBuildingBlocks.WALNUT_VERTICAL_STAIRS, 300);
+//        registry.add(ExcessiveBuildingBlocks.CHISELED_WALNUT_PLANKS, 300);
+//        registry.add(ExcessiveBuildingBlocks.WALNUT_MOSAIC, 300);
+//        registry.add(ExcessiveBuildingBlocks.WALNUT_MOSAIC_SLAB, 300);
+//        registry.add(ExcessiveBuildingBlocks.WALNUT_MOSAIC_STAIRS, 300);
+//        registry.add(ExcessiveBuildingBlocks.WALNUT_MOSAIC_VERTICAL_STAIRS, 300);
+//        registry.add(ExcessiveBuildingBlocks.WALNUT_LADDER, 300);
+//        registry.add(ExcessiveBuildingBlocks.HOARY_VERTICAL_STAIRS, 300);
+//        registry.add(ExcessiveBuildingBlocks.CHISELED_HOARY_PLANKS, 300);
+//        registry.add(ExcessiveBuildingBlocks.HOARY_MOSAIC, 300);
+//        registry.add(ExcessiveBuildingBlocks.HOARY_MOSAIC_SLAB, 300);
+//        registry.add(ExcessiveBuildingBlocks.HOARY_MOSAIC_STAIRS, 300);
+//        registry.add(ExcessiveBuildingBlocks.HOARY_MOSAIC_VERTICAL_STAIRS, 300);
+//        registry.add(ExcessiveBuildingBlocks.HOARY_LADDER, 300);
+
+    }
+}

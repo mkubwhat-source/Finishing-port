@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "flavored:cinnamon_sprout"
+  },
+  "max_uses": 1,
+  "reputation_discount": 0.2,
+  "wants": {
+    "id": "minecraft:emerald"
+  },
+  "xp": 10
+}
