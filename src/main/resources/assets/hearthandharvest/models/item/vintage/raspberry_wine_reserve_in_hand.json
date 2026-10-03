@@ -1,0 +1,14 @@
+{
+  "children": {
+    "base": {
+      "parent": "hearthandharvest:block/raspberry_wine_bottle"
+    },
+    "seal": {
+      "parent": "hearthandharvest:display/vintage/bottle_reserve"
+    }
+  },
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "hearthandharvest:item/raspberry_wine"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "hearthandharvest:block/jungle_cabinet_front",
+    "side": "hearthandharvest:block/jungle_cabinet_side",
+    "top": "hearthandharvest:block/jungle_cabinet_top"
+  }
+}

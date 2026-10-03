@@ -1,0 +1,40 @@
+{
+  "textures": {
+    "all": "hearthandharvest:block/rope",
+    "particle": "hearthandharvest:block/rope"
+  },
+  "elements": [
+    {
+      "from": [
+        8,
+        0,
+        0
+      ],
+      "to": [
+        8,
+        16,
+        7
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            9,
+            0,
+            16,
+            16
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            7,
+            16
+          ],
+          "texture": "#all"
+        }
+      }
+    }
+  ]
+}

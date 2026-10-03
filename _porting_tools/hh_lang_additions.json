@@ -1,0 +1,10 @@
+{
+  "_comment": "en_us keys this port needs that HH 1.21.1 / FD didn't ship (merged by hh_asset_migrate.py; existing keys win).",
+  "key.category.hearthandharvest.main": "Hearth and Harvest",
+  "hearthandharvest.tooltip.mead_bottle": "Cures Poison",
+  "effect.hearthandharvest.horse_boost": "Horse Boost",
+  "entity.hearthandharvest.manure_projectile": "Manure",
+  "entity.hearthandharvest.thrown_pitchfork": "Pitchfork",
+  "entity.hearthandharvest.thrown_cleaver": "Cleaver",
+  "entity.hearthandharvest.thrown_horseshoe": "Horseshoe"
+}

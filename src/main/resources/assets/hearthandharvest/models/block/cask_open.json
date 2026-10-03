@@ -1,0 +1,90 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "hearthandharvest:block/cask_bottom",
+    "2": "hearthandharvest:block/cask_side",
+    "4": "hearthandharvest:block/cask_open",
+    "particle": "hearthandharvest:block/cask_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        12,
+        13
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          10.25,
+          8
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            4,
+            13,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            3,
+            4,
+            13,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            3,
+            4,
+            13,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            3,
+            4,
+            13,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#4"
+        },
+        "down": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hearthandharvest:block/light_blue_mum"
+  }
+}

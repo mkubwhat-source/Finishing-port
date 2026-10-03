@@ -1,0 +1,6 @@
+{
+  "parent": "hearthandharvest:item/mug",
+  "textures": {
+    "layer0": "hearthandharvest:item/melon_juice"
+  }
+}

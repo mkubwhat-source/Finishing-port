@@ -1,0 +1,6 @@
+{
+  "parent": "hearthandharvest:block/generic_jar",
+  "textures": {
+    "lid": "hearthandharvest:block/cherry_jam_jar"
+  }
+}

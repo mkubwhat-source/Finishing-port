@@ -1,0 +1,44 @@
+{
+  "textures": {
+    "particle": "hearthandharvest:block/carrot_cake_side",
+    "bottom": "hearthandharvest:block/carrot_cake_bottom",
+    "top": "hearthandharvest:block/carrot_cake_top",
+    "side": "hearthandharvest:block/carrot_cake_side",
+    "inside": "hearthandharvest:block/carrot_cake_inner"
+  },
+  "elements": [
+    {
+      "from": [
+        5,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        8,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "north": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#inside"
+        },
+        "east": {
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}

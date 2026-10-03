@@ -1,0 +1,6 @@
+{
+  "parent": "hearthandharvest:block/crop_cross",
+  "textures": {
+    "cross": "hearthandharvest:block/corn_top_stage_5"
+  }
+}

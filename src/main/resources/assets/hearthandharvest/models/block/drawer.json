@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "hearthandharvest:block/counter_bottom",
+    "front": "hearthandharvest:block/drawer_front",
+    "side": "hearthandharvest:block/counter_side",
+    "top": "hearthandharvest:block/counter_top"
+  }
+}

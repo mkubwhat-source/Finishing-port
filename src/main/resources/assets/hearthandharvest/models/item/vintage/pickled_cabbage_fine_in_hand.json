@@ -1,0 +1,14 @@
+{
+  "children": {
+    "base": {
+      "parent": "hearthandharvest:block/pickled_cabbage"
+    },
+    "seal": {
+      "parent": "hearthandharvest:display/vintage/jar_fine"
+    }
+  },
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "hearthandharvest:item/pickled_cabbage"
+  }
+}

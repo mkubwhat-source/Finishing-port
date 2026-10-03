@@ -26,17 +26,25 @@ public class CrowSpawnRules {
         int radius = Config.CROW_SPAWN_RADIUS.get();
         int cropRequirement = Config.CROW_SPAWN_NUMBER_OF_CROPS.get();
 
-        if (Config.CROW_SPAWN_NEAR_NESTS.get() && hasNearbyGeneratedNest(level, pos, radius)) return true;
+        // 26.3: spawns during chunk generation may only read the chunk being generated (1.21.1 let
+        // them read neighbours), so the search area is clamped to that chunk there.
+        boolean worldgen = spawnType == EntitySpawnReason.CHUNK_GENERATION;
+        if (Config.CROW_SPAWN_NEAR_NESTS.get() && hasNearbyGeneratedNest(level, pos, radius, worldgen)) return true;
         if (cropRequirement == 0) return false;
 
-        return countNearbyCrops(level, pos, radius) >= cropRequirement;
+        return countNearbyCrops(level, pos, radius, worldgen) >= cropRequirement;
     }
 
-    private static boolean hasNearbyGeneratedNest(ServerLevelAccessor level, BlockPos pos, int radius) {
+    private static boolean outsideChunk(BlockPos origin, int x, int z, boolean worldgen) {
+        return worldgen && ((x >> 4) != (origin.getX() >> 4) || (z >> 4) != (origin.getZ() >> 4));
+    }
+
+    private static boolean hasNearbyGeneratedNest(ServerLevelAccessor level, BlockPos pos, int radius, boolean worldgen) {
         BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
 
         for (int dx = -radius; dx <= radius; dx++) {
             for (int dz = -radius; dz <= radius; dz++) {
+                if (outsideChunk(pos, pos.getX() + dx, pos.getZ() + dz, worldgen)) continue;
                 for (int dy = -4; dy <= 8; dy++) {
                     cursor.set(pos.getX() + dx, pos.getY() + dy, pos.getZ() + dz);
                     BlockState state = level.getBlockState(cursor);
@@ -51,13 +59,14 @@ public class CrowSpawnRules {
         return false;
     }
 
-    private static int countNearbyCrops(ServerLevelAccessor level, BlockPos pos, int radius) {
+    private static int countNearbyCrops(ServerLevelAccessor level, BlockPos pos, int radius, boolean worldgen) {
         int count = 0;
         int needed = Config.CROW_SPAWN_NUMBER_OF_CROPS.get();
         BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
 
         for (int dx = -radius; dx <= radius; dx++) {
             for (int dz = -radius; dz <= radius; dz++) {
+                if (outsideChunk(pos, pos.getX() + dx, pos.getZ() + dz, worldgen)) continue;
                 for (int dy = -2; dy <= 2; dy++) {
                     cursor.set(pos.getX() + dx, pos.getY() + dy, pos.getZ() + dz);
 

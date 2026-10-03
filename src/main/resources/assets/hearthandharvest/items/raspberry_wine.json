@@ -1,0 +1,106 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "hearthandharvest:vintage",
+    "cases": [
+      {
+        "when": 1,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "fixed",
+                "on_shelf",
+                "ground",
+                "gui"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "hearthandharvest:item/vintage/2d_raspberry_wine_aged"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/vintage/raspberry_wine_aged_in_hand"
+          }
+        }
+      },
+      {
+        "when": 2,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "fixed",
+                "on_shelf",
+                "ground",
+                "gui"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "hearthandharvest:item/vintage/2d_raspberry_wine_fine"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/vintage/raspberry_wine_fine_in_hand"
+          }
+        }
+      },
+      {
+        "when": 3,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "fixed",
+                "on_shelf",
+                "ground",
+                "gui"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "hearthandharvest:item/vintage/2d_raspberry_wine_reserve"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/vintage/raspberry_wine_reserve_in_hand"
+          }
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:select",
+      "property": "minecraft:display_context",
+      "cases": [
+        {
+          "when": [
+            "fixed",
+            "on_shelf",
+            "ground",
+            "gui"
+          ],
+          "model": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/2d_raspberry_wine"
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "hearthandharvest:block/raspberry_wine_bottle"
+      }
+    }
+  }
+}

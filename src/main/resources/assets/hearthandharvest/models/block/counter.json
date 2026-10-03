@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "hearthandharvest:block/counter_top",
+    "side": "hearthandharvest:block/counter_side",
+    "bottom": "hearthandharvest:block/counter_bottom",
+    "particle": "hearthandharvest:block/counter_side"
+  }
+}

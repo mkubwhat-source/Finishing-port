@@ -1,0 +1,183 @@
+{
+  "credit": "Made with Blockbench",
+  "elements": [
+    {
+      "from": [
+        5,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        5,
+        11
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.5,
+          4.34724,
+          8.01798
+        ]
+      },
+      "color": 1,
+      "faces": {}
+    },
+    {
+      "from": [
+        7,
+        2.67477,
+        4.00816
+      ],
+      "to": [
+        8,
+        3.67477,
+        9.00816
+      ],
+      "rotation": {
+        "angle": 45,
+        "axis": "x",
+        "origin": [
+          7.5,
+          4.34724,
+          8.01798
+        ]
+      },
+      "color": 3,
+      "faces": {}
+    },
+    {
+      "from": [
+        6,
+        3.03001,
+        3.13217
+      ],
+      "to": [
+        9,
+        6.03001,
+        4.13217
+      ],
+      "rotation": {
+        "angle": 22.5,
+        "axis": "x",
+        "origin": [
+          7.5,
+          4.34724,
+          8.01798
+        ]
+      },
+      "color": 3,
+      "faces": {}
+    },
+    {
+      "from": [
+        7.5,
+        1,
+        11
+      ],
+      "to": [
+        7.5,
+        5,
+        13
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.5,
+          4.34724,
+          8.01798
+        ]
+      },
+      "color": 2,
+      "faces": {}
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        60,
+        0,
+        0
+      ],
+      "translation": [
+        1,
+        6,
+        3
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        60,
+        0,
+        0
+      ],
+      "translation": [
+        1,
+        6,
+        3
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "translation": [
+        1,
+        6.25,
+        0.75
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "translation": [
+        1,
+        6.25,
+        0.75
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        5,
+        0
+      ]
+    },
+    "head": {
+      "rotation": [
+        -5,
+        0,
+        0
+      ],
+      "translation": [
+        1,
+        6.25,
+        0.75
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "translation": [
+        0,
+        6.25,
+        -0.5
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    }
+  }
+}

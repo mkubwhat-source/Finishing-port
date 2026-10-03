@@ -1,0 +1,14 @@
+{
+  "children": {
+    "base": {
+      "parent": "hearthandharvest:block/red_grape_wine_bottle"
+    },
+    "seal": {
+      "parent": "hearthandharvest:display/vintage/bottle_fine"
+    }
+  },
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "hearthandharvest:item/red_grape_wine"
+  }
+}

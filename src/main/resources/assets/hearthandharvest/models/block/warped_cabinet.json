@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "hearthandharvest:block/warped_cabinet_front",
+    "side": "hearthandharvest:block/warped_cabinet_side",
+    "top": "hearthandharvest:block/warped_cabinet_top"
+  }
+}

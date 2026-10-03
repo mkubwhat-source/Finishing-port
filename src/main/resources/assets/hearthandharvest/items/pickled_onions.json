@@ -1,0 +1,106 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "hearthandharvest:vintage",
+    "cases": [
+      {
+        "when": 1,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "fixed",
+                "on_shelf",
+                "ground",
+                "gui"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "hearthandharvest:item/vintage/2d_pickled_onions_aged"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/vintage/pickled_onions_aged_in_hand"
+          }
+        }
+      },
+      {
+        "when": 2,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "fixed",
+                "on_shelf",
+                "ground",
+                "gui"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "hearthandharvest:item/vintage/2d_pickled_onions_fine"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/vintage/pickled_onions_fine_in_hand"
+          }
+        }
+      },
+      {
+        "when": 3,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "fixed",
+                "on_shelf",
+                "ground",
+                "gui"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "hearthandharvest:item/vintage/2d_pickled_onions_reserve"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/vintage/pickled_onions_reserve_in_hand"
+          }
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:select",
+      "property": "minecraft:display_context",
+      "cases": [
+        {
+          "when": [
+            "fixed",
+            "on_shelf",
+            "ground",
+            "gui"
+          ],
+          "model": {
+            "type": "minecraft:model",
+            "model": "hearthandharvest:item/2d_pickled_onions"
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "hearthandharvest:block/pickled_onions"
+      }
+    }
+  }
+}

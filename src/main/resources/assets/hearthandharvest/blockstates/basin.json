@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hearthandharvest:block/basin",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "hearthandharvest:block/basin",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "hearthandharvest:block/basin"
+    },
+    "facing=west": {
+      "model": "hearthandharvest:block/basin",
+      "y": 90
+    }
+  }
+}
