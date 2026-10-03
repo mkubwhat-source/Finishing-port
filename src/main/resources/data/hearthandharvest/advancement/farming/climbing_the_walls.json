@@ -6,8 +6,9 @@
         "items": [
           {
             "items": [
-              "bountifulfares:trellis",
-              "bountifulfares:bamboo_trellis"
+              "hearthandharvest:trellis",
+              "hearthandharvest:bamboo_trellis",
+              "hearthandharvest:stripped_bamboo_trellis"
             ]
           }
         ]
@@ -21,7 +22,7 @@
       "translate": "advancement.hearthandharvest.climbing_the_walls.desc"
     },
     "icon": {
-      "id": "bountifulfares:trellis"
+      "id": "hearthandharvest:trellis"
     },
     "title": {
       "translate": "advancement.hearthandharvest.climbing_the_walls"

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "hearthandharvest:grape_trellis",
     "hearthandharvest:cotton",
     "hearthandharvest:corn_stalk",
     "hearthandharvest:cabbages",

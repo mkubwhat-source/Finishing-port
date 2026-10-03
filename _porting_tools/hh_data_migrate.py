@@ -24,7 +24,7 @@ names with merged items, e.g. the hearthandharvest:sweet_berry_wine fluid stays)
   flavored:knife, mutton chops -> flavored:mutton_shank, bacon -> flavored:pork_jowl.
 * HH items merged into BF/Flavored (decisions 3, 4, 7, 11): see HHRegistryAliases.MERGED_ITEMS.
 * Dropped (no counterpart in the bundle): FD rice, skillet, shepherd's pie, stuffed pumpkin, rotten
-  tomato, sandy shrub, tomatoes on rope; HH trellises (BF trellises replace them), rotten tomato
+  tomato, sandy shrub, tomatoes on rope, rotten tomato
   crate, flour bag. Loot entries/tag values naming them are removed; recipes making or needing them
   are skipped (HH's flour bag <-> flour recipes too: BF's flour block has its own).
 
@@ -56,8 +56,7 @@ Other conversions
 * Lilliput Lane structure NBT: farmersdelight blocks/block entities -> hearthandharvest ones; FD
   blocks that are not part of the bundle get vanilla stand-ins (stove -> smoker, tatami ->
   bamboo mosaic, rope fence -> oak fence, canvas wall signs -> pale oak/cherry wall signs, wooden
-  basket -> barrel, keeping loot tables); HH trellises -> BF trellises (one side per block, plant in
-  the block entity; flat-only trellises -> oak trapdoors).
+  basket -> barrel, keeping loot tables). HH's trellises stay as they are (restored next to BF's).
 * Tag files whose path Bountiful Fares' datagen also writes (src/main/generated) can't be shipped
   twice in one jar: their entries go to the generated HHTagAdditions.java, which BF's item/block
   tag providers apply. Other tag files that already exist in the bundle are merged (union).
@@ -121,8 +120,7 @@ INGREDIENT_REMAP = {"bountifulfares:flour": "#c:flour"}
 DROPPED = {
     "farmersdelight:rice", "farmersdelight:skillet", "farmersdelight:shepherds_pie", "farmersdelight:stuffed_pumpkin",
     "farmersdelight:rotten_tomato", "farmersdelight:sandy_shrub", "farmersdelight:tomatoes_on_rope",
-    "hearthandharvest:trellis", "hearthandharvest:bamboo_trellis", "hearthandharvest:stripped_bamboo_trellis",
-    "hearthandharvest:grape_trellis", "hearthandharvest:rotten_tomato_crate", "hearthandharvest:flour_bag",
+    "hearthandharvest:rotten_tomato_crate", "hearthandharvest:flour_bag",
 }
 SKIP_RECIPES = {"flour_bag", "flour_from_bag"}  # duplicates of BF's flour block recipes
 
@@ -147,10 +145,8 @@ def norm(i):
 
 
 VANILLA_RENAMES = {"minecraft:chain": "minecraft:iron_chain"}  # renamed after 1.21.1
-# Advancements only ("Climbing the Walls": obtain a trellis): HH's trellises became BF's.
-ADVANCEMENT_ITEMS = {"hearthandharvest:trellis": "bountifulfares:trellis",
-                     "hearthandharvest:bamboo_trellis": "bountifulfares:bamboo_trellis",
-                     "hearthandharvest:stripped_bamboo_trellis": "bountifulfares:bamboo_trellis"}
+# Advancement-only item renames (none since HH's trellises were restored next to BF's).
+ADVANCEMENT_ITEMS = {}
 
 
 def remap_item(i):
@@ -635,31 +631,6 @@ def migrate_structure(src, dst):
     for idx, p in enumerate(pal):
         name = str(p["Name"])
         props = {k: str(v) for k, v in p.get("Properties", {}).items()}
-        if name in ("hearthandharvest:trellis", "hearthandharvest:grape_trellis"):
-            sides = [d for d in ("north", "south", "east", "west") if props.get("side_" + d) == "true"]
-            if props.get("middle_ns") == "true":
-                sides.append("east")
-            if props.get("middle_ew") == "true":
-                sides.append("north")
-            plant = props.get("plant", "none")
-            if not sides:
-                # flat (floor/roof) trellis only: BF trellises are wall panels
-                new_pal.append(st("minecraft:oak_trapdoor", {"facing": "north", "half": "bottom", "open": "false", "powered": "false", "waterlogged": "false"}))
-                continue
-            new_pal.append(st("bountifulfares:trellis", {"facing": sides[0], "waterlogged": "false"}))
-            be = Compound({"id": String("bountifulfares:trellis_block_entity")})
-            item = {"vine": "minecraft:vine", "rose": "minecraft:rose_bush", "red_grape": "hearthandharvest:red_grapes",
-                    "green_grape": "hearthandharvest:green_grapes"}.get(plant)
-            if item:
-                be["Plant"] = Compound({"id": String(item), "count": Int(1)})
-                if "grape" in plant:
-                    # HH grape age 0..4 (ripe at 4) -> BF trellis stage 1..5 (BF stages start at 1;
-                    # the renderer uses texture <crop>_<stage>, ripe at stages=5)
-                    age = int(props.get("age", "0"))
-                    be["Stage"] = Int(min(age + 1, 5))
-            extra_be[idx] = be
-            REPORT["structure trellis"].append("%s %s -> facing %s plant %s" % (name, sides, sides[0], plant))
-            continue
         if name.startswith("farmersdelight:"):
             path = name.split(":", 1)[1]
             standins = {

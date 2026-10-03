@@ -21,8 +21,9 @@ Credit kept in fabric.mod.json and LICENSE notice.
    FD wheat_dough → flavored:dough, HH chocolate_bar → flavored:chocolate.
    **Keep HH cheese wheels** (separate from Flavored aged cheese). Goat cheese stays.
 5. **Corn: keep both** HH corn and BF maize. Tags make them interchangeable where sensible.
-6. **Trellis**: drop HH trellis / bamboo_trellis / stripped_bamboo_trellis (alias to BF trellis
-   blocks); red/green grapes become BF trellis plants on every wood trellis.
+6. **Trellis** (revised 2026-10-03): keep BOTH. HH's trellis / bamboo_trellis / stripped_bamboo_trellis
+   and grape_trellis are back (the user wants HH's multi-piece placement); red/green grapes also stay
+   BF trellis plants on every BF wood trellis. Lilliput Lane uses HH's trellises again, as upstream.
 7. **Dishes**: merge exact dupes only: HH pizza/pizza_slice → flavored:pizza/pizza_slice
    (HH cheese/meat/veggie pizzas stay); HH pickled_beetroots → bountifulfares:pickled_beetroot.
    Corn dishes stay separate.
@@ -62,8 +63,8 @@ Credit kept in fabric.mod.json and LICENSE notice.
 - Grapes: Bountiful Fares' `trellis_crop` data gained an optional `spreading` object (chance,
   max_height, soil tag). HH grapes are BF trellis crops (data/hearthandharvest/bountifulfares/trellis_crop)
   that climb/spread onto empty trellises and need `#c:villager_farmlands` under the lowest vine
-  (HH config `grapeRequireFarmland` still applies). HH's own trellis blocks/classes are dropped
-  (kept for reference in `_porting_tools/hh_dropped_1.21.1`).
+  (HH config `grapeRequireFarmland` still applies). HH's own trellises are ported too (see
+  "Play-test fixes" below); `_porting_tools/hh_dropped_1.21.1` keeps the 1.21.1 sources they came from.
 - Recipe books: the cooking pot, keg and cask get their own `RecipeBookType`s
   (HEARTHANDHARVEST_COOKING/FERMENTING/AGING) via class-tweaker enum extension + mixins, as
   FarmersDelightRefabricated does. `bountifulfares.accesswidener` is now a `classTweaker v2` file.
@@ -125,3 +126,30 @@ Credit kept in fabric.mod.json and LICENSE notice.
   model is an untextured draft that no display context uses (1.21.1 and this port both use the 2D model),
   so the script now drops face-less cubes too. The jar models' "Unresolved texture references" warnings
   are inherited from upstream (generic_jar's cube_all parent) and harmless.
+
+## Play-test fixes (2026-10-03)
+- Trellis textures on BF trellises (grapes): the renderer clamps the stage to 1..stages.
+- Cleaver: per-hit durability via `DataComponents.WEAPON` (`Weapon(2)`, as FDR's knives), throw animation
+  `ItemUseAnimation.TRIDENT` (26.3's SPEAR is the kinetic spear; same for pitchfork, horseshoe, hot sauce).
+  Cutting board: a tool clicked on an empty board no longer goes on the board (sneak places tools, as FD).
+  Missing `block.hearthandharvest.cutting_board.*` messages added to the 5 HH locales.
+- Washed-out / desaturated models (corn, crops, coconuts, lanterns...): 26.3 ignores the element key
+  `"shade"`; `"shade": false` is now `"shade_direction_override": "up"` (`_porting_tools/shade_fix.py`,
+  also built into hh_asset_migrate.py). 33 models (BF, HH, appledog).
+- HH trellises restored (user decision 6 revised): `common/block/trellis/*` (TrellisBlock, GrapeTrellisBlock,
+  TrellisMaterial/Plant/Shape) and `common/item/TrellisBlockItem` ported from 1.21.1. NeoForge leftovers:
+  `isLadder` -> `TrellisClimbMixin` (LivingEntity.onClimbable HEAD; flat-only pieces aren't climbable, as
+  upstream), `ItemAbilities.AXE_STRIP` -> HH ItemAbility, burn time -> COOKING_FUEL component (300).
+  Only the stick trellis item is the block's `asItem()` (1.21.1 let the stripped bamboo one win).
+  Client: vine foliage tint (BlockColorRegistry, tint index 0), `TrellisGhostRenderer` placement preview
+  (LevelRenderEvents.AFTER_BLOCK_OUTLINE_EXTRACTION + COLLECT_SUBMITS, translucent custom geometry, 40%
+  alpha as upstream, config `trellisPlacementPreview`). Aliases to BF trellises removed. Data/assets come
+  back through the migration scripts (no longer DROPPED); Lilliput Lane's NBT is upstream's trellis
+  states again (checked block-for-block). Verified in the dev client: placing/extending pieces with the
+  preview, vine/rose/grape trellises, grapes planted by hand, climbing, the structure.
+- Crate item ("Empty Crate" in chests): it showed the double-crate model. 1.21.1's BEWLR drew one bottom
+  crate raised 4px plus its contents; the item definition is now a composite of `item/crate` (parent
+  `block/crate_bottom`) and a `hearthandharvest:crate_contents` special model (`CrateItemRenderer`), both
+  translated 0.25 up. Filled crates show their items again.
+- Re-running hh_asset_migrate.py: it doesn't write `textures/gui/jei/*.png` (copied by hand from FDR) or
+  the newline-less `models/item/3d_watering_can.json`; restore them from git after a re-run.

@@ -27,8 +27,8 @@ crates, nests; DisplayModels points the stack's item_model there) - so the merge
 under flavored:/bountifulfares:, vanilla bottles under minecraft:, FD's milk bottle under hearthandharvest:.
 
 Other assets
-* Blockstates of registered blocks only (HH trellises etc. are gone: grapes use BF trellis crops).
-* Textures copied except those of dropped/merged items and the dropped trellises. HH 1.21.1 lacks
+* Blockstates of registered blocks only. HH's trellises are kept next to BF's (grapes grow on both).
+* Textures copied except those of dropped/merged items. HH 1.21.1 lacks
   textures/block/fluid/glow_berry_juice_flow.png (only its .mcmeta): the still texture is used.
 * Keg bottle slot icon is now a GUI sprite (textures/gui/sprites/container/slot/bottle.png).
 * sounds.json: HH's + FD's entries for the FD sound events HH registers; particles: HH's + FD's star,
@@ -53,7 +53,7 @@ MERGED_ITEMS = {"mead": "bountifulfares:mead_bottle", "sweet_berry_wine": "flavo
                 "glow_berry_juice": "flavored:glow_berry_juice", "pizza": "flavored:pizza", "pizza_slice": "flavored:pizza_slice",
                 "pickled_beetroots": "bountifulfares:pickled_beetroot", "flour": "bountifulfares:flour",
                 "butter": "flavored:butter", "batter": "flavored:batter", "chocolate_bar": "flavored:chocolate"}
-DROPPED = {"trellis", "bamboo_trellis", "stripped_bamboo_trellis", "grape_trellis", "rotten_tomato_crate", "flour_bag"}
+DROPPED = {"rotten_tomato_crate", "flour_bag"}
 
 REPORT = {}
 
@@ -178,8 +178,7 @@ class Migrator:
                 continue
             name = rel[:-5]
             base = os.path.basename(name)
-            if any(base == d or base.startswith(d + "_") for d in ("trellis", "bamboo_trellis", "stripped_bamboo_trellis", "grape_trellis")) \
-                    or name.startswith("block/trellis/") or base in ("rotten_tomato_crate", "flour_bag"):
+            if base in ("rotten_tomato_crate", "flour_bag"):
                 report("model skipped (dropped block)", name)
                 continue
             if name.startswith("item/") and re.sub(r"^(vintage/)?(2d_)?|_(aged|fine|reserve)$", "", name[5:]) in MERGED_ITEMS:
@@ -200,7 +199,10 @@ class Migrator:
                 continue
             if m.get("parent") in ("builtin/entity", "minecraft:builtin/entity") and name == "item/crate":
                 m = dict(m)
-                m["parent"] = HH + ":block/crate"   # the crate block model, with the BEWLR model's display transforms
+                # the BEWLR drew the crate's default state (one bottom crate) raised 4px, plus its contents:
+                # that model with the BEWLR model's display transforms; the item definition raises it
+                # and adds the contents layer (CrateItemRenderer)
+                m["parent"] = HH + ":block/crate_bottom"
             if m.get("loader") == "neoforge:separate_transforms":
                 persp = m.get("perspectives", {})
                 cases = {}
@@ -275,6 +277,11 @@ class Migrator:
                 else:
                     report("ITEM WITHOUT MODEL", item)
                     continue
+            if item == "crate":
+                raised = {"translation": [0, 0.25, 0], "left_rotation": [0, 0, 0, 1], "right_rotation": [0, 0, 0, 1], "scale": [1, 1, 1]}
+                node = {"type": "minecraft:composite", "models": [
+                    dict(node, transformation=raised),
+                    {"type": "minecraft:special", "base": mid_, "transformation": raised, "model": {"type": HH + ":crate_contents"}}]}
             self.put(os.path.join(HH, "items", item + ".json"), {"model": node})
 
     def display_definitions(self):
@@ -325,9 +332,6 @@ class Migrator:
             stem = os.path.basename(rel).split(".")[0]
             if rel.startswith("item/") and stem in merged_tex:
                 report("texture skipped (merged/dropped item)", rel)
-                continue
-            if "trellis" in stem and not re.search(r"_grape_trellis_\d", stem):
-                report("texture skipped (dropped trellis)", rel)
                 continue
             copyfile(p, os.path.join(self.out, HH, "textures", rel))
         still = os.path.join(self.out, HH, "textures/block/fluid/glow_berry_juice_still.png")
@@ -488,9 +492,6 @@ class Migrator:
                 parts = k.split(".")
                 if len(parts) == 3 and parts[0] in ("item", "block") and parts[1] == HH and parts[2] in merged:
                     report("lang key dropped (merged/dropped)", k)
-                    continue
-                if "trellis" in k:
-                    report("lang key dropped (trellis)", k)
                     continue
                 # HH items using FD's ConsumableItem had FD-style tooltip keys; FD's TextUtils is HH's now
                 k = k.replace("tooltip.farmersdelight.", "tooltip.%s." % HH)

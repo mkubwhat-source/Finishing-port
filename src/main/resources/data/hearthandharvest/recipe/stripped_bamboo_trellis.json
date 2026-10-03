@@ -1,0 +1,17 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:bamboo_trellis"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "hearthandharvest:stripped_bamboo_trellis"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "axe_dig"
+  }
+}

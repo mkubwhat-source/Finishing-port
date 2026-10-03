@@ -1,5 +1,5 @@
 {
-  "parent": "hearthandharvest:block/crate",
+  "parent": "hearthandharvest:block/crate_bottom",
   "gui_light": "side",
   "display": {
     "gui": {

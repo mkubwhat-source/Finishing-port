@@ -15,6 +15,7 @@
     "PlayerTickMixin",
     "ServerPlayerShoulderMixin",
     "SheepGrassManureMixin",
+    "TrellisClimbMixin",
     "WaterBottleMixin"
   ],
   "client": [],

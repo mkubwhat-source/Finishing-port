@@ -38,18 +38,13 @@ public final class HHRegistryAliases {
             Map.entry("butter", "flavored:butter"),
             Map.entry("batter", "flavored:batter"),
             Map.entry("chocolate_bar", "flavored:chocolate"),
-            Map.entry("flour_bag", "bountifulfares:flour_block"),
-            Map.entry("trellis", "bountifulfares:trellis"),
-            Map.entry("bamboo_trellis", "bountifulfares:bamboo_trellis"),
-            Map.entry("stripped_bamboo_trellis", "bountifulfares:bamboo_trellis")
+            Map.entry("flour_bag", "bountifulfares:flour_block")
     );
 
     /** HH block id -> the bundled block that replaced it (placed blocks in old worlds). */
     private static final Map<String, String> MERGED_BLOCKS = Map.of(
             "pizza", "flavored:pizza",
-            "flour_bag", "bountifulfares:flour_block",
-            "trellis", "bountifulfares:trellis",
-            "grape_trellis", "bountifulfares:trellis"
+            "flour_bag", "bountifulfares:flour_block"
     );
 
     private HHRegistryAliases() {

@@ -20,6 +20,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
@@ -71,19 +72,35 @@ public class CrateRenderer implements BlockEntityRenderer<CrateBlockEntity, Crat
     private void addHalf(CrateBlockEntity crate, State state, int slotOffset, double surfaceY) {
         int seed = (int) crate.getBlockPos().asLong();
         for (int i = 0; i < CrateBlockEntity.SLOTS_PER_HALF; i++) {
-            ItemStack stack = crate.getItem(slotOffset + i);
-            Identifier model = DisplayModels.get(stack);
-            if (model == null) continue;
-            ItemStackRenderState modelState = new ItemStackRenderState();
-            DisplayModels.resolve(itemModelResolver, modelState, stack, model, ItemDisplayContext.FIXED, crate.getLevel(), seed + slotOffset + i);
-            ItemStackRenderState vintageState = null;
-            Identifier vintage = DisplayModels.vintageOverlay(stack);
-            if (vintage != null) {
-                vintageState = new ItemStackRenderState();
-                DisplayModels.resolve(itemModelResolver, vintageState, stack, vintage, ItemDisplayContext.FIXED, crate.getLevel(), seed + slotOffset + i);
-            }
-            state.entries.add(new Entry(i, surfaceY, modelState, vintageState));
+            Entry entry = entry(itemModelResolver, crate.getItem(slotOffset + i), i, surfaceY, crate.getLevel(), seed + slotOffset + i);
+            if (entry != null) state.entries.add(entry);
         }
+    }
+
+    /** An item stood in crate slot {@code slot} (0..8 of a half), or null when it has no display model. */
+    public static @Nullable Entry entry(ItemModelResolver resolver, ItemStack stack, int slot, double surfaceY, @Nullable Level level, int seed) {
+        Identifier model = DisplayModels.get(stack);
+        if (model == null) return null;
+        ItemStackRenderState modelState = new ItemStackRenderState();
+        DisplayModels.resolve(resolver, modelState, stack, model, ItemDisplayContext.FIXED, level, seed);
+        ItemStackRenderState vintageState = null;
+        Identifier vintage = DisplayModels.vintageOverlay(stack);
+        if (vintage != null) {
+            vintageState = new ItemStackRenderState();
+            DisplayModels.resolve(resolver, vintageState, stack, vintage, ItemDisplayContext.FIXED, level, seed);
+        }
+        return new Entry(slot, surfaceY, modelState, vintageState);
+    }
+
+    /** Submits an entry in crate (block) space, facing north. */
+    public static void submitEntry(Entry entry, PoseStack pose, SubmitNodeCollector collector, int light) {
+        int col = entry.slot() % 3;
+        int row = entry.slot() / 3;
+        pose.pushPose();
+        pose.translate(SPACING + col * (SLOT_SIZE + SPACING) + SLOT_SIZE / 2.0, entry.surfaceY() + PX, SPACING + row * (SLOT_SIZE + SPACING) + SLOT_SIZE / 2.0);
+        entry.model().submit(pose, collector, light, OverlayTexture.NO_OVERLAY, 0);
+        if (entry.vintage() != null) entry.vintage().submit(pose, collector, light, OverlayTexture.NO_OVERLAY, 0);
+        pose.popPose();
     }
 
     @Override
@@ -93,13 +110,7 @@ public class CrateRenderer implements BlockEntityRenderer<CrateBlockEntity, Crat
         pose.rotate(Axis.YP.rotationDegrees(state.yRot));
         pose.translate(-0.5, 0.0, -0.5);
         for (Entry entry : state.entries) {
-            int col = entry.slot() % 3;
-            int row = entry.slot() / 3;
-            pose.pushPose();
-            pose.translate(SPACING + col * (SLOT_SIZE + SPACING) + SLOT_SIZE / 2.0, entry.surfaceY() + PX, SPACING + row * (SLOT_SIZE + SPACING) + SLOT_SIZE / 2.0);
-            entry.model().submit(pose, collector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
-            if (entry.vintage() != null) entry.vintage().submit(pose, collector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
-            pose.popPose();
+            submitEntry(entry, pose, collector, state.lightCoords);
         }
         pose.popPose();
     }

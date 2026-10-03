@@ -11,7 +11,7 @@ b9d6e9c93a5650fda7704fd237f6def15314f86e data/bountifulfares/tags/block/grass_se
 4d62aa8f96977f3c11cc711530c6b5c484604d43 data/bountifulfares/tags/block/hoary_logs.json
 742d5732faf11c3316ea3d1203a0471bcb3bfca5 data/bountifulfares/tags/block/ignore_particle_tint.json
 80af8854f2544f66937dd404edb2eff0b5ff52c9 data/bountifulfares/tags/block/infused_candles.json
-e395fe628bb0e8b41235c00bdf3ce03f43f0219f data/bountifulfares/tags/block/jack_o_straws.json
+02f820beec6e35fb87e489913264a8d05e81c575 data/bountifulfares/tags/block/jack_o_straws.json
 13315de25b88787d97f22a6c8c65543a89498727 data/bountifulfares/tags/block/lemon_leaves.json
 049ca99ae5204aa2e9751896cee4fe8353bf8fc4 data/bountifulfares/tags/block/lemon_logs.json
 5d8fbc4ff116818df875561368742f504f3bffb3 data/bountifulfares/tags/block/orange_leaves.json
@@ -30,7 +30,7 @@ b81c307e2bdffe0efb2c70d96bdf4d309c504b6f data/bountifulfares/tags/block/wild_eld
 b9f829433c3219a0ac18256a2c35474c83ac71e7 data/minecraft/tags/block/bee_growables.json
 36b433bb8a21386d4fc6f005577885fa78746cd3 data/minecraft/tags/block/buttons.json
 b96aad2ef2ba9039c41011af58c78962f6921b79 data/minecraft/tags/block/ceiling_hanging_signs.json
-e2774b36ab2b0642fe4e244f64e4dc1bab7285d4 data/minecraft/tags/block/crops.json
+73c694a21535bea9621f8aa1cb4a74c942b10ae6 data/minecraft/tags/block/crops.json
 aa369359b91a26abf0d1a587e6d4294a66983c0b data/minecraft/tags/block/dirt.json
 5e42dd4903b486387041bbfac5cb8cd6ad73a0d4 data/minecraft/tags/block/doors.json
 a843f336e54d14eac75c66290f383cd793a581fd data/minecraft/tags/block/fence_gates.json
@@ -38,7 +38,7 @@ a843f336e54d14eac75c66290f383cd793a581fd data/minecraft/tags/block/fence_gates.j
 1d62a018d4c8a2f36af1757db6279871e6f0e40f data/minecraft/tags/block/flowers.json
 e9d81a8b71c67a64ef902dd234f70a7df9775e76 data/minecraft/tags/block/leaves.json
 9d78e6e2a75be75d789401dad8d79a08cbd563d6 data/minecraft/tags/block/logs_that_burn.json
-6e9dbd0a67ec892eb711e239d84d6fd9b5d7156e data/minecraft/tags/block/mineable/axe.json
+f5c507b4788898b240d2bd93a775741dbb664f48 data/minecraft/tags/block/mineable/axe.json
 313134eee5e7b7f6c7dff4599ca60bcaff9b3e7a data/minecraft/tags/block/mineable/hoe.json
 6a5f4c6ac3d055383a9fec0923e42577927ad326 data/minecraft/tags/block/mineable/pickaxe.json
 460ca0044e9970a294ff30c8b30535fa3ea9fd97 data/minecraft/tags/block/mineable/shovel.json

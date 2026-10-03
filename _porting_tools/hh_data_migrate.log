@@ -1,7 +1,6 @@
-== block loot skipped (block not registered) (3)
+== block loot skipped (block not registered) (2)
     flour_bag
     rotten_tomato_crate
-    trellis
 == fd cutting result dropped (9)
     farmersdelight:cake_slice
     farmersdelight:cod_slice
@@ -212,19 +211,14 @@
     farmersdelight:shepherds_pie
     farmersdelight:skillet
     farmersdelight:stuffed_pumpkin
-== recipe advancement dropped (6)
+== recipe advancement dropped (4)
     hearthandharvest/advancement/recipes/building_blocks/flour_bag.json
     hearthandharvest/advancement/recipes/building_blocks/rotten_tomato_crate.json
-    hearthandharvest/advancement/recipes/decorations/bamboo_trellis.json
-    hearthandharvest/advancement/recipes/decorations/trellis.json
     hearthandharvest/advancement/recipes/food/flour_from_bag.json
     hearthandharvest/advancement/recipes/food/rotten_tomato_from_crate.json
-== recipe dropped (5)
-    hearthandharvest/recipe/bamboo_trellis.json (hearthandharvest:bamboo_trellis)
+== recipe dropped (2)
     hearthandharvest/recipe/rotten_tomato_crate.json (farmersdelight:rotten_tomato)
     hearthandharvest/recipe/rotten_tomato_from_crate.json (hearthandharvest:rotten_tomato_crate)
-    hearthandharvest/recipe/stripped_bamboo_trellis.json (hearthandharvest:bamboo_trellis)
-    hearthandharvest/recipe/trellis.json (hearthandharvest:trellis)
 == recipe skipped (dup) (2)
     hearthandharvest/recipe/flour_bag.json
     hearthandharvest/recipe/flour_from_bag.json
@@ -235,22 +229,6 @@
     farmersdelight:stove -> minecraft:smoker
     farmersdelight:tatami -> minecraft:bamboo_mosaic
     farmersdelight:wooden_basket -> minecraft:barrel
-== structure trellis (20)
-    hearthandharvest:grape_trellis ['east'] -> facing east plant red_grape
-    hearthandharvest:trellis ['east'] -> facing east plant rose
-    hearthandharvest:trellis ['east'] -> facing east plant vine
-    hearthandharvest:trellis ['north', 'east'] -> facing north plant rose
-    hearthandharvest:trellis ['north', 'east'] -> facing north plant vine
-    hearthandharvest:trellis ['north', 'south'] -> facing north plant none
-    hearthandharvest:trellis ['north'] -> facing north plant none
-    hearthandharvest:trellis ['north'] -> facing north plant vine
-    hearthandharvest:trellis ['south', 'west'] -> facing south plant rose
-    hearthandharvest:trellis ['south', 'west'] -> facing south plant vine
-    hearthandharvest:trellis ['south'] -> facing south plant none
-    hearthandharvest:trellis ['south'] -> facing south plant rose
-    hearthandharvest:trellis ['south'] -> facing south plant vine
-    hearthandharvest:trellis ['west'] -> facing west plant rose
-    hearthandharvest:trellis ['west'] -> facing west plant vine
 == tag reference dropped (tag missing) (27)
     #c:crops/rice in c/tags/item/crops.json
     #c:foods/cooked_bacon in c/tags/item/foods/cooked_pork.json
@@ -279,7 +257,7 @@
     #hearthandharvest:mushroom_colonies in hearthandharvest/tags/block/compost_activators.json
     #hearthandharvest:mushroom_colonies in hearthandharvest/tags/block/unaffected_by_rich_soil.json
     #hearthandharvest:snacks in c/tags/item/foods.json
-== tag value dropped (block) (180)
+== tag value dropped (block) (167)
     farmersdelight:apple_pie
     farmersdelight:bamboo_basket
     farmersdelight:beetroot_crate
@@ -392,12 +370,10 @@
     farmersdelight:yellow_hanging_canvas_sign
     farmersdelight:yellow_wall_hanging_canvas_sign
     hearthandharvest:flour_bag
-    hearthandharvest:grape_trellis
     hearthandharvest:rotten_tomato_crate
-    hearthandharvest:trellis
 == tag value dropped (enchantment) (1)
     hearthandharvest:backstabbing
-== tag value dropped (item) (184)
+== tag value dropped (item) (181)
     farmersdelight:apple_pie
     farmersdelight:apple_pie_slice
     farmersdelight:bacon_and_eggs
@@ -528,10 +504,7 @@
     farmersdelight:wild_tomatoes
     farmersdelight:yellow_canvas_sign
     farmersdelight:yellow_hanging_canvas_sign
-    hearthandharvest:bamboo_trellis
     hearthandharvest:flour_bag
     hearthandharvest:rotten_tomato_crate
-    hearthandharvest:stripped_bamboo_trellis
-    hearthandharvest:trellis
 tag path collisions with datagen output: ['c/tags/item/crops.json', 'c/tags/item/seeds.json', 'c/tags/item/foods/bread.json', 'c/tags/item/foods/fruit.json', 'minecraft/tags/block/crops.json', 'minecraft/tags/block/dirt.json', 'minecraft/tags/block/flower_pots.json', 'minecraft/tags/block/flowers.json', 'minecraft/tags/block/slabs.json', 'minecraft/tags/block/small_flowers.json', 'minecraft/tags/block/stairs.json', 'minecraft/tags/block/walls.json', 'minecraft/tags/block/mineable/axe.json', 'minecraft/tags/block/mineable/hoe.json', 'minecraft/tags/block/mineable/pickaxe.json', 'minecraft/tags/block/mineable/shovel.json', 'minecraft/tags/item/chicken_food.json', 'minecraft/tags/item/cow_food.json', 'minecraft/tags/item/fox_food.json', 'minecraft/tags/item/goat_food.json', 'minecraft/tags/item/horse_food.json', 'minecraft/tags/item/parrot_food.json', 'minecraft/tags/item/pig_food.json', 'minecraft/tags/item/piglin_loved.json', 'minecraft/tags/item/sheep_food.json', 'minecraft/tags/item/slabs.json', 'minecraft/tags/item/small_flowers.json', 'minecraft/tags/item/stairs.json', 'minecraft/tags/item/villager_plantable_seeds.json', 'minecraft/tags/item/walls.json', 'c/tags/item/foods/vegetable.json', 'c/tags/item/foods/corn.json']
-written: 1595
+written: 1603

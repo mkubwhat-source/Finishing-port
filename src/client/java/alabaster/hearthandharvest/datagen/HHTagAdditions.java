@@ -125,6 +125,7 @@ public final class HHTagAdditions {
 
     public static void addBlockTags(Function<TagKey<Block>, TagAppender<Block>> builder) {
         builder.apply(TagKey.create(Registries.BLOCK, Identifier.parse("minecraft:crops")))
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:grape_trellis")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:cotton")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:peanuts")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:corn_stalk")))
@@ -160,6 +161,8 @@ public final class HHTagAdditions {
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:stomping_basin")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:crate")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:sprinkler")))
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:trellis")))
+                .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:grape_trellis")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:oak_half_cabinet")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:birch_half_cabinet")))
                 .add(ResourceKey.create(Registries.BLOCK, Identifier.parse("hearthandharvest:spruce_half_cabinet")))

@@ -26,7 +26,13 @@ import alabaster.hearthandharvest.common.network.PlayerPoopCooldownPacket;
 import alabaster.hearthandharvest.common.network.PlayerPoopPacket;
 import alabaster.hearthandharvest.common.registry.*;
 import alabaster.hearthandharvest.platform.util.BlockEntityItems;
+import alabaster.hearthandharvest.common.block.trellis.TrellisBlock;
+import alabaster.hearthandharvest.common.block.trellis.TrellisPlant;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
+import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.client.renderer.special.SpecialModelRenderers;
+import net.minecraft.world.level.FoliageColor;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
@@ -62,9 +68,11 @@ import net.minecraft.world.item.ItemStack;
  * Hearth and Harvest client setup (1.21.1: NeoForge ClientEventHandler, ChickenGlideClientEvents,
  * SaltedFoodTooltipHandler and FarmersDelight's ClientSetupEvents).
  * <ul>
- *   <li>The trellis block colour handler is gone with HH's trellises (grapes use BF's trellis).</li>
- *   <li>Crate and pitchfork item renderers (BEWLR) are gone: the crate item is a plain item model and
- *       the pitchfork uses its plain item model (no trident-style rendering, per the merge plan).</li>
+ *   <li>Trellis vines take the biome foliage colour (tint index 0; roses and grapes are untinted), and
+ *       {@link TrellisGhostRenderer} previews trellis placement.</li>
+ *   <li>The crate item renderer (BEWLR) is the crate's item definition: the single crate model plus a
+ *       {@link CrateItemRenderer} special layer for its contents. The pitchfork BEWLR is gone: it uses
+ *       its plain item model (no trident-style rendering, per the merge plan).</li>
  *   <li>The "vintage" item property is a {@code minecraft:select} on the {@code hearthandharvest:vintage}
  *       component in the item definitions, so it needs no code.</li>
  *   <li>Recipe book categories are registered server-side (HHRecipeBookCategories) and shown by the
@@ -86,6 +94,12 @@ public class HearthAndHarvestClient implements ClientModInitializer {
         registerTooltips();
         registerKeys();
         HHExtraModels.register();
+        TrellisGhostRenderer.register();
+        SpecialModelRenderers.ID_MAPPER.put(CrateItemRenderer.ID, CrateItemRenderer.Unbaked.MAP_CODEC);
+        BlockColorRegistry.register((state, level, pos, tints) -> tints.add(
+                state.getValue(TrellisBlock.PLANT) != TrellisPlant.VINE ? -1
+                        : level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.FOLIAGE_DEFAULT),
+                HHModBlocks.TRELLIS.get());
 
         ExtractItemDecorationsCallback.EVENT.register((gui, font, stack, x, y) -> {
             if (!stack.is(HHModItems.SEED_POUCH.get())) return;

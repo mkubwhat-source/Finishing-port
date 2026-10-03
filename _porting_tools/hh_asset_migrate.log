@@ -1,11 +1,9 @@
-/home/user/Finishing-port/_porting_tools/hh_asset_migrate.py:517: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+/home/user/Finishing-port/_porting_tools/hh_asset_migrate.py:526: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
   px = [(p[0] * r // 255, p[1] * g // 255, p[2] * b // 255, p[3]) for p in im.getdata()]
-== blockstate skipped (block not registered) (5)
+== blockstate skipped (block not registered) (3)
     flour_bag
-    grape_trellis
     pizza
     rotten_tomato_crate
-    trellis
 == fd texture copied (106)
     textures/block/acacia_cabinet_front.png
     textures/block/acacia_cabinet_front_open.png
@@ -113,15 +111,10 @@
     textures/particle/steam_7.png
     textures/particle/steam_8.png
     textures/particle/steam_9.png
-== lang key dropped (merged/dropped) (21)
-    block.hearthandharvest.bamboo_trellis
+== lang key dropped (merged/dropped) (14)
     block.hearthandharvest.flour_bag
-    block.hearthandharvest.grape_trellis
     block.hearthandharvest.pizza
     block.hearthandharvest.rotten_tomato_crate
-    block.hearthandharvest.stripped_bamboo_trellis
-    block.hearthandharvest.trellis
-    item.hearthandharvest.bamboo_trellis
     item.hearthandharvest.batter
     item.hearthandharvest.butter
     item.hearthandharvest.chocolate_bar
@@ -131,106 +124,13 @@
     item.hearthandharvest.mead
     item.hearthandharvest.pickled_beetroots
     item.hearthandharvest.pizza_slice
-    item.hearthandharvest.stripped_bamboo_trellis
     item.hearthandharvest.sweet_berry_juice
     item.hearthandharvest.sweet_berry_wine
-    item.hearthandharvest.trellis
-== lang key dropped (trellis) (3)
-    block.hearthandharvest.trellis.growth_allowed
-    block.hearthandharvest.trellis.growth_blocked
-    block.hearthandharvest.trellis.remove_plant_first
-== model skipped (dropped block) (91)
+== model skipped (dropped block) (4)
     block/flour_bag
     block/rotten_tomato_crate
-    block/trellis/base/trellis_flat
-    block/trellis/base/trellis_middle_ew
-    block/trellis/base/trellis_middle_ns
-    block/trellis/base/trellis_side_ew
-    block/trellis/base/trellis_side_ns
-    block/trellis/base/trellis_top
-    block/trellis/base/vine_overlay_flat
-    block/trellis/base/vine_overlay_middle_ew
-    block/trellis/base/vine_overlay_middle_ns
-    block/trellis/base/vine_overlay_side
-    block/trellis/base/vine_overlay_top
-    block/trellis_bamboo_trellis_flat
-    block/trellis_bamboo_trellis_middle_ew
-    block/trellis_bamboo_trellis_middle_ns
-    block/trellis_bamboo_trellis_side_ew
-    block/trellis_bamboo_trellis_side_ns
-    block/trellis_bamboo_trellis_top
-    block/trellis_grape_vine_overlay_flat
-    block/trellis_grape_vine_overlay_middle_ew
-    block/trellis_grape_vine_overlay_middle_ns
-    block/trellis_grape_vine_overlay_side
-    block/trellis_grape_vine_overlay_top
-    block/trellis_green_grape_vine_stage0_overlay_flat
-    block/trellis_green_grape_vine_stage0_overlay_middle_ew
-    block/trellis_green_grape_vine_stage0_overlay_middle_ns
-    block/trellis_green_grape_vine_stage0_overlay_side
-    block/trellis_green_grape_vine_stage0_overlay_top
-    block/trellis_green_grape_vine_stage1_overlay_flat
-    block/trellis_green_grape_vine_stage1_overlay_middle_ew
-    block/trellis_green_grape_vine_stage1_overlay_middle_ns
-    block/trellis_green_grape_vine_stage1_overlay_side
-    block/trellis_green_grape_vine_stage1_overlay_top
-    block/trellis_green_grape_vine_stage2_overlay_flat
-    block/trellis_green_grape_vine_stage2_overlay_middle_ew
-    block/trellis_green_grape_vine_stage2_overlay_middle_ns
-    block/trellis_green_grape_vine_stage2_overlay_side
-    block/trellis_green_grape_vine_stage2_overlay_top
-    block/trellis_green_grape_vine_stage3_overlay_flat
-    block/trellis_green_grape_vine_stage3_overlay_middle_ew
-    block/trellis_green_grape_vine_stage3_overlay_middle_ns
-    block/trellis_green_grape_vine_stage3_overlay_side
-    block/trellis_green_grape_vine_stage3_overlay_top
-    block/trellis_red_grape_vine_stage0_overlay_flat
-    block/trellis_red_grape_vine_stage0_overlay_middle_ew
-    block/trellis_red_grape_vine_stage0_overlay_middle_ns
-    block/trellis_red_grape_vine_stage0_overlay_side
-    block/trellis_red_grape_vine_stage0_overlay_top
-    block/trellis_red_grape_vine_stage1_overlay_flat
-    block/trellis_red_grape_vine_stage1_overlay_middle_ew
-    block/trellis_red_grape_vine_stage1_overlay_middle_ns
-    block/trellis_red_grape_vine_stage1_overlay_side
-    block/trellis_red_grape_vine_stage1_overlay_top
-    block/trellis_red_grape_vine_stage2_overlay_flat
-    block/trellis_red_grape_vine_stage2_overlay_middle_ew
-    block/trellis_red_grape_vine_stage2_overlay_middle_ns
-    block/trellis_red_grape_vine_stage2_overlay_side
-    block/trellis_red_grape_vine_stage2_overlay_top
-    block/trellis_red_grape_vine_stage3_overlay_flat
-    block/trellis_red_grape_vine_stage3_overlay_middle_ew
-    block/trellis_red_grape_vine_stage3_overlay_middle_ns
-    block/trellis_red_grape_vine_stage3_overlay_side
-    block/trellis_red_grape_vine_stage3_overlay_top
-    block/trellis_rose_vine_overlay_flat
-    block/trellis_rose_vine_overlay_middle_ew
-    block/trellis_rose_vine_overlay_middle_ns
-    block/trellis_rose_vine_overlay_side
-    block/trellis_rose_vine_overlay_top
-    block/trellis_stripped_bamboo_trellis_flat
-    block/trellis_stripped_bamboo_trellis_middle_ew
-    block/trellis_stripped_bamboo_trellis_middle_ns
-    block/trellis_stripped_bamboo_trellis_side_ew
-    block/trellis_stripped_bamboo_trellis_side_ns
-    block/trellis_stripped_bamboo_trellis_top
-    block/trellis_trellis_flat
-    block/trellis_trellis_middle_ew
-    block/trellis_trellis_middle_ns
-    block/trellis_trellis_side_ew
-    block/trellis_trellis_side_ns
-    block/trellis_trellis_top
-    block/trellis_vine_overlay_flat
-    block/trellis_vine_overlay_middle_ew
-    block/trellis_vine_overlay_middle_ns
-    block/trellis_vine_overlay_side
-    block/trellis_vine_overlay_top
-    item/bamboo_trellis
     item/flour_bag
     item/rotten_tomato_crate
-    item/stripped_bamboo_trellis
-    item/trellis
 == model skipped (merged item: its own mod's model is used) (40)
     item/2d_glow_berry_wine
     item/2d_mead
@@ -284,15 +184,7 @@
     crabbersdelight:block/palm_cabinet_front
     crabbersdelight:block/palm_cabinet_front_open
     crabbersdelight:block/palm_cabinet_side
-== texture skipped (dropped trellis) (6)
-    block/bamboo_trellis.png
-    block/bamboo_trellis_flat.png
-    block/stripped_bamboo_trellis.png
-    block/stripped_bamboo_trellis_flat.png
-    block/trellis.png
-    block/trellis_flat.png
-== texture skipped (merged/dropped item) (15)
-    item/bamboo_trellis.png
+== texture skipped (merged/dropped item) (12)
     item/batter.png
     item/butter.png
     item/chocolate_bar.png
@@ -303,8 +195,6 @@
     item/pickled_beetroots.png
     item/pizza.png
     item/pizza_slice.png
-    item/stripped_bamboo_trellis.png
     item/sweet_berry_juice.png
     item/sweet_berry_wine.png
-    item/trellis.png
-json written: 1269
+json written: 1361

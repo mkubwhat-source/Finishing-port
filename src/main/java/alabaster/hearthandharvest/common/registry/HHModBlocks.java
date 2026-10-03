@@ -4,6 +4,8 @@ import net.minecraft.world.level.material.PushReaction;
 import net.hecco.bountifulfares.platform.BFProperties;
 import alabaster.hearthandharvest.HearthAndHarvest;
 import alabaster.hearthandharvest.common.block.*;
+import alabaster.hearthandharvest.common.block.trellis.GrapeTrellisBlock;
+import alabaster.hearthandharvest.common.block.trellis.TrellisBlock;
 import alabaster.hearthandharvest.common.fd.block.*;
 import net.hecco.bountifulfares.platform.BFRegistryHelper;
 import net.minecraft.world.level.material.MapColor;
@@ -56,6 +58,19 @@ public class HHModBlocks {
 
 
 
+
+    // Trellises
+    public static final Supplier<TrellisBlock> TRELLIS = register("trellis",
+            () -> new TrellisBlock(BFProperties.block().strength(2.0F).sound(SoundType.WOOD).noOcclusion().forceSolidOff(),
+                    HHModBlocks::getGrapeTrellis));
+
+    public static final Supplier<GrapeTrellisBlock> GRAPE_TRELLIS = register("grape_trellis",
+            () -> new GrapeTrellisBlock(BFProperties.block().strength(2.0F).sound(SoundType.WOOD).noOcclusion().forceSolidOff(),
+                    HHModBlocks::getTrellis));
+
+    // This portion is needed to map transforming from trellis/grape trellises
+    private static Block getTrellis() { return TRELLIS.get(); }
+    private static Block getGrapeTrellis() { return GRAPE_TRELLIS.get(); }
 
     // Half-Cabinets
     public static final Supplier<Block> OAK_HALF_CABINET = register("oak_half_cabinet",

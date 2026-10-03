@@ -19,8 +19,8 @@ Done this session (details in `_porting_tools/HEARTH_AND_HARVEST_STATUS.md`):
 - Verified: compile, runDatagen, dedicated server boots with all data (0 load errors), dev client: HH creative tabs
   fully textured, blocks/block entities/crow render, Cooking Pot / Keg / Cask screens open.
 - Lilliput Lane NBT uses vanilla stand-ins for FD blocks not in the bundle (stove -> smoker, tatami -> bamboo mosaic,
-  rope fence -> oak fence, canvas wall signs -> cherry/pale oak wall signs, wooden basket -> barrel);
-  HH trellises -> BF trellises (one side per block). Not yet confirmed with the user.
+  rope fence -> oak fence, canvas wall signs -> cherry/pale oak wall signs, wooden basket -> barrel).
+  Its HH trellises are HH trellises again (see the play-test fixes below).
 
 Done in the follow-up session (2026-10-03, branch claude/amazing-tesla-wp9pz9; details in the
 "JEI / EMI" section of `_porting_tools/HEARTH_AND_HARVEST_STATUS.md`):
@@ -34,6 +34,12 @@ Done in the follow-up session (2026-10-03, branch claude/amazing-tesla-wp9pz9; d
 - 3d_watering_can model load error fixed (script kept face-less cubes).
 - LICENSE: third-party section for HH (MIT), FD (MIT), NeoForge-derived inventory classes (LGPL-2.1);
   the jar now ships it as LICENSE_bountifulfares. `./gradlew build -x test` OK, runDatagen OK.
+
+Done after user play-testing (2026-10-03, branch claude/cool-turing-q22lhn; details in "Play-test fixes"
+of `_porting_tools/HEARTH_AND_HARVEST_STATUS.md`): BF trellis grape textures, cleaver attack/durability and
+throw animation, cutting board tool handling and messages, desaturated models (26.3 ignores "shade"),
+HH trellises + grape trellis restored next to BF's (user decision 6 revised) with placement preview and
+climbing, Lilliput Lane back to upstream trellises, crate item model + contents.
 
 NEXT (not done):
 1. Functional play-test: cutting board, cooking pot, keg, cask, stomping basin, grapes on BF trellises,

@@ -15,6 +15,7 @@ import alabaster.hearthandharvest.HearthAndHarvest;
 import alabaster.hearthandharvest.common.HHFoodValues;
 import alabaster.hearthandharvest.common.item.GoatMilkBucketItem;
 import alabaster.hearthandharvest.common.item.*;
+import alabaster.hearthandharvest.common.block.trellis.TrellisMaterial;
 import com.google.common.collect.Sets;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
@@ -67,6 +68,12 @@ public class HHModItems {
     /** 1.21.1: FD KnifeItem(tier) + CleaverItem.createAttributes(tier, 2.0, -3.0). */
     public static Item.Properties cleaverItem(ToolMaterial material) {
         return KnifeItem.knifeProperties(BFProperties.item(), material, 2.0F, -3.0F);
+    }
+
+    /** 1.21.1 TrellisBlockItem.getBurnTime: 300 ticks. */
+    public static Item.Properties trellisItem() {
+        return BFProperties.item().component(DataComponents.COOKING_FUEL, new net.minecraft.world.item.component.CookingFuel(
+                new net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant(300), new net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat.Constant(1.0F)));
     }
 
     public static Item.Properties foodItem(HHFood food) {
@@ -155,7 +162,12 @@ public class HHModItems {
     public static final Supplier<Item> SCARECROW = registerWithBlockTab("scarecrow",
             () -> new BlockItem(HHModBlocks.SCARECROW.get(), basicItem()));
 
-    public static final Supplier<Item> TRELLIS = merged(() -> BFBlocks.TRELLISES.get("oak").get());
+    public static final Supplier<Item> TRELLIS = registerWithBlockTab("trellis",
+            () -> new TrellisBlockItem(HHModBlocks.TRELLIS.get(), TrellisMaterial.STICK, trellisItem()));
+    public static final Supplier<Item> BAMBOO_TRELLIS = registerWithBlockTab("bamboo_trellis",
+            () -> new TrellisBlockItem(HHModBlocks.TRELLIS.get(), TrellisMaterial.BAMBOO, trellisItem()));
+    public static final Supplier<Item> STRIPPED_BAMBOO_TRELLIS = registerWithBlockTab("stripped_bamboo_trellis",
+            () -> new TrellisBlockItem(HHModBlocks.TRELLIS.get(), TrellisMaterial.STRIPPED_BAMBOO, trellisItem()));
 
     public static final Supplier<Item> HORSESHOE = registerWithTab("horseshoe",
             () -> new HorseshoeItem (basicItem()));

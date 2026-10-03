@@ -1,1 +1,1 @@
-HH 1.21.1 trellis classes, replaced by Bountiful Fares trellises (grapes = BF trellis crops with 'spreading'). Kept for reference; not compiled.
+HH 1.21.1 trellis sources the 26.3 port of HH's trellises (src/main/java/alabaster/hearthandharvest/common/block/trellis, common/item/TrellisBlockItem, client TrellisGhostRenderer) was made from. Kept for reference; not compiled.
