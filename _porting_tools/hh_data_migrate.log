@@ -251,11 +251,10 @@
     hearthandharvest:trellis ['south'] -> facing south plant vine
     hearthandharvest:trellis ['west'] -> facing west plant rose
     hearthandharvest:trellis ['west'] -> facing west plant vine
-== tag reference dropped (tag missing) (28)
+== tag reference dropped (tag missing) (27)
     #c:crops/rice in c/tags/item/crops.json
     #c:foods/cooked_bacon in c/tags/item/foods/cooked_pork.json
     #c:foods/cooked_egg in c/tags/item/foods.json
-    #c:mineable/knife in hearthandharvest/tags/block/mineable/knife.json
     #c:storage_blocks/beetroot in c/tags/block/storage_blocks.json
     #c:storage_blocks/beetroot in c/tags/item/storage_blocks.json
     #c:storage_blocks/cabbage in c/tags/block/storage_blocks.json
@@ -535,4 +534,4 @@
     hearthandharvest:stripped_bamboo_trellis
     hearthandharvest:trellis
 tag path collisions with datagen output: ['c/tags/item/crops.json', 'c/tags/item/seeds.json', 'c/tags/item/foods/bread.json', 'c/tags/item/foods/fruit.json', 'minecraft/tags/block/crops.json', 'minecraft/tags/block/dirt.json', 'minecraft/tags/block/flower_pots.json', 'minecraft/tags/block/flowers.json', 'minecraft/tags/block/slabs.json', 'minecraft/tags/block/small_flowers.json', 'minecraft/tags/block/stairs.json', 'minecraft/tags/block/walls.json', 'minecraft/tags/block/mineable/axe.json', 'minecraft/tags/block/mineable/hoe.json', 'minecraft/tags/block/mineable/pickaxe.json', 'minecraft/tags/block/mineable/shovel.json', 'minecraft/tags/item/chicken_food.json', 'minecraft/tags/item/cow_food.json', 'minecraft/tags/item/fox_food.json', 'minecraft/tags/item/goat_food.json', 'minecraft/tags/item/horse_food.json', 'minecraft/tags/item/parrot_food.json', 'minecraft/tags/item/pig_food.json', 'minecraft/tags/item/piglin_loved.json', 'minecraft/tags/item/sheep_food.json', 'minecraft/tags/item/slabs.json', 'minecraft/tags/item/small_flowers.json', 'minecraft/tags/item/stairs.json', 'minecraft/tags/item/villager_plantable_seeds.json', 'minecraft/tags/item/walls.json', 'c/tags/item/foods/vegetable.json', 'c/tags/item/foods/corn.json']
-written: 1591
+written: 1595

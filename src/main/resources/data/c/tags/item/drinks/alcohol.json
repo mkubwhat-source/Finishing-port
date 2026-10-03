@@ -12,6 +12,10 @@
     "bountifulfares:mead_bottle",
     "hearthandharvest:root_beer",
     "hearthandharvest:hard_cider",
-    "hearthandharvest:moonshine"
+    "hearthandharvest:moonshine",
+    "flavored:beer",
+    "flavored:cider",
+    "bountifulfares:elderberry_wine_bottle",
+    "bountifulfares:lapisberry_wine_bottle"
   ]
 }

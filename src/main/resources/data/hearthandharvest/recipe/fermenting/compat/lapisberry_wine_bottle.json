@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:fermenting",
+  "experience": 0.35,
+  "ferment_time": 1200,
+  "ingredients": [
+    "bountifulfares:lapisberries",
+    "minecraft:glass_bottle"
+  ],
+  "recipe_book_tab": "drinks",
+  "result_item": {
+    "id": "bountifulfares:lapisberry_wine_bottle"
+  }
+}

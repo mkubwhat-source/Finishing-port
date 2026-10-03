@@ -1,0 +1,10 @@
+{
+  "type": "flavored:fermenting",
+  "category": "food",
+  "fermenter": "minecraft:sugar",
+  "ingredient": "hearthandharvest:cherry_juice",
+  "particle_color": "6d0d19",
+  "result": {
+    "id": "hearthandharvest:cherry_wine"
+  }
+}

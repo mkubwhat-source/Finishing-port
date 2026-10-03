@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:fermenting",
+  "experience": 0.35,
+  "ferment_time": 1200,
+  "ingredients": [
+    "bountifulfares:hoary_apple",
+    "bountifulfares:jar"
+  ],
+  "recipe_book_tab": "drinks",
+  "result_item": {
+    "id": "bountifulfares:hoary_cider_jar"
+  }
+}

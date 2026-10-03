@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "hearthandharvest:raspberry_juice",
+  "particle_color": 8982845,
+  "result": {
+    "id": "hearthandharvest:raspberry_wine"
+  },
+  "result_count": 1
+}

@@ -3,6 +3,7 @@
   "values": [
     "minecraft:carved_pumpkin",
     "minecraft:jack_o_lantern",
-    "hearthandharvest:scarecrow"
+    "hearthandharvest:scarecrow",
+    "#bountifulfares:jack_o_straws"
   ]
 }

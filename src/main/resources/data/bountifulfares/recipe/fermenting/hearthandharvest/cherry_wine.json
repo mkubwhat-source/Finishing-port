@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "hearthandharvest:cherry_juice",
+  "particle_color": 7146777,
+  "result": {
+    "id": "hearthandharvest:cherry_wine"
+  },
+  "result_count": 1
+}

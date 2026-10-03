@@ -705,7 +705,8 @@ def migrate_structure(src, dst):
                     if k not in ("id", "LootTable", "LootTableSeed", "Items"):
                         del n[k]
         _remap_nbt_items(n)
-    f.save(dst, gzipped=True)
+    with gzip.GzipFile(dst, "wb", mtime=0) as g:   # deterministic output (no timestamp)
+        f.write(g)
 
 
 def _remap_nbt_items(n):
@@ -822,7 +823,7 @@ def main(hh, fdr, fd121, port, vanilla, *extra_tag_dirs):
             REPORT["fd recipe skipped"].append("%s (%s)" % (rel, e))
             continue
         rid = HH + ":" + rel[:-5]
-        if os.path.exists(os.path.join(out, HH, "recipe", rel)):
+        if os.path.join(out, HH, "recipe", rel) in WRITTEN:
             REPORT["fd recipe clashes with hh"].append(rel)
             continue
         write(os.path.join(out, HH, "recipe", rel), r2)
@@ -867,7 +868,7 @@ def main(hh, fdr, fd121, port, vanilla, *extra_tag_dirs):
         if b not in HH_BLOCKS:
             continue
         dst = os.path.join(out, HH, "loot_table/blocks", rel)
-        if os.path.exists(dst):
+        if dst in WRITTEN:
             continue
         t = json.loads(json.dumps(json.load(open(p))).replace("farmersdelight:", HH + ":"))
         write(dst, t)
@@ -903,6 +904,23 @@ def main(hh, fdr, fd121, port, vanilla, *extra_tag_dirs):
     tag_files[os.path.join("c", "tags/item/foods/corn.json")]["values"].append("#c:vegetables/corn")
     tag_files[os.path.join("c", "tags/item/flours/wheat.json")]  # (bountifulfares:flour via remap)
     tag_files[os.path.join("c", "tags/block/villager_farmlands.json")]["values"] += ["minecraft:farmland", HH + ":rich_soil_farmland"]
+    # Tags the ported code uses that 1.21.1 didn't ship as data:
+    # decision 12 - BF's walnut/palm mulch act as HH mulch (HHModTags.MULCH)
+    tag_files[os.path.join(HH, "tags/block/mulch.json")]["values"] += [
+        HH + ":mulch", "bountifulfares:walnut_mulch", "bountifulfares:walnut_mulch_block",
+        "bountifulfares:palm_mulch", "bountifulfares:palm_mulch_block"]
+    # decision 10 - BF Jack o' Straws scare crows too
+    tag_files[os.path.join(HH, "tags/block/repels_crows.json")]["values"].append("#bountifulfares:jack_o_straws")
+    # decision 11 - HH's flour bag is BF's flour block (HHCommonTags storage_blocks/flour)
+    for kind in ("block", "item"):
+        tag_files[os.path.join("c", "tags/%s/storage_blocks/flour.json" % kind)]["values"].append("bountifulfares:flour_block")
+    # decision 8 - the bundle's other alcoholic drinks (they give HH's Drunk too)
+    tag_files[os.path.join("c", "tags/item/drinks/alcohol.json")]["values"] += [
+        "flavored:beer", "flavored:cider", "bountifulfares:elderberry_wine_bottle", "bountifulfares:lapisberry_wine_bottle"]
+    # FD's knife-mineable blocks (FDTags.MINEABLE_WITH_KNIFE is c:mineable/knife)
+    tag_files[os.path.join("c", "tags/block/mineable/knife.json")]["values"].append("#" + HH + ":mineable/knife")
+    knife = tag_files[os.path.join(HH, "tags/block/mineable/knife.json")]
+    knife["values"] = [v for v in knife["values"] if v != "#c:mineable/knife"]   # would be a cycle now
 
     # Drop references to tags that won't exist (FD tags emptied by the filtering, e.g. FD knives),
     # and enchantment tag entries for FD enchantments that aren't part of the bundle. Repeat until stable.
@@ -954,6 +972,7 @@ def main(hh, fdr, fd121, port, vanilla, *extra_tag_dirs):
 
     collisions = []
     for key, t in tag_files.items():
+        t["values"] = list({json.dumps(v, sort_keys=True): v for v in t["values"]}.values())
         if not t["values"]:
             continue
         dst = os.path.join(out, key)

@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "hearthandharvest:green_grape_juice",
+  "particle_color": 6190597,
+  "result": {
+    "id": "hearthandharvest:green_grape_wine"
+  },
+  "result_count": 1
+}

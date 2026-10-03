@@ -1,0 +1,12 @@
+{
+  "type": "hearthandharvest:fermenting",
+  "experience": 0.35,
+  "ferment_time": 1200,
+  "ingredients": [
+    "flavored:wort"
+  ],
+  "recipe_book_tab": "drinks",
+  "result_item": {
+    "id": "flavored:beer"
+  }
+}

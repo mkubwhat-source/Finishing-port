@@ -1,0 +1,9 @@
+{
+  "type": "bountifulfares:fermenting",
+  "ingredient": "hearthandharvest:blueberry_juice",
+  "particle_color": 656758,
+  "result": {
+    "id": "hearthandharvest:blueberry_wine"
+  },
+  "result_count": 1
+}

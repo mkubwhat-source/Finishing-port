@@ -117,8 +117,10 @@ public final class FlavoredFoods {
     public static final Food APPLE_JUICE = bottle(nutrition(5, 0.3f), drink());
     public static final Food SWEET_BERRY_WINE = bottle(nutrition(6, 0.3f), effect(drink(), FlavoredEffects.BOOZED, 2400, 1F));
     public static final Food GLOW_BERRY_WINE = bottle(nutrition(6, 0.3f), effect(effect(drink(), FlavoredEffects.BOOZED, 2400, 1F), MobEffects.GLOWING, 1200, 1F));
-    public static final Food BEER = bottle(nutrition(5, 0.3f), effect(drink(), FlavoredEffects.BOOZED, 2400, 1F));
-    public static final Food CIDER = bottle(nutrition(7, 0.5f), effect(drink(), FlavoredEffects.BOOZED, 2400, 1F));
+    // Hearth and Harvest merge (user decision): every alcoholic drink of the bundle gives HH's Drunk
+    // (same duration/chance as Flavored's Boozed had); Boozed/Hangover are no longer given by drinks.
+    public static final Food BEER = bottle(nutrition(5, 0.3f), effect(drink(), alabaster.hearthandharvest.common.registry.HHModEffects.DRUNK, 2400, 1F));
+    public static final Food CIDER = bottle(nutrition(7, 0.5f), effect(drink(), alabaster.hearthandharvest.common.registry.HHModEffects.DRUNK, 2400, 1F));
 
     private FlavoredFoods() {
     }
