@@ -121,6 +121,10 @@ def clean_model(m):
         faces = el.get("faces", {})
         for f in [f for f, v in faces.items() if v.get("texture") == "#missing" and "missing" not in defined]:
             del faces[f]
+    # ...and a cube left with no faces at all is rejected outright ("Expected between 1 and 6 unique
+    # faces"), failing the whole model (3d_watering_can had four such cubes), so it goes too.
+    if "elements" in m:
+        m["elements"] = [el for el in m["elements"] if el.get("faces")]
     return m
 
 
@@ -466,7 +470,7 @@ class Migrator:
         fd_keys_wanted = re.compile(r"^(block|item)\.farmersdelight\.(%s)$" % "|".join(sorted(map(re.escape, self.items | self.blocks))))
         fd_lang_dirs = [os.path.join(b, "lang") for b in self.fdr_assets]
         extra_fd_prefixes = ("container.farmersdelight.", "farmersdelight.container.", "farmersdelight.tooltip.",
-                             "effect.farmersdelight.", "farmersdelight.block.", "farmersdelight.jei.", "farmersdelight.emi.",
+                             "effect.farmersdelight.", "farmersdelight.block.", "farmersdelight.jei.", "jei.farmersdelight.", "farmersdelight.emi.",
                              "subtitles.farmersdelight.block.cooking_pot", "subtitles.farmersdelight.block.cutting_board",
                              "subtitles.farmersdelight.block.cabinet", "gui.farmersdelight.", "farmersdelight.recipe_book.",
                              "itemGroup.farmersdelight", "tooltip.farmersdelight.cooking_pot.", "tooltip.farmersdelight.placeable")

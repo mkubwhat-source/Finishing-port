@@ -87,6 +87,41 @@ Credit kept in fabric.mod.json and LICENSE notice.
 - [x] Data migration (hh_data_migrate.py; server loads it with 0 errors)
 - [x] Merges/aliases + cross-compat recipes (hh_bundle_compat_recipes.py, Drunk, tags)
 - [x] Client code (renderers, screens, particles, models); assets still pending
-- [ ] JEI/EMI (next; see HANDOFF.md)
+- [x] JEI/EMI (2026-10-03, details below; checked in the dev client with JEI alone and with EMI + JEI)
 - [x] Assets (hh_asset_migrate.py; checked in the dev client)
-- [ ] Build, datagen, dev server/client play-test
+- [x] Build (jar now carries LICENSE_bountifulfares), datagen, dev server boot, dev client
+- [ ] Functional play-test of the machines and worldgen (see HANDOFF.md NEXT)
+
+## JEI / EMI (2026-10-03)
+- JEI: `client/compat/jei/HHJeiPlugin` (entrypoint `jei_mod_plugin`), port of HH 1.21.1's plugin plus the
+  FD parts from FarmersDelightRefabricated 26.3's: categories `hearthandharvest:aging` (cask),
+  `fermenting` (keg), `stomping`, `cooking`, `cutting`, `decomposition`; HH and FD info pages (FD only
+  for the FD items in the bundle: straw, wild cabbages, wild onions; the vintage page lists the merged
+  wines/mead/pickled beetroot); catalysts; click areas on the cask and cooking pot screens; transfer
+  handlers for the cask (4 inputs, inventory from slot 8) and cooking pot (6 inputs, inventory from 9).
+  Recipes come from BFClientRecipes (Fabric recipe sync), fluids in droplets (mB * 81).
+- HH 1.21.1's keg category pointed at `textures/gui/jei/jei_keg_gui.png`, which HH never shipped (it drew a
+  missing texture). The keg page is now cut from `keg_gui.png`: both tanks with their scale overlays, the
+  item slots, animated bubble columns, the glass bottle -> the bottle the result fills (HH fluid->bottle
+  data map), and the ferment time printed under the bottles.
+- Vintage (`hearthandharvest:vintage`) and other component ingredients are shown through the ingredient's
+  SlotDisplay so the right vintage / water bottle appears.
+- EMI: `client/compat/emi/HHEmiPlugin` (new; 1.21.1 HH had none). Same six categories, layouts and textures,
+  same ids, so JEMI skips the JEI copies ("Skipping recipe category ... native EMI recipe category already
+  exists"). EMI's own Ingredient conversion drops components, so custom ingredients are resolved through
+  their SlotDisplay (HHEmiUtil). Fluids show in EMI's default unit (liters, 1000 per bucket, so 250 L = 250 mB).
+  JEI's info pages reach EMI through JEMI when JEI is installed; EMI alone has no info pages.
+- Recipe sync: `bottle_crate` and `shapeless_remainder` serializers are now synced too, so JEI's crafting
+  category lists them (JEI itself only syncs minecraft: serializers; the tortilla recipe was checked).
+  Note HH 1.21.1 ships no bottle_crate recipe data at all; its JEI code for them was dead upstream.
+- Lang: FD's `jei.farmersdelight.*` keys were never migrated (hh_asset_migrate.py had the prefix as
+  `farmersdelight.jei.`); fixed in the script and added as `jei.hearthandharvest.*` to the 5 HH locales.
+  `gui.jei.category.smelting.time.seconds/experience` added to en_us (as FD does) so EMI-only installs
+  read them. FD's JEI textures copied to `textures/gui/jei/{cooking_pot,cutting_board,decomposition}.png`.
+- EMI "Untranslated tag" errors: 118 item tags (c:, hearthandharvest:, plus a few compat namespaces)
+  now have `tag.item.*` names in HH's en_us (and hh_lang_additions.json). Dev client: 0 untranslated.
+- Asset fix found on the way: `item/3d_watering_can.json` failed to load ("Expected between 1 and 6 unique
+  faces") because hh_asset_migrate.py removed its `#missing` faces but kept the empty cubes. Upstream's
+  model is an untextured draft that no display context uses (1.21.1 and this port both use the 2D model),
+  so the script now drops face-less cubes too. The jar models' "Unresolved texture references" warnings
+  are inherited from upstream (generic_jar's cube_all parent) and harmless.

@@ -133,6 +133,14 @@ processResources {
     }
 }
 
+// Ship the license (and its notices for the bundled Hearth and Harvest / Farmer's Delight / NeoForge
+// parts, which their licenses require to travel with copies) inside the jar.
+jar {
+    from("LICENSE") {
+        rename { "${it}_${mod_id}" }
+    }
+}
+
 tasks.withType(JavaCompile).configureEach {
     it.options.release.set(java_version.toInteger())
     it.options.compilerArgs.add("-Xmaxerrs")

@@ -22,17 +22,26 @@ Done this session (details in `_porting_tools/HEARTH_AND_HARVEST_STATUS.md`):
   rope fence -> oak fence, canvas wall signs -> cherry/pale oak wall signs, wooden basket -> barrel);
   HH trellises -> BF trellises (one side per block). Not yet confirmed with the user.
 
+Done in the follow-up session (2026-10-03, branch claude/amazing-tesla-wp9pz9; details in the
+"JEI / EMI" section of `_porting_tools/HEARTH_AND_HARVEST_STATUS.md`):
+- JEI plugin `alabaster.hearthandharvest.client.compat.jei.HHJeiPlugin`: aging, fermenting (keg), stomping,
+  cooking, cutting, decomposition + info pages, catalysts, click areas, transfer handlers. HH's keg page
+  never had its texture upstream; it is now cut from keg_gui.png and shows the ferment time.
+- Native EMI plugin `alabaster.hearthandharvest.client.compat.emi.HHEmiPlugin` with the same categories and
+  ids (JEMI skips the JEI copies). Both checked in the dev client (JEI alone, and EMI + JEI).
+- bottle_crate / shapeless_remainder serializers synced so JEI's crafting category shows them.
+- FD JEI lang keys migrated (script prefix bug fixed), 118 EMI tag names added (0 untranslated now).
+- 3d_watering_can model load error fixed (script kept face-less cubes).
+- LICENSE: third-party section for HH (MIT), FD (MIT), NeoForge-derived inventory classes (LGPL-2.1);
+  the jar now ships it as LICENSE_bountifulfares. `./gradlew build -x test` OK, runDatagen OK.
+
 NEXT (not done):
-1. JEI plugin for HH (in progress, nothing written yet): port HH 1.21.1 `integration/jei` (keg, cask aging, stomping,
-   ingredient info pages, bottle crate crafting) and FDR 26.3 `integration/jei` (cooking pot, cutting board) into
-   `src/client/java/alabaster/hearthandharvest/client/compat/jei/`, and add it to fabric.mod.json's "jei" entrypoint.
-   Model it on `com.sidden.flavored.client.compat.jei.FlavoredJeiPlugin`: recipes come from
-   `BFClientRecipes.getAllOfType`; fluids use JEI's Fabric fluid helper (HH FluidStack mB * 81 = droplets).
-   EMI shows JEI categories through JEMI; a native EMI plugin (like FlavoredEmiPlugin) is optional.
-2. EMI logs ~236 "Untranslated tag" errors: add `tag.item.<ns>.<path>` lang keys for HH and c: tags.
-3. Functional play-test: cutting board, cooking pot, keg, cask, stomping basin, grapes on BF trellises, Lilliput Lane /
-   corn maze generation, wild crop patches.
-4. Build the jar (`./gradlew build -x test`), update the STATUS docs, and add the LICENSE notice for HH (MIT) and FD (MIT).
+1. Functional play-test: cutting board, cooking pot, keg, cask, stomping basin, grapes on BF trellises,
+   Lilliput Lane / corn maze generation, wild crop patches. Confirm the Lilliput Lane stand-ins with the user.
+2. Optional: EMI-only installs get no HH info pages (they come through JEMI when JEI is installed); could
+   add EmiInfoRecipes, but they would then show twice with JEI + EMI.
+3. Open items from the BF + Flavored handoff below still apply. Flavored's own license is not in LICENSE yet
+   (not checked this session).
 
 Environment for a fresh cloud session:
 - JDK 25: install Temurin 25 to /opt/jdk25. In `~/.gradle/gradle.properties` set
@@ -52,6 +61,11 @@ Environment for a fresh cloud session:
   `DISPLAY=:99 SDL_VIDEO_FORCE_EGL=1 ./gradlew runClient --args="--quickPlaySingleplayer hhtest"`.
   The test world is a copy of runs/server/world with level.dat GameType=1 and allowCommands=1.
   Server smoke test: runs/server needs eula=true and online-mode=false; send "stop" on stdin.
+  The client needs EGL (`apt-get install libegl1 libegl-mesa0`; without it 26.3 fails with "Could not load
+  EGL library") and `xdotool` to drive it. First launch shows the accessibility screen (click Continue at
+  638,567 on a 1280x720 Xvfb). Driving JEI/EMI: give the items, open the inventory, hover, press U/R. The
+  creative tab's search box steals key presses, so test from survival (`/gamemode survival`).
+  To see JEI's own overlay, comment out the EMI `localRuntime` line in build.gradle for that run.
 
 ---
 

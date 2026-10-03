@@ -35,11 +35,13 @@
 		],
 		"jei_mod_plugin": [
 			"net.hecco.bountifulfares.definition.compat.jei.JEIPlugin",
-			"com.sidden.flavored.client.compat.jei.FlavoredJeiPlugin"
+			"com.sidden.flavored.client.compat.jei.FlavoredJeiPlugin",
+			"alabaster.hearthandharvest.client.compat.jei.HHJeiPlugin"
 		],
 		"emi": [
 			"net.hecco.bountifulfares.definition.compat.emi.BFEmiPlugin",
-			"com.sidden.flavored.client.compat.emi.FlavoredEmiPlugin"
+			"com.sidden.flavored.client.compat.emi.FlavoredEmiPlugin",
+			"alabaster.hearthandharvest.client.compat.emi.HHEmiPlugin"
 		]
 	},
 	"mixins": [

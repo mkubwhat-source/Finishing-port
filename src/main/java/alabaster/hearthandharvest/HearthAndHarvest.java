@@ -170,5 +170,9 @@ public class HearthAndHarvest implements ModInitializer {
         RecipeSynchronization.synchronizeRecipeSerializer(HHModRecipeSerializers.STOMPING.get());
         RecipeSynchronization.synchronizeRecipeSerializer(HHModRecipeSerializers.COOKING.get());
         RecipeSynchronization.synchronizeRecipeSerializer(HHModRecipeSerializers.CUTTING.get());
+        // HH's two non-special crafting serializers, so JEI's crafting category lists them (JEI itself
+        // only syncs minecraft: serializers). Salting is a special recipe, hidden as in 1.21.1.
+        RecipeSynchronization.synchronizeRecipeSerializer(HHModRecipeSerializers.BOTTLE_CRATE.get());
+        RecipeSynchronization.synchronizeRecipeSerializer(HHModRecipeSerializers.SHAPELESS_REMAINDER.get());
     }
 }
