@@ -1,5 +1,61 @@
 # START HERE: handoff for continuing the Bountiful Fares + Flavored + Hearth and Harvest 26.3 Fabric port
 
+## LATEST STATE (2026-10-03, cloud session; repo github.com/mkubwhat-source/Finishing-port, branch claude/cool-turing-q22lhn)
+The project now lives in this git repo (repo root = the old `bf-port/` folder). Branch commits, oldest first:
+WIP import (a2fa670) -> HH data migration -> merges/cross-compat (c49f9f6) -> client assets (b4a8551) -> this doc update.
+
+Done this session (details in `_porting_tools/HEARTH_AND_HARVEST_STATUS.md`):
+- HH data migrated by `_porting_tools/hh_data_migrate.py` (report: `hh_data_migrate.log`): recipes, loot, tags,
+  worldgen, structure NBT, villager trades (now 26.3 villager_trade data), compostables (generated `HHCompostables`),
+  cherry-leaves loot modifier (`HHLootModifiers`). Tag files that BF's datagen also writes go through the generated
+  `src/client/java/alabaster/hearthandharvest/datagen/HHTagAdditions.java` (called from BF's tag providers), so run
+  `./gradlew runDatagen` after re-migrating.
+- Merges: fermenter cross-recipes (`_porting_tools/hh_bundle_compat_recipes.py`), Drunk on all alcoholic drinks,
+  mulch / jack o' straw / flour block / knife tags.
+- Client assets migrated by `_porting_tools/hh_asset_migrate.py` (log: `hh_asset_migrate.log`; extra lang in
+  `hh_lang_additions.json`): 0 missing models, textures or lang keys.
+- Runtime fixes: WaterBottleMixin, AbstractHorseMixin, the HHModBlocks init cycle, client mixins marked client-only,
+  the shapeless remainder codec, the crow spawn rule (worldgen chunk clamp), aliases for item-only renames.
+- Verified: compile, runDatagen, dedicated server boots with all data (0 load errors), dev client: HH creative tabs
+  fully textured, blocks/block entities/crow render, Cooking Pot / Keg / Cask screens open.
+- Lilliput Lane NBT uses vanilla stand-ins for FD blocks not in the bundle (stove -> smoker, tatami -> bamboo mosaic,
+  rope fence -> oak fence, canvas wall signs -> cherry/pale oak wall signs, wooden basket -> barrel);
+  HH trellises -> BF trellises (one side per block). Not yet confirmed with the user.
+
+NEXT (not done):
+1. JEI plugin for HH (in progress, nothing written yet): port HH 1.21.1 `integration/jei` (keg, cask aging, stomping,
+   ingredient info pages, bottle crate crafting) and FDR 26.3 `integration/jei` (cooking pot, cutting board) into
+   `src/client/java/alabaster/hearthandharvest/client/compat/jei/`, and add it to fabric.mod.json's "jei" entrypoint.
+   Model it on `com.sidden.flavored.client.compat.jei.FlavoredJeiPlugin`: recipes come from
+   `BFClientRecipes.getAllOfType`; fluids use JEI's Fabric fluid helper (HH FluidStack mB * 81 = droplets).
+   EMI shows JEI categories through JEMI; a native EMI plugin (like FlavoredEmiPlugin) is optional.
+2. EMI logs ~236 "Untranslated tag" errors: add `tag.item.<ns>.<path>` lang keys for HH and c: tags.
+3. Functional play-test: cutting board, cooking pot, keg, cask, stomping basin, grapes on BF trellises, Lilliput Lane /
+   corn maze generation, wild crop patches.
+4. Build the jar (`./gradlew build -x test`), update the STATUS docs, and add the LICENSE notice for HH (MIT) and FD (MIT).
+
+Environment for a fresh cloud session:
+- JDK 25: install Temurin 25 to /opt/jdk25. In `~/.gradle/gradle.properties` set
+  `org.gradle.java.installations.paths=/opt/jdk25` and `org.gradle.java.installations.auto-download=false`.
+  Copy `_porting_tools/env/mirror.gradle` to `~/.gradle/init.d/` (Maven Central returns HTTP 429 without it).
+  Then `export JAVA_HOME=/opt/jdk25`.
+- Sources the scripts read (clone to a scratch dir):
+  `git clone -b NeoForge-1.21.1 https://github.com/AlabasterLeking/Hearth-And-Harvest hh`,
+  `git clone -b fabric/latest/26.3 https://github.com/MehVahdJukaar/FarmersDelightRefabricated fdr`,
+  `git clone -b 1.21 https://github.com/vectorwing/FarmersDelight fd121`.
+  Vanilla 26.3 data/assets: unzip the minecraft-common and clientOnly jars from `.gradle/loom-cache/minecraftMaven`.
+  Fabric API data: unzip the `data/` folder of the fabric-api jars. 1.21.1 client jar: from piston-meta (needed for the
+  spawn egg template). Python packages: nbtlib, pillow.
+- Re-running migrations: first reset the outputs to the pre-migration commits (data: a2fa670, assets: c49f9f6),
+  then run the scripts (usage is in each docstring), then `./gradlew runDatagen`.
+- Client test: `Xvfb :99 -screen 0 1280x720x24 +extension GLX`, then
+  `DISPLAY=:99 SDL_VIDEO_FORCE_EGL=1 ./gradlew runClient --args="--quickPlaySingleplayer hhtest"`.
+  The test world is a copy of runs/server/world with level.dat GameType=1 and allowCommands=1.
+  Server smoke test: runs/server needs eula=true and online-mode=false; send "stop" on stdin.
+
+---
+
+
 ## CURRENT WORK (2026-10-03): adding Hearth and Harvest (HH) to the bundle
 Source: github.com/AlabasterLeking/Hearth-And-Harvest, branch NeoForge-1.21.1 (v1.4.0). Farmer's Delight
 is no longer a dependency; the FD parts HH needs come from FarmersDelightRefabricated (26.3 branch,

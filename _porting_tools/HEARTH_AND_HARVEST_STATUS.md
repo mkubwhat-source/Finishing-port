@@ -84,8 +84,9 @@ Credit kept in fabric.mod.json and LICENSE notice.
 - [x] Code port, client source set (compiles 2026-10-03): 26.3 render-state renderers, AbstractRecipeBookScreen screens,
       SingleQuadParticle particles, Fabric entrypoint `HearthAndHarvestClient`; no trident-style pitchfork rendering (user).
 - [x] FD pot + cutting board port (code + client)
-- [ ] Data migration (recipes, loot, tags, worldgen, structures, data maps → Fabric equivalents)
-- [ ] Merges/aliases + cross-compat recipes
+- [x] Data migration (hh_data_migrate.py; server loads it with 0 errors)
+- [x] Merges/aliases + cross-compat recipes (hh_bundle_compat_recipes.py, Drunk, tags)
 - [x] Client code (renderers, screens, particles, models); assets still pending
-- [ ] JEI/EMI
+- [ ] JEI/EMI (next; see HANDOFF.md)
+- [x] Assets (hh_asset_migrate.py; checked in the dev client)
 - [ ] Build, datagen, dev server/client play-test
