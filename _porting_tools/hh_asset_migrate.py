@@ -112,6 +112,10 @@ def clean_model(m):
     m = fd_to_hh(json.loads(s))
     m.pop("render_type", None)
     m.pop("overrides", None)
+    # 26.3 ignores "shade" (see shade_fix.py): unshaded elements use shade_direction_override "up"
+    for el in m.get("elements", []):
+        if el.pop("shade", True) is False:
+            el.setdefault("shade_direction_override", "up")
     m.pop("format_version", None)
     # Blockbench leftovers: faces on "#missing" (never defined). 1.21.1 drew them with the missing
     # sprite (usually zero-area faces); 26.3 item models reject them (missing sprite is on the block

@@ -22,7 +22,6 @@
         16,
         9
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "y",
@@ -100,7 +99,6 @@
         22,
         11
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "x",
@@ -169,7 +167,6 @@
         22.15419,
         10
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "z",
@@ -247,7 +244,6 @@
         22.15419,
         10
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "z",
@@ -325,7 +321,6 @@
         29,
         12
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "x",
@@ -403,7 +398,6 @@
         32,
         12
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "y",
@@ -472,7 +466,6 @@
         29,
         16
       ],
-      "shade": true,
       "rotation": {
         "angle": 0,
         "axis": "y",
