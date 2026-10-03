@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": "minecraft:wooden_shovel",
+    "W": "#c:buckets/water",
+    "b": "minecraft:brick",
+    "i": "#c:ingots/iron"
+  },
+  "pattern": [
+    "bSb",
+    "iWi",
+    "iii"
+  ],
+  "result": {
+    "id": "hearthandharvest:cooking_pot"
+  }
+}

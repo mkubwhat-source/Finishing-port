@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:oak_cabinet",
+    "hearthandharvest:oak_cabinet"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:oak_half_cabinet"
+  }
+}

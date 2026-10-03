@@ -1,5 +1,9 @@
 {
   "values": [
+    "hearthandharvest:salt_slab",
+    "hearthandharvest:polished_salt_slab",
+    "hearthandharvest:manure_brick_slab",
+    "hearthandharvest:polished_manure_slab",
     "bountifulfares:coir_brick_slab",
     "bountifulfares:feldspar_brick_slab",
     "bountifulfares:ceramic_tile_slab",

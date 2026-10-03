@@ -1,0 +1,538 @@
+== block loot skipped (block not registered) (3)
+    flour_bag
+    rotten_tomato_crate
+    trellis
+== fd cutting result dropped (9)
+    farmersdelight:cake_slice
+    farmersdelight:cod_slice
+    farmersdelight:cooked_cod_slice
+    farmersdelight:cooked_mutton_chops
+    farmersdelight:cooked_salmon_slice
+    farmersdelight:minced_beef
+    farmersdelight:pumpkin_pie_slice
+    farmersdelight:pumpkin_slice
+    farmersdelight:salmon_slice
+== fd recipe skipped (194)
+    apple_pie.json (farmersdelight:apple_pie)
+    apple_pie_from_slices.json (farmersdelight:apple_pie_slice)
+    bacon_and_eggs.json (farmersdelight:bacon_and_eggs)
+    bacon_sandwich.json (farmersdelight:bacon_sandwich)
+    bamboo_basket.json (farmersdelight:bamboo_basket)
+    barbecue_stick.json (farmersdelight:barbecue_stick)
+    beef_patty.json (farmersdelight:minced_beef)
+    beef_patty_from_campfire_cooking.json (farmersdelight:minced_beef)
+    beef_patty_from_smoking.json (farmersdelight:minced_beef)
+    beetroot_crate.json (farmersdelight:beetroot_crate)
+    beetroot_from_crate.json (farmersdelight:beetroot_crate)
+    black_canvas_sign.json (farmersdelight:black_canvas_sign)
+    black_hanging_canvas_sign.json (farmersdelight:black_hanging_canvas_sign)
+    blue_canvas_sign.json (farmersdelight:blue_canvas_sign)
+    blue_hanging_canvas_sign.json (farmersdelight:blue_hanging_canvas_sign)
+    bread_from_smelting.json (result minecraft:bread not an FD item of the bundle)
+    bread_from_smoking.json (result minecraft:bread not an FD item of the bundle)
+    brown_canvas_sign.json (farmersdelight:brown_canvas_sign)
+    brown_hanging_canvas_sign.json (farmersdelight:brown_hanging_canvas_sign)
+    cabbage.json (farmersdelight:cabbage_crate)
+    cabbage_crate.json (farmersdelight:cabbage_crate)
+    cake_from_milk_bottle.json (result minecraft:cake not an FD item of the bundle)
+    cake_from_slices.json (farmersdelight:cake_slice)
+    canvas_from_canvas_rug.json (farmersdelight:canvas_rug)
+    canvas_rug.json (farmersdelight:canvas_rug)
+    canvas_sign.json (farmersdelight:canvas_sign)
+    carrot_crate.json (farmersdelight:carrot_crate)
+    carrot_from_crate.json (farmersdelight:carrot_crate)
+    chicken_sandwich.json (farmersdelight:chicken_sandwich)
+    chocolate_pie.json (farmersdelight:chocolate_pie)
+    chocolate_pie_from_slices.json (farmersdelight:chocolate_pie_slice)
+    cod_roll.json (farmersdelight:cod_slice)
+    cooked_bacon.json (farmersdelight:cooked_bacon)
+    cooked_bacon_from_campfire_cooking.json (farmersdelight:cooked_bacon)
+    cooked_bacon_from_smoking.json (farmersdelight:cooked_bacon)
+    cooked_chicken_cuts.json (result flavored:cooked_chicken_drumstick not an FD item of the bundle)
+    cooked_chicken_cuts_from_campfire_cooking.json (result flavored:cooked_chicken_drumstick not an FD item of the bundle)
+    cooked_chicken_cuts_from_smoking.json (result flavored:cooked_chicken_drumstick not an FD item of the bundle)
+    cooked_cod_slice.json (farmersdelight:cod_slice)
+    cooked_cod_slice_from_campfire_cooking.json (farmersdelight:cod_slice)
+    cooked_cod_slice_from_smoking.json (farmersdelight:cod_slice)
+    cooked_mutton_chops.json (farmersdelight:cooked_mutton_chops)
+    cooked_mutton_chops_from_campfire_cooking.json (farmersdelight:cooked_mutton_chops)
+    cooked_mutton_chops_from_smoking.json (farmersdelight:cooked_mutton_chops)
+    cooked_salmon_slice.json (farmersdelight:salmon_slice)
+    cooked_salmon_slice_from_campfire_cooking.json (farmersdelight:salmon_slice)
+    cooked_salmon_slice_from_smoking.json (farmersdelight:salmon_slice)
+    cooking/apple_cider.json (result flavored:apple_juice not an FD item of the bundle)
+    cooking/baked_cod_stew.json (farmersdelight:baked_cod_stew)
+    cooking/beef_stew.json (farmersdelight:beef_stew)
+    cooking/beetroot_soup.json (result minecraft:beetroot_soup not an FD item of the bundle)
+    cooking/bone_broth.json (custom ingredient {'fabric:type': 'fabric:any', 'ingredients': ['minecraft:glow_berries', '#c:mushrooms', 'minecraft:hanging_roots', 'minecraft:glow_lichen']})
+    cooking/cabbage_rolls.json (custom ingredient {'fabric:type': 'fabric:any', 'ingredients': ['#c:foods/raw_meat', '#c:foods/safe_raw_fish', '#c:foods/vegetable', '#c:mushrooms']})
+    cooking/chicken_soup.json (farmersdelight:chicken_soup)
+    cooking/cooked_rice.json (farmersdelight:cooked_rice)
+    cooking/dog_food.json (farmersdelight:dog_food)
+    cooking/dumplings.json (custom ingredient {'fabric:type': 'fabric:any', 'ingredients': ['#c:foods/raw_chicken', '#c:foods/raw_pork', '#c:foods/raw_beef', 'minecraft:brown_mushroom']})
+    cooking/fish_stew.json (farmersdelight:fish_stew)
+    cooking/fried_rice.json (farmersdelight:fried_rice)
+    cooking/glow_berry_custard.json (farmersdelight:glow_berry_custard)
+    cooking/mushroom_rice.json (farmersdelight:mushroom_rice)
+    cooking/mushroom_stew.json (result minecraft:mushroom_stew not an FD item of the bundle)
+    cooking/noodle_soup.json (farmersdelight:noodle_soup)
+    cooking/onion_soup.json (farmersdelight:onion_soup)
+    cooking/pasta_with_meatballs.json (farmersdelight:minced_beef)
+    cooking/pasta_with_mutton_chop.json (farmersdelight:pasta_with_mutton_chop)
+    cooking/pumpkin_soup.json (farmersdelight:pumpkin_slice)
+    cooking/rabbit_stew.json (result minecraft:rabbit_stew not an FD item of the bundle)
+    cooking/ratatouille.json (farmersdelight:ratatouille)
+    cooking/squid_ink_pasta.json (farmersdelight:squid_ink_pasta)
+    cooking/stuffed_pumpkin_block.json (farmersdelight:stuffed_pumpkin_block)
+    cooking/vegetable_noodles.json (farmersdelight:vegetable_noodles)
+    cooking/vegetable_soup.json (farmersdelight:vegetable_soup)
+    copper_knife.json (farmersdelight:copper_knife)
+    copper_nugget_from_blasting_knife.json (type minecraft:blasting)
+    copper_nugget_from_smelting_knife.json (farmersdelight:copper_knife)
+    cutting/apple_pie.json (farmersdelight:apple_pie)
+    cutting/bamboo_basket.json (custom ingredient {'fabric:type': 'fabric:any', 'ingredients': [{'fabric:type': 'farmersdelight:item_ability', 'action': 'axe_dig'}, '#minecraft:axes']})
+    cutting/beef.json (no results)
+    cutting/brown_mushroom_colony.json (farmersdelight:brown_mushroom_colony)
+    cutting/cake.json (no results)
+    cutting/chocolate_pie.json (farmersdelight:chocolate_pie)
+    cutting/cooked_mutton.json (no results)
+    cutting/ham.json (farmersdelight:ham)
+    cutting/kelp_roll.json (farmersdelight:kelp_roll)
+    cutting/pumpkin.json (no results)
+    cutting/pumpkin_pie.json (no results)
+    cutting/red_mushroom_colony.json (farmersdelight:red_mushroom_colony)
+    cutting/rice_panicle.json (farmersdelight:rice_panicle)
+    cutting/smoked_ham.json (farmersdelight:smoked_ham)
+    cutting/sweet_berry_cheesecake.json (farmersdelight:sweet_berry_cheesecake)
+    cutting/wild_beetroots.json (farmersdelight:wild_beetroots)
+    cutting/wild_carrots.json (farmersdelight:wild_carrots)
+    cutting/wild_potatoes.json (farmersdelight:wild_potatoes)
+    cutting/wild_rice.json (farmersdelight:wild_rice)
+    cutting/wild_tomatoes.json (farmersdelight:wild_tomatoes)
+    cutting/wooden_basket.json (custom ingredient {'fabric:type': 'fabric:any', 'ingredients': [{'fabric:type': 'farmersdelight:item_ability', 'action': 'axe_dig'}, '#minecraft:axes']})
+    cyan_canvas_sign.json (farmersdelight:cyan_canvas_sign)
+    cyan_hanging_canvas_sign.json (farmersdelight:cyan_hanging_canvas_sign)
+    diamond_knife.json (result flavored:knife not an FD item of the bundle)
+    egg_sandwich.json (farmersdelight:egg_sandwich)
+    flint_knife.json (result flavored:knife not an FD item of the bundle)
+    food_serving.json (type hearthandharvest:food_serving)
+    fried_egg.json (farmersdelight:fried_egg)
+    fried_egg_from_campfire_cooking.json (farmersdelight:fried_egg)
+    fried_egg_from_smoking.json (farmersdelight:fried_egg)
+    fruit_salad.json (farmersdelight:pumpkin_slice)
+    full_tatami_mat.json (farmersdelight:tatami)
+    full_tatami_mat_from_halves.json (farmersdelight:half_tatami_mat)
+    gleaming_salad_block.json (farmersdelight:gleaming_salad_block)
+    gold_nugget_from_blasting_knife.json (type minecraft:blasting)
+    gold_nugget_from_smelting_knife.json (result minecraft:gold_nugget not an FD item of the bundle)
+    golden_knife.json (result flavored:knife not an FD item of the bundle)
+    gray_canvas_sign.json (farmersdelight:gray_canvas_sign)
+    gray_hanging_canvas_sign.json (farmersdelight:gray_hanging_canvas_sign)
+    green_canvas_sign.json (farmersdelight:green_canvas_sign)
+    green_hanging_canvas_sign.json (farmersdelight:green_hanging_canvas_sign)
+    grilled_salmon.json (farmersdelight:grilled_salmon)
+    half_tatami_mat.json (farmersdelight:full_tatami_mat)
+    hamburger.json (farmersdelight:hamburger)
+    hanging_canvas_sign.json (farmersdelight:hanging_canvas_sign)
+    honey_cookie.json (farmersdelight:honey_cookie)
+    honey_glazed_ham_block.json (farmersdelight:smoked_ham)
+    horse_feed.json (farmersdelight:rice_bale)
+    iron_knife.json (result flavored:knife not an FD item of the bundle)
+    iron_nugget_from_blasting_knife.json (type minecraft:blasting)
+    iron_nugget_from_smelting_knife.json (result minecraft:iron_nugget not an FD item of the bundle)
+    kelp_roll.json (farmersdelight:cooked_rice)
+    light_blue_canvas_sign.json (farmersdelight:light_blue_canvas_sign)
+    light_blue_hanging_canvas_sign.json (farmersdelight:light_blue_hanging_canvas_sign)
+    light_gray_canvas_sign.json (farmersdelight:light_gray_canvas_sign)
+    light_gray_hanging_canvas_sign.json (farmersdelight:light_gray_hanging_canvas_sign)
+    lime_canvas_sign.json (farmersdelight:lime_canvas_sign)
+    lime_hanging_canvas_sign.json (farmersdelight:lime_hanging_canvas_sign)
+    magenta_canvas_sign.json (farmersdelight:magenta_canvas_sign)
+    magenta_hanging_canvas_sign.json (farmersdelight:magenta_hanging_canvas_sign)
+    melon_popsicle.json (farmersdelight:melon_popsicle)
+    mixed_salad.json (farmersdelight:mixed_salad)
+    mutton_wrap.json (farmersdelight:mutton_wrap)
+    nether_salad.json (farmersdelight:nether_salad)
+    netherite_knife_smithing.json (type minecraft:smithing_transform)
+    onion.json (farmersdelight:onion_crate)
+    onion_crate.json (farmersdelight:onion_crate)
+    orange_canvas_sign.json (farmersdelight:orange_canvas_sign)
+    orange_hanging_canvas_sign.json (farmersdelight:orange_hanging_canvas_sign)
+    pale_oak_cabinet.json (farmersdelight:pale_oak_cabinet)
+    pink_canvas_sign.json (farmersdelight:pink_canvas_sign)
+    pink_hanging_canvas_sign.json (farmersdelight:pink_hanging_canvas_sign)
+    poplar_cabinet.json (farmersdelight:poplar_cabinet)
+    potato_crate.json (farmersdelight:potato_crate)
+    potato_from_crate.json (farmersdelight:potato_crate)
+    pumpkin_from_slices.json (farmersdelight:pumpkin_slice)
+    pumpkin_pie_from_pie_crust.json (farmersdelight:pumpkin_slice)
+    pumpkin_pie_from_slices.json (farmersdelight:pumpkin_pie_slice)
+    pumpkin_seeds_from_slice.json (farmersdelight:pumpkin_slice)
+    purple_canvas_sign.json (farmersdelight:purple_canvas_sign)
+    purple_hanging_canvas_sign.json (farmersdelight:purple_hanging_canvas_sign)
+    red_canvas_sign.json (farmersdelight:red_canvas_sign)
+    red_hanging_canvas_sign.json (farmersdelight:red_hanging_canvas_sign)
+    rice.json (farmersdelight:rice_panicle)
+    rice_bag.json (farmersdelight:rice)
+    rice_bale.json (farmersdelight:rice_panicle)
+    rice_from_bag.json (farmersdelight:rice_bag)
+    rice_panicle.json (farmersdelight:rice_bale)
+    rice_roll_medley_block.json (farmersdelight:kelp_roll_slice)
+    roast_chicken_block.json (farmersdelight:roast_chicken_block)
+    roasted_mutton_chops.json (farmersdelight:cooked_mutton_chops)
+    rope_fence.json (farmersdelight:rope_fence)
+    rope_fence_gate.json (farmersdelight:rope_fence_gate)
+    rope_from_safety_net.json (farmersdelight:safety_net)
+    safety_net.json (farmersdelight:safety_net)
+    salmon_roll.json (farmersdelight:salmon_slice)
+    shepherds_pie_block.json (farmersdelight:shepherds_pie_block)
+    skillet.json (farmersdelight:skillet)
+    smoked_ham.json (farmersdelight:ham)
+    steak_and_potatoes.json (farmersdelight:cooked_rice)
+    stove.json (farmersdelight:stove)
+    straw_bed.json (farmersdelight:straw_bed)
+    stuffed_potato.json (farmersdelight:stuffed_potato)
+    sweet_berry_cheesecake.json (farmersdelight:sweet_berry_cheesecake)
+    sweet_berry_cheesecake_from_slices.json (farmersdelight:sweet_berry_cheesecake_slice)
+    sweet_berry_cookie.json (farmersdelight:sweet_berry_cookie)
+    tatami.json (farmersdelight:tatami)
+    tatami_block_from_full.json (farmersdelight:full_tatami_mat)
+    tomato.json (farmersdelight:tomato_crate)
+    tomato_crate.json (farmersdelight:tomato_crate)
+    tomato_seeds.json (farmersdelight:rotten_tomato)
+    wheat_dough_from_egg.json (result flavored:dough not an FD item of the bundle)
+    wheat_dough_from_water.json (type hearthandharvest:dough)
+    white_canvas_sign.json (farmersdelight:white_canvas_sign)
+    white_hanging_canvas_sign.json (farmersdelight:white_hanging_canvas_sign)
+    wooden_basket.json (farmersdelight:wooden_basket)
+    yellow_canvas_sign.json (farmersdelight:yellow_canvas_sign)
+    yellow_hanging_canvas_sign.json (farmersdelight:yellow_hanging_canvas_sign)
+== loot entry dropped (5)
+    farmersdelight:rice
+    farmersdelight:shepherds_pie
+    farmersdelight:skillet
+    farmersdelight:stuffed_pumpkin
+== recipe advancement dropped (6)
+    hearthandharvest/advancement/recipes/building_blocks/flour_bag.json
+    hearthandharvest/advancement/recipes/building_blocks/rotten_tomato_crate.json
+    hearthandharvest/advancement/recipes/decorations/bamboo_trellis.json
+    hearthandharvest/advancement/recipes/decorations/trellis.json
+    hearthandharvest/advancement/recipes/food/flour_from_bag.json
+    hearthandharvest/advancement/recipes/food/rotten_tomato_from_crate.json
+== recipe dropped (5)
+    hearthandharvest/recipe/bamboo_trellis.json (hearthandharvest:bamboo_trellis)
+    hearthandharvest/recipe/rotten_tomato_crate.json (farmersdelight:rotten_tomato)
+    hearthandharvest/recipe/rotten_tomato_from_crate.json (hearthandharvest:rotten_tomato_crate)
+    hearthandharvest/recipe/stripped_bamboo_trellis.json (hearthandharvest:bamboo_trellis)
+    hearthandharvest/recipe/trellis.json (hearthandharvest:trellis)
+== recipe skipped (dup) (2)
+    hearthandharvest/recipe/flour_bag.json
+    hearthandharvest/recipe/flour_from_bag.json
+== structure stand-in (9)
+    farmersdelight:pink_canvas_wall_sign -> minecraft:cherry_wall_sign
+    farmersdelight:purple_canvas_wall_sign -> minecraft:pale_oak_wall_sign
+    farmersdelight:rope_fence -> minecraft:oak_fence
+    farmersdelight:stove -> minecraft:smoker
+    farmersdelight:tatami -> minecraft:bamboo_mosaic
+    farmersdelight:wooden_basket -> minecraft:barrel
+== structure trellis (20)
+    hearthandharvest:grape_trellis ['east'] -> facing east plant red_grape
+    hearthandharvest:trellis ['east'] -> facing east plant rose
+    hearthandharvest:trellis ['east'] -> facing east plant vine
+    hearthandharvest:trellis ['north', 'east'] -> facing north plant rose
+    hearthandharvest:trellis ['north', 'east'] -> facing north plant vine
+    hearthandharvest:trellis ['north', 'south'] -> facing north plant none
+    hearthandharvest:trellis ['north'] -> facing north plant none
+    hearthandharvest:trellis ['north'] -> facing north plant vine
+    hearthandharvest:trellis ['south', 'west'] -> facing south plant rose
+    hearthandharvest:trellis ['south', 'west'] -> facing south plant vine
+    hearthandharvest:trellis ['south'] -> facing south plant none
+    hearthandharvest:trellis ['south'] -> facing south plant rose
+    hearthandharvest:trellis ['south'] -> facing south plant vine
+    hearthandharvest:trellis ['west'] -> facing west plant rose
+    hearthandharvest:trellis ['west'] -> facing west plant vine
+== tag reference dropped (tag missing) (28)
+    #c:crops/rice in c/tags/item/crops.json
+    #c:foods/cooked_bacon in c/tags/item/foods/cooked_pork.json
+    #c:foods/cooked_egg in c/tags/item/foods.json
+    #c:mineable/knife in hearthandharvest/tags/block/mineable/knife.json
+    #c:storage_blocks/beetroot in c/tags/block/storage_blocks.json
+    #c:storage_blocks/beetroot in c/tags/item/storage_blocks.json
+    #c:storage_blocks/cabbage in c/tags/block/storage_blocks.json
+    #c:storage_blocks/cabbage in c/tags/item/storage_blocks.json
+    #c:storage_blocks/carrot in c/tags/block/storage_blocks.json
+    #c:storage_blocks/carrot in c/tags/item/storage_blocks.json
+    #c:storage_blocks/onion in c/tags/block/storage_blocks.json
+    #c:storage_blocks/onion in c/tags/item/storage_blocks.json
+    #c:storage_blocks/potato in c/tags/block/storage_blocks.json
+    #c:storage_blocks/potato in c/tags/item/storage_blocks.json
+    #c:storage_blocks/rice in c/tags/block/storage_blocks.json
+    #c:storage_blocks/rice in c/tags/item/storage_blocks.json
+    #c:storage_blocks/rice_panicle in c/tags/block/storage_blocks.json
+    #c:storage_blocks/rice_panicle in c/tags/item/storage_blocks.json
+    #c:storage_blocks/tomato in c/tags/block/storage_blocks.json
+    #c:storage_blocks/tomato in c/tags/item/storage_blocks.json
+    #hearthandharvest:canvas_signs in minecraft/tags/item/signs.json
+    #hearthandharvest:feasts in c/tags/item/foods/edible_when_placed.json
+    #hearthandharvest:feasts in create/tags/block/brittle.json
+    #hearthandharvest:feasts in create/tags/item/upright_on_belt.json
+    #hearthandharvest:hanging_canvas_signs in minecraft/tags/item/hanging_signs.json
+    #hearthandharvest:mushroom_colonies in hearthandharvest/tags/block/compost_activators.json
+    #hearthandharvest:mushroom_colonies in hearthandharvest/tags/block/unaffected_by_rich_soil.json
+    #hearthandharvest:snacks in c/tags/item/foods.json
+== tag value dropped (block) (180)
+    farmersdelight:apple_pie
+    farmersdelight:bamboo_basket
+    farmersdelight:beetroot_crate
+    farmersdelight:black_canvas_sign
+    farmersdelight:black_canvas_wall_sign
+    farmersdelight:black_hanging_canvas_sign
+    farmersdelight:black_wall_hanging_canvas_sign
+    farmersdelight:blue_canvas_sign
+    farmersdelight:blue_canvas_wall_sign
+    farmersdelight:blue_hanging_canvas_sign
+    farmersdelight:blue_wall_hanging_canvas_sign
+    farmersdelight:brown_canvas_sign
+    farmersdelight:brown_canvas_wall_sign
+    farmersdelight:brown_hanging_canvas_sign
+    farmersdelight:brown_mushroom_colony
+    farmersdelight:brown_wall_hanging_canvas_sign
+    farmersdelight:cabbage_crate
+    farmersdelight:canvas_rug
+    farmersdelight:canvas_sign
+    farmersdelight:canvas_wall_sign
+    farmersdelight:carrot_crate
+    farmersdelight:chocolate_pie
+    farmersdelight:cyan_canvas_sign
+    farmersdelight:cyan_canvas_wall_sign
+    farmersdelight:cyan_hanging_canvas_sign
+    farmersdelight:cyan_wall_hanging_canvas_sign
+    farmersdelight:full_tatami_mat
+    farmersdelight:gleaming_salad_block
+    farmersdelight:gray_canvas_sign
+    farmersdelight:gray_canvas_wall_sign
+    farmersdelight:gray_hanging_canvas_sign
+    farmersdelight:gray_wall_hanging_canvas_sign
+    farmersdelight:green_canvas_sign
+    farmersdelight:green_canvas_wall_sign
+    farmersdelight:green_hanging_canvas_sign
+    farmersdelight:green_wall_hanging_canvas_sign
+    farmersdelight:half_tatami_mat
+    farmersdelight:hanging_canvas_sign
+    farmersdelight:honey_glazed_ham_block
+    farmersdelight:light_blue_canvas_sign
+    farmersdelight:light_blue_canvas_wall_sign
+    farmersdelight:light_blue_hanging_canvas_sign
+    farmersdelight:light_blue_wall_hanging_canvas_sign
+    farmersdelight:light_gray_canvas_sign
+    farmersdelight:light_gray_canvas_wall_sign
+    farmersdelight:light_gray_hanging_canvas_sign
+    farmersdelight:light_gray_wall_hanging_canvas_sign
+    farmersdelight:lime_canvas_sign
+    farmersdelight:lime_canvas_wall_sign
+    farmersdelight:lime_hanging_canvas_sign
+    farmersdelight:lime_wall_hanging_canvas_sign
+    farmersdelight:magenta_canvas_sign
+    farmersdelight:magenta_canvas_wall_sign
+    farmersdelight:magenta_hanging_canvas_sign
+    farmersdelight:magenta_wall_hanging_canvas_sign
+    farmersdelight:onion_crate
+    farmersdelight:orange_canvas_sign
+    farmersdelight:orange_canvas_wall_sign
+    farmersdelight:orange_hanging_canvas_sign
+    farmersdelight:orange_wall_hanging_canvas_sign
+    farmersdelight:pale_oak_cabinet
+    farmersdelight:pink_canvas_sign
+    farmersdelight:pink_canvas_wall_sign
+    farmersdelight:pink_hanging_canvas_sign
+    farmersdelight:pink_wall_hanging_canvas_sign
+    farmersdelight:poplar_cabinet
+    farmersdelight:potato_crate
+    farmersdelight:pumpkin_pie
+    farmersdelight:purple_canvas_sign
+    farmersdelight:purple_canvas_wall_sign
+    farmersdelight:purple_hanging_canvas_sign
+    farmersdelight:purple_wall_hanging_canvas_sign
+    farmersdelight:red_canvas_sign
+    farmersdelight:red_canvas_wall_sign
+    farmersdelight:red_hanging_canvas_sign
+    farmersdelight:red_mushroom_colony
+    farmersdelight:red_wall_hanging_canvas_sign
+    farmersdelight:rice
+    farmersdelight:rice_bag
+    farmersdelight:rice_bale
+    farmersdelight:rice_panicles
+    farmersdelight:rice_roll_medley_block
+    farmersdelight:roast_chicken_block
+    farmersdelight:rope_fence
+    farmersdelight:rope_fence_gate
+    farmersdelight:safety_net
+    farmersdelight:sandy_shrub
+    farmersdelight:shepherds_pie_block
+    farmersdelight:skillet
+    farmersdelight:stove
+    farmersdelight:straw_bed
+    farmersdelight:stuffed_pumpkin_block
+    farmersdelight:sweet_berry_cheesecake
+    farmersdelight:tatami
+    farmersdelight:tomato_crate
+    farmersdelight:tomatoes_on_rope
+    farmersdelight:wall_hanging_canvas_sign
+    farmersdelight:white_canvas_sign
+    farmersdelight:white_canvas_wall_sign
+    farmersdelight:white_hanging_canvas_sign
+    farmersdelight:white_wall_hanging_canvas_sign
+    farmersdelight:wild_beetroots
+    farmersdelight:wild_carrots
+    farmersdelight:wild_potatoes
+    farmersdelight:wild_rice
+    farmersdelight:wild_tomatoes
+    farmersdelight:wooden_basket
+    farmersdelight:yellow_canvas_sign
+    farmersdelight:yellow_canvas_wall_sign
+    farmersdelight:yellow_hanging_canvas_sign
+    farmersdelight:yellow_wall_hanging_canvas_sign
+    hearthandharvest:flour_bag
+    hearthandharvest:grape_trellis
+    hearthandharvest:rotten_tomato_crate
+    hearthandharvest:trellis
+== tag value dropped (enchantment) (1)
+    hearthandharvest:backstabbing
+== tag value dropped (item) (184)
+    farmersdelight:apple_pie
+    farmersdelight:apple_pie_slice
+    farmersdelight:bacon_and_eggs
+    farmersdelight:bacon_sandwich
+    farmersdelight:baked_cod_stew
+    farmersdelight:barbecue_stick
+    farmersdelight:beef_stew
+    farmersdelight:beetroot_crate
+    farmersdelight:black_canvas_sign
+    farmersdelight:black_hanging_canvas_sign
+    farmersdelight:blue_canvas_sign
+    farmersdelight:blue_hanging_canvas_sign
+    farmersdelight:bone_broth
+    farmersdelight:brown_canvas_sign
+    farmersdelight:brown_hanging_canvas_sign
+    farmersdelight:brown_mushroom_colony
+    farmersdelight:cabbage_crate
+    farmersdelight:cabbage_rolls
+    farmersdelight:cake_slice
+    farmersdelight:canvas_sign
+    farmersdelight:carrot_crate
+    farmersdelight:chicken_sandwich
+    farmersdelight:chicken_soup
+    farmersdelight:chocolate_pie
+    farmersdelight:chocolate_pie_slice
+    farmersdelight:cod_roll
+    farmersdelight:cod_slice
+    farmersdelight:cooked_bacon
+    farmersdelight:cooked_cod_slice
+    farmersdelight:cooked_mutton_chops
+    farmersdelight:cooked_rice
+    farmersdelight:cooked_salmon_slice
+    farmersdelight:copper_knife
+    farmersdelight:cyan_canvas_sign
+    farmersdelight:cyan_hanging_canvas_sign
+    farmersdelight:debug_pumpkin_pie
+    farmersdelight:dog_food
+    farmersdelight:dumplings
+    farmersdelight:egg_sandwich
+    farmersdelight:fish_stew
+    farmersdelight:fried_egg
+    farmersdelight:fried_rice
+    farmersdelight:fruit_salad
+    farmersdelight:gleaming_salad
+    farmersdelight:gleaming_salad_block
+    farmersdelight:glow_berry_custard
+    farmersdelight:gray_canvas_sign
+    farmersdelight:gray_hanging_canvas_sign
+    farmersdelight:green_canvas_sign
+    farmersdelight:green_hanging_canvas_sign
+    farmersdelight:grilled_salmon
+    farmersdelight:ham
+    farmersdelight:hamburger
+    farmersdelight:hanging_canvas_sign
+    farmersdelight:honey_cookie
+    farmersdelight:honey_glazed_ham
+    farmersdelight:honey_glazed_ham_block
+    farmersdelight:horse_feed
+    farmersdelight:kelp_roll
+    farmersdelight:kelp_roll_slice
+    farmersdelight:light_blue_canvas_sign
+    farmersdelight:light_blue_hanging_canvas_sign
+    farmersdelight:light_gray_canvas_sign
+    farmersdelight:light_gray_hanging_canvas_sign
+    farmersdelight:lime_canvas_sign
+    farmersdelight:lime_hanging_canvas_sign
+    farmersdelight:magenta_canvas_sign
+    farmersdelight:magenta_hanging_canvas_sign
+    farmersdelight:melon_popsicle
+    farmersdelight:minced_beef
+    farmersdelight:mixed_salad
+    farmersdelight:mushroom_rice
+    farmersdelight:mutton_wrap
+    farmersdelight:nether_salad
+    farmersdelight:noodle_soup
+    farmersdelight:onion_crate
+    farmersdelight:onion_soup
+    farmersdelight:orange_canvas_sign
+    farmersdelight:orange_hanging_canvas_sign
+    farmersdelight:pale_oak_cabinet
+    farmersdelight:pasta_with_meatballs
+    farmersdelight:pasta_with_mutton_chop
+    farmersdelight:pink_canvas_sign
+    farmersdelight:pink_hanging_canvas_sign
+    farmersdelight:poplar_cabinet
+    farmersdelight:potato_crate
+    farmersdelight:pumpkin_pie_slice
+    farmersdelight:pumpkin_slice
+    farmersdelight:pumpkin_soup
+    farmersdelight:purple_canvas_sign
+    farmersdelight:purple_hanging_canvas_sign
+    farmersdelight:ratatouille
+    farmersdelight:red_canvas_sign
+    farmersdelight:red_hanging_canvas_sign
+    farmersdelight:red_mushroom_colony
+    farmersdelight:rice
+    farmersdelight:rice_bag
+    farmersdelight:rice_bale
+    farmersdelight:rice_roll_medley_block
+    farmersdelight:roast_chicken
+    farmersdelight:roast_chicken_block
+    farmersdelight:roasted_mutton_chops
+    farmersdelight:rope_fence
+    farmersdelight:rope_fence_gate
+    farmersdelight:salmon_roll
+    farmersdelight:salmon_slice
+    farmersdelight:shepherds_pie
+    farmersdelight:shepherds_pie_block
+    farmersdelight:skillet
+    farmersdelight:smoked_ham
+    farmersdelight:squid_ink_pasta
+    farmersdelight:steak_and_potatoes
+    farmersdelight:stuffed_potato
+    farmersdelight:stuffed_pumpkin
+    farmersdelight:stuffed_pumpkin_block
+    farmersdelight:sweet_berry_cheesecake
+    farmersdelight:sweet_berry_cheesecake_slice
+    farmersdelight:sweet_berry_cookie
+    farmersdelight:tomato_crate
+    farmersdelight:vegetable_noodles
+    farmersdelight:vegetable_soup
+    farmersdelight:white_canvas_sign
+    farmersdelight:white_hanging_canvas_sign
+    farmersdelight:wild_beetroots
+    farmersdelight:wild_carrots
+    farmersdelight:wild_potatoes
+    farmersdelight:wild_rice
+    farmersdelight:wild_tomatoes
+    farmersdelight:yellow_canvas_sign
+    farmersdelight:yellow_hanging_canvas_sign
+    hearthandharvest:bamboo_trellis
+    hearthandharvest:flour_bag
+    hearthandharvest:rotten_tomato_crate
+    hearthandharvest:stripped_bamboo_trellis
+    hearthandharvest:trellis
+tag path collisions with datagen output: ['c/tags/item/crops.json', 'c/tags/item/seeds.json', 'c/tags/item/foods/bread.json', 'c/tags/item/foods/fruit.json', 'minecraft/tags/block/crops.json', 'minecraft/tags/block/dirt.json', 'minecraft/tags/block/flower_pots.json', 'minecraft/tags/block/flowers.json', 'minecraft/tags/block/slabs.json', 'minecraft/tags/block/small_flowers.json', 'minecraft/tags/block/stairs.json', 'minecraft/tags/block/walls.json', 'minecraft/tags/block/mineable/axe.json', 'minecraft/tags/block/mineable/hoe.json', 'minecraft/tags/block/mineable/pickaxe.json', 'minecraft/tags/block/mineable/shovel.json', 'minecraft/tags/item/chicken_food.json', 'minecraft/tags/item/cow_food.json', 'minecraft/tags/item/fox_food.json', 'minecraft/tags/item/goat_food.json', 'minecraft/tags/item/horse_food.json', 'minecraft/tags/item/parrot_food.json', 'minecraft/tags/item/pig_food.json', 'minecraft/tags/item/piglin_loved.json', 'minecraft/tags/item/sheep_food.json', 'minecraft/tags/item/slabs.json', 'minecraft/tags/item/small_flowers.json', 'minecraft/tags/item/stairs.json', 'minecraft/tags/item/villager_plantable_seeds.json', 'minecraft/tags/item/walls.json', 'c/tags/item/foods/vegetable.json', 'c/tags/item/foods/corn.json']
+written: 1591

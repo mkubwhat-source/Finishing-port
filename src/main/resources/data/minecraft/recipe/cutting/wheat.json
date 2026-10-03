@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:wheat"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "bountifulfares:flour"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

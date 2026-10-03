@@ -1,0 +1,36 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "brewinandchewin"
+      ]
+    }
+  ],
+  "type": "brewinandchewin:fermenting",
+  "experience": 1.0,
+  "base_fluid": {
+    "amount": 500,
+    "ingredient": {
+      "tag": "#c:water"
+    },
+    "unit": "millibuckets"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    []
+  ],
+  "result": {
+    "amount": 500,
+    "id": "hearthandharvest:hard_cider"
+  },
+  "unit": "millibuckets"
+}

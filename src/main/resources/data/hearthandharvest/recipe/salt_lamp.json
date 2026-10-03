@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "walls",
+  "key": {
+    "B": "#minecraft:buttons",
+    "G": "minecraft:glowstone",
+    "S": "hearthandharvest:polished_salt_block"
+  },
+  "pattern": [
+    "S",
+    "G",
+    "B"
+  ],
+  "result": {
+    "id": "hearthandharvest:salt_lamp"
+  }
+}

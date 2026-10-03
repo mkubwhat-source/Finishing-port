@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:basin"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "hearthandharvest:blocks/basin"
+}

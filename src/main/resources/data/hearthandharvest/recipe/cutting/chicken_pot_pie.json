@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:chicken_pot_pie"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "hearthandharvest:chicken_pot_pie_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

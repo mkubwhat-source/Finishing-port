@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "#hearthandharvest:cheese_slices",
+    "D": "flavored:dough",
+    "T": "hearthandharvest:tomato_sauce"
+  },
+  "pattern": [
+    "CCC",
+    "DTD"
+  ],
+  "result": {
+    "id": "hearthandharvest:cheese_pizza"
+  }
+}

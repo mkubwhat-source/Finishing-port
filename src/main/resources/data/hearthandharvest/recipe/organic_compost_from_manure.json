@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "fd_organic_compost",
+  "ingredients": [
+    "minecraft:dirt",
+    "hearthandharvest:straw",
+    "hearthandharvest:straw",
+    "hearthandharvest:manure",
+    "hearthandharvest:manure",
+    "hearthandharvest:manure",
+    "hearthandharvest:manure",
+    "minecraft:bone_meal",
+    "minecraft:bone_meal"
+  ],
+  "result": {
+    "id": "hearthandharvest:organic_compost"
+  }
+}

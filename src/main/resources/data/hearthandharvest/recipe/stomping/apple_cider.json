@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:apple"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:apple_cider"
+  }
+}

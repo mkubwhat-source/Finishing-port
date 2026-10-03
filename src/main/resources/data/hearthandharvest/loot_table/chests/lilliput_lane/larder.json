@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:moonshine",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bountifulfares:pickled_beetroot",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:pickled_cabbage",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:pickled_carrots",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:pickled_onions",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:pickled_potatoes",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:crate",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:cooking_pot",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "hearthandharvest:salt_block",
+  "result": {
+    "id": "hearthandharvest:salt_stairs"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "minecraft:carrot",
+    "minecraft:carrot",
+    "hearthandharvest:syrup_bottle"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:glazed_carrots"
+  }
+}

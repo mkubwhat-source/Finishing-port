@@ -1,0 +1,36 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "brewinandchewin"
+      ]
+    }
+  ],
+  "type": "brewinandchewin:fermenting",
+  "base_fluid": {
+    "amount": 500,
+    "ingredient": {
+      "tag": "#c:water"
+    },
+    "unit": "millibuckets"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "hearthandharvest:corn_meal"
+    },
+    {
+      "item": "hearthandharvest:corn_meal"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    []
+  ],
+  "result": {
+    "amount": 500,
+    "id": "hearthandharvest:moonshine"
+  },
+  "unit": "millibuckets"
+}

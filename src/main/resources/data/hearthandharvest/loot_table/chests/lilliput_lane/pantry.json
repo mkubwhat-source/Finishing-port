@@ -1,0 +1,158 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:jar",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:blueberry_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:cherry_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:raspberry_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:grape_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:sweet_berry_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:glow_berry_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:melon_jam",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:red_grapes",
+          "weight": 10,
+          "modifier": {
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            },
+            "type": "minecraft:set_count"
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:green_grapes",
+          "weight": 10,
+          "modifier": {
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            },
+            "type": "minecraft:set_count"
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot",
+          "weight": 10,
+          "modifier": {
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            },
+            "type": "minecraft:set_count"
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potato",
+          "weight": 10,
+          "modifier": {
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            },
+            "type": "minecraft:set_count"
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:onion",
+          "weight": 10,
+          "modifier": {
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            },
+            "type": "minecraft:set_count"
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "flavored:knife",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "flavored:pork_jowl",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "flavored:mutton_shank",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "flavored:chicken_drumstick",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:chicken_pot_pie",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:iron_cleaver",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 6
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 5
+      }
+    }
+  ]
+}

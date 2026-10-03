@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:pancake",
+          "modifier": [
+            {
+              "count": 2,
+              "type": "minecraft:set_count",
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "hearthandharvest:pancake",
+                "state": {
+                  "count": "2"
+                }
+              }
+            },
+            {
+              "count": 3,
+              "type": "minecraft:set_count",
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "hearthandharvest:pancake",
+                "state": {
+                  "count": "3"
+                }
+              }
+            },
+            {
+              "count": 4,
+              "type": "minecraft:set_count",
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "hearthandharvest:pancake",
+                "state": {
+                  "count": "4"
+                }
+              }
+            },
+            {
+              "type": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "hearthandharvest:blocks/pancake"
+}

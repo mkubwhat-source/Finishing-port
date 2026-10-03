@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "peanut_butter_pie",
+  "key": {
+    "#": "hearthandharvest:peanut_butter_pie_slice"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "hearthandharvest:peanut_butter_pie"
+  }
+}

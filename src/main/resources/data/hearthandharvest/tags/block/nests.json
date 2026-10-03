@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:nest",
+    {
+      "id": "incubation:twig_nest",
+      "required": false
+    },
+    {
+      "id": "incubation:hay_nest",
+      "required": false
+    }
+  ]
+}

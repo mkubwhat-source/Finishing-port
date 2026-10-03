@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:blueberry_wine",
+    "hearthandharvest:cherry_wine",
+    "hearthandharvest:green_grape_wine",
+    "bountifulfares:mead_bottle",
+    "hearthandharvest:root_beer",
+    "hearthandharvest:hard_cider",
+    "hearthandharvest:raspberry_wine",
+    "hearthandharvest:red_grape_wine",
+    "flavored:sweet_berry_wine",
+    "flavored:glow_berry_wine",
+    "hearthandharvest:melon_wine"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "minecraft:slime_block"
+  ],
+  "result_item": {
+    "count": 9,
+    "id": "minecraft:slime_ball"
+  }
+}

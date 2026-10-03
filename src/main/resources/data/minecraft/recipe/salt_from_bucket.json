@@ -1,0 +1,12 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "count": 8,
+    "id": "hearthandharvest:salt"
+  }
+}

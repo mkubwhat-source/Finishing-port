@@ -1,0 +1,29 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "crabbersdelight"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "crabbersdelight:palm_slab"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "HSH",
+    "SSS",
+    "HSH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hearthandharvest:palm_bottle_rack"
+  }
+}

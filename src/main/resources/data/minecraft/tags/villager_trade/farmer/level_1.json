@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:farmer/1/blueberries_emerald",
+    "hearthandharvest:farmer/1/raspberry_emerald",
+    "hearthandharvest:farmer/1/cherry_emerald",
+    "hearthandharvest:farmer/1/peanut_emerald",
+    "hearthandharvest:farmer/1/cotton_emerald",
+    "hearthandharvest:farmer/1/emerald_manure",
+    "hearthandharvest:farmer/1/onion_emerald"
+  ]
+}

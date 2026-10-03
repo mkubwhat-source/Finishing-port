@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:red_grapes",
+    "hearthandharvest:green_grapes",
+    "hearthandharvest:cotton_seeds",
+    "hearthandharvest:corn_kernels",
+    "hearthandharvest:cabbage_seeds",
+    "hearthandharvest:onion"
+  ]
+}

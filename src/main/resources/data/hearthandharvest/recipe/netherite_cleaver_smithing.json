@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "hearthandharvest:diamond_cleaver",
+  "result": {
+    "id": "hearthandharvest:netherite_cleaver"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

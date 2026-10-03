@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:farmer/3/emerald_scarecrow",
+    "hearthandharvest:farmer/3/emerald_nest",
+    "hearthandharvest:farmer/3/emerald_sprinkler"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "hearthandharvest:polished_manure",
+  "result": {
+    "id": "hearthandharvest:polished_manure_wall"
+  }
+}

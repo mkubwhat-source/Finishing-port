@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:salt_slab",
+          "modifier": [
+            {
+              "count": 2,
+              "type": "minecraft:set_count",
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "hearthandharvest:salt_slab",
+                "state": {
+                  "type": "double"
+                }
+              }
+            },
+            {
+              "type": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

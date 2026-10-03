@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    "hearthandharvest:corn_kernels",
+    "minecraft:orange_dye",
+    "hearthandharvest:syrup_bottle",
+    "minecraft:sugar"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 4,
+    "id": "hearthandharvest:candy_corn"
+  }
+}

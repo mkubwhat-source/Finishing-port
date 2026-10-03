@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "brewinandchewin"
+      ]
+    }
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "fluid": {
+    "amount": 500,
+    "id": "flavored:sweet_berry_wine"
+  },
+  "output": {
+    "count": 1,
+    "id": "flavored:sweet_berry_wine"
+  },
+  "unit": "millibuckets"
+}

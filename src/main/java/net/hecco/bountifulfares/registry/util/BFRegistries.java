@@ -374,7 +374,7 @@ public class BFRegistries {
         return compostables;
     }
 
-    private static ResourceKey<net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider> compostBucketFor(float chance) {
+    public static ResourceKey<net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider> compostBucketFor(float chance) {
         if (chance >= 1.0f) return ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE;
         if (chance >= 0.85f) return ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH;
         if (chance >= 0.65f) return ContextIntProviders.COMPOSTABLE_MEDIUM;

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:dark_oak_slab",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "HSH",
+    "SSS",
+    "HSH"
+  ],
+  "result": {
+    "id": "hearthandharvest:dark_oak_bottle_rack"
+  }
+}

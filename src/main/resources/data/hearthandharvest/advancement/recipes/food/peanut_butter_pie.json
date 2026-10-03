@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_peanut_butters": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:roasted_peanuts"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:peanut_butter_pie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_peanut_butters"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:peanut_butter_pie"
+    ]
+  }
+}

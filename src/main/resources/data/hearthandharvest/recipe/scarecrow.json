@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:hay_block",
+    "f": "hearthandharvest:farmers_hat",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    " f ",
+    "sHs",
+    " s "
+  ],
+  "result": {
+    "id": "hearthandharvest:scarecrow"
+  }
+}

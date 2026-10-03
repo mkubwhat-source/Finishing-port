@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:brick",
+    "C": "minecraft:cauldron",
+    "i": "#c:ingots/iron"
+  },
+  "pattern": [
+    "iii",
+    "BCB",
+    "BBB"
+  ],
+  "result": {
+    "id": "hearthandharvest:basin"
+  }
+}

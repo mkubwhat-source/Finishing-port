@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    "hearthandharvest:corn_meal",
+    "hearthandharvest:corn_meal",
+    "#c:dusts/salt",
+    "minecraft:egg",
+    "#c:drinks/milk"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:corn_bread"
+  }
+}

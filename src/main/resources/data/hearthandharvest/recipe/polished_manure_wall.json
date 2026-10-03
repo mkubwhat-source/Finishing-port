@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "walls",
+  "key": {
+    "#": "hearthandharvest:polished_manure"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "hearthandharvest:polished_manure_wall"
+  }
+}

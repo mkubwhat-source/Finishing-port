@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_caramel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:caramel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:cooking/caramel_apple"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_caramel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:cooking/caramel_apple"
+    ]
+  }
+}

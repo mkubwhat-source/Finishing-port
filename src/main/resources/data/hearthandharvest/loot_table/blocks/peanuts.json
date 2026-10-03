@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:peanut"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "hearthandharvest:peanuts",
+        "state": {
+          "age": "7"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:peanut",
+          "modifier": {
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:binomial_with_bonus_count",
+            "parameters": {
+              "extra": 3,
+              "probability": 0.5714286
+            },
+            "type": "minecraft:apply_bonus"
+          }
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "modifier": {
+    "type": "minecraft:explosion_decay"
+  }
+}

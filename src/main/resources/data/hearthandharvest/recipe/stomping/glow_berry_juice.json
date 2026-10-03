@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "minecraft:glow_berries",
+    "minecraft:glow_berries",
+    "minecraft:glow_berries",
+    "minecraft:glow_berries"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:glow_berry_juice"
+  }
+}

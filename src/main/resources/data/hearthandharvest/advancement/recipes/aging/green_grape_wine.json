@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_any_ingredient": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:green_grape_juice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:aging/green_grape_wine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_any_ingredient"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:aging/green_grape_wine"
+    ]
+  }
+}

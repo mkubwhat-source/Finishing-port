@@ -1,5 +1,18 @@
 {
   "values": [
+    "hearthandharvest:cotton_seeds",
+    "hearthandharvest:sunflower_seeds",
+    "hearthandharvest:corn_kernels",
+    {
+      "id": "hearthandharvest:blueberry_pips",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:raspberry_pips",
+      "required": false
+    },
+    "hearthandharvest:cabbage_seeds",
+    "flavored:tomato_seeds",
     "bountifulfares:spongekin_seeds",
     "bountifulfares:hoary_seeds",
     "bountifulfares:maize_seeds",

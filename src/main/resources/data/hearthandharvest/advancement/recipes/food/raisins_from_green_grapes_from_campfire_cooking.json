@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:raisins_from_green_grapes_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "raisins_from_green_grapes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:green_grapes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "raisins_from_green_grapes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:raisins_from_green_grapes_from_campfire_cooking"
+    ]
+  }
+}

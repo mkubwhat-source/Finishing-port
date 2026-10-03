@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "hearthandharvest:red_grapes",
+    "hearthandharvest:red_grapes",
+    "hearthandharvest:red_grapes",
+    "hearthandharvest:red_grapes"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:red_grape_juice"
+  }
+}

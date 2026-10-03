@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "carrot_cake",
+  "ingredients": [
+    "hearthandharvest:carrot_cake_slice",
+    "hearthandharvest:carrot_cake_slice",
+    "hearthandharvest:carrot_cake_slice",
+    "hearthandharvest:carrot_cake_slice",
+    "hearthandharvest:carrot_cake_slice",
+    "hearthandharvest:carrot_cake_slice",
+    "hearthandharvest:carrot_cake_slice"
+  ],
+  "result": {
+    "id": "hearthandharvest:carrot_cake"
+  }
+}

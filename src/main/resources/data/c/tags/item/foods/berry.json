@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:blueberries",
+    "hearthandharvest:cherry",
+    "hearthandharvest:raspberry",
+    "hearthandharvest:red_grapes",
+    "hearthandharvest:green_grapes"
+  ]
+}

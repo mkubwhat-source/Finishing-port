@@ -1,5 +1,10 @@
 {
   "values": [
+    "hearthandharvest:nest",
+    "hearthandharvest:corn_husk_bundle",
+    "hearthandharvest:cotton_bale",
+    "hearthandharvest:sugar_cane_bundle",
+    "hearthandharvest:straw_bale",
     "bountifulfares:apple_leaves",
     "bountifulfares:flowering_apple_leaves",
     "bountifulfares:golden_apple_leaves",

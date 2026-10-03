@@ -1,0 +1,20 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:corn"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "hearthandharvest:corn_kernels"
+      }
+    },
+    {
+      "item": {
+        "id": "hearthandharvest:corn_husk"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

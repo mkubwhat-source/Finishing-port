@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:crops",
+    "#minecraft:leaves",
+    "minecraft:hay_block",
+    "hearthandharvest:straw_bale",
+    "hearthandharvest:hay_rug",
+    "hearthandharvest:straw_rug",
+    "hearthandharvest:mulch",
+    "hearthandharvest:manure_block",
+    "hearthandharvest:stick_brush",
+    "hearthandharvest:cotton_bale",
+    "hearthandharvest:sugar_cane_bundle"
+  ]
+}

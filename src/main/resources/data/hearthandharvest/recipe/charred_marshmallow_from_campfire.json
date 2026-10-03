@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": "hearthandharvest:roasted_marshmallow_stick",
+  "result": {
+    "id": "hearthandharvest:charred_marshmallow_stick"
+  }
+}

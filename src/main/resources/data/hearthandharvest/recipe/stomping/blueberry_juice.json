@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "#c:fruits/blueberry",
+    "#c:fruits/blueberry",
+    "#c:fruits/blueberry",
+    "#c:fruits/blueberry"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:blueberry_juice"
+  }
+}

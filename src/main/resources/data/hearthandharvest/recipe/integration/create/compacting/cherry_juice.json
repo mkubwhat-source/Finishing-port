@@ -1,0 +1,31 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "hearthandharvest:cherry"
+    },
+    {
+      "item": "hearthandharvest:cherry"
+    },
+    {
+      "item": "hearthandharvest:cherry"
+    },
+    {
+      "item": "hearthandharvest:cherry"
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "hearthandharvest:cherry_juice"
+    }
+  ]
+}

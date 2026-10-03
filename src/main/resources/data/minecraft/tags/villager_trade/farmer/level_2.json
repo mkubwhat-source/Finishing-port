@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:farmer/2/corn_emerald",
+    "hearthandharvest:farmer/2/red_grapes_emerald",
+    "hearthandharvest:farmer/2/green_grapes_emerald",
+    "hearthandharvest:farmer/2/cabbage_emerald"
+  ]
+}

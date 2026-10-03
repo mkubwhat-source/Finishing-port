@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:drinks/milk",
+    "minecraft:cocoa_beans",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "hearthandharvest:chocolate_milk_bottle"
+  }
+}

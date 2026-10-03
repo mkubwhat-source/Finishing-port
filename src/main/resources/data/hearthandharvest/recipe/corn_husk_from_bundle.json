@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:corn_husk_bundle"
+  ],
+  "result": {
+    "count": 9,
+    "id": "hearthandharvest:corn_husk"
+  }
+}

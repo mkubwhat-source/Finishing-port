@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "hearthandharvest:manure_bricks",
+  "result": {
+    "id": "hearthandharvest:manure_brick_wall"
+  }
+}

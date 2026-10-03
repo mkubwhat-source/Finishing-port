@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 1.0,
+  "ingredients": [
+    "#c:dusts/salt",
+    "#c:foods/raw_meat",
+    "#c:foods/raw_meat",
+    "#c:foods/raw_meat"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 3,
+    "id": "hearthandharvest:jerky"
+  }
+}

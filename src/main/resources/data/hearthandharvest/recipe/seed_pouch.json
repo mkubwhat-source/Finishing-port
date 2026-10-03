@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "hearthandharvest:canvas",
+    "S": "minecraft:string",
+    "s": "#c:seeds"
+  },
+  "pattern": [
+    " S ",
+    "CsC",
+    " C "
+  ],
+  "result": {
+    "id": "hearthandharvest:seed_pouch"
+  }
+}

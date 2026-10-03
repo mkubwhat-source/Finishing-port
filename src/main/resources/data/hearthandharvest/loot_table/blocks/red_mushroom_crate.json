@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hearthandharvest:red_mushroom_crate",
+          "modifier": [
+            {
+              "count": 2,
+              "type": "minecraft:set_count",
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "hearthandharvest:red_mushroom_crate",
+                "state": {
+                  "type": "double"
+                }
+              }
+            },
+            {
+              "type": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

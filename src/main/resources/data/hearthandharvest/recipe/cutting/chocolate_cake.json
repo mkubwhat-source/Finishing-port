@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:chocolate_cake"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 7,
+        "id": "hearthandharvest:chocolate_cake_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

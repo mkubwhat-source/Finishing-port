@@ -62,11 +62,13 @@ public class ShapelessRemainderRecipe extends ShapelessRecipe {
         return (RecipeSerializer) HHModRecipeSerializers.SHAPELESS_REMAINDER.get();
     }
 
-    /** A remainder entry: an item stack, or an empty stack ({@code minecraft:air}) for "nothing". */
+    /**
+     * A remainder entry: an item stack, or {@code {}} for "nothing" (1.21.1's ItemStack.OPTIONAL_CODEC
+     * format). Decoded as an ItemStackTemplate: recipes load before item components are bound, so no
+     * ItemStack may be created here.
+     */
     private static final com.mojang.serialization.Codec<Optional<ItemStackTemplate>> REMAINDER_CODEC =
-            ItemStack.OPTIONAL_CODEC.xmap(
-                    stack -> stack.isEmpty() ? Optional.<ItemStackTemplate>empty() : Optional.of(ItemStackTemplate.fromNonEmptyStack(stack)),
-                    opt -> opt.map(ItemStackTemplate::create).orElse(ItemStack.EMPTY));
+            net.minecraft.util.ExtraCodecs.optionalEmptyMap(ItemStackTemplate.CODEC);
 
     public static final MapCodec<ShapelessRemainderRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
             Recipe.CommonInfo.MAP_CODEC.forGetter(r -> r.commonInfo),

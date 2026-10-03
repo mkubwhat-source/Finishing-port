@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:raw_sausage",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "hearthandharvest:raw_skewered_sausage"
+  }
+}

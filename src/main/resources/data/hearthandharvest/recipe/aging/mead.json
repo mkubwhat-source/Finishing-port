@@ -1,0 +1,22 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:water"
+        }
+      }
+    },
+    "minecraft:honey_block",
+    "minecraft:sugar"
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "id": "bountifulfares:mead_bottle"
+  }
+}

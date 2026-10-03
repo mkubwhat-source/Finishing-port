@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:bucket",
+    "I": "minecraft:iron_ingot",
+    "S": "#minecraft:wooden_slabs"
+  },
+  "pattern": [
+    " I ",
+    "SBS",
+    " S "
+  ],
+  "result": {
+    "id": "hearthandharvest:tree_tapper"
+  }
+}

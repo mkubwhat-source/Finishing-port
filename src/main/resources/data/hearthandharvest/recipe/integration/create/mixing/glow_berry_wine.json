@@ -1,0 +1,24 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 500,
+      "fluid": "flavored:glow_berry_juice"
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "flavored:glow_berry_wine"
+    }
+  ]
+}

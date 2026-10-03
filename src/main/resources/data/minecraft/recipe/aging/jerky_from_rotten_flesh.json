@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 1.0,
+  "ingredients": [
+    "#c:dusts/salt",
+    "minecraft:rotten_flesh",
+    "minecraft:rotten_flesh",
+    "minecraft:rotten_flesh"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 3,
+    "id": "hearthandharvest:jerky"
+  }
+}

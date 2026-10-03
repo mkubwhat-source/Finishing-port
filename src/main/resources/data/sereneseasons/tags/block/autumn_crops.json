@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:cotton",
+    "hearthandharvest:corn_stalk",
+    "hearthandharvest:cabbages",
+    "hearthandharvest:onions"
+  ]
+}

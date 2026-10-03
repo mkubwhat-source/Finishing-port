@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:milk_bottle",
+    "flavored:apple_juice",
+    "hearthandharvest:melon_juice",
+    "hearthandharvest:hot_cocoa"
+  ]
+}

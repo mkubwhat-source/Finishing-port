@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "flavored:knife",
-    "flavored:whisk"
+    "flavored:whisk",
+    "hearthandharvest:farmers_hat",
+    "hearthandharvest:pitchfork",
+    "#hearthandharvest:tools/knives"
   ]
 }

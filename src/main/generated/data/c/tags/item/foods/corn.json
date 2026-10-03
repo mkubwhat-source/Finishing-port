@@ -1,5 +1,9 @@
 {
   "values": [
+    {
+      "id": "#c:vegetables/corn",
+      "required": false
+    },
     "bountifulfares:maize",
     {
       "id": "hauntedharvest:corn",

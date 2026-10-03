@@ -1,0 +1,25 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "hearthandharvest:sap"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "id": "hearthandharvest:syrup"
+    }
+  ]
+}

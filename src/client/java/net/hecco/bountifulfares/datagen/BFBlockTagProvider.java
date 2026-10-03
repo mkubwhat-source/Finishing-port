@@ -31,6 +31,9 @@ public class BFBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
+        // Hearth and Harvest entries of the tags this provider writes (see HHTagAdditions).
+        alabaster.hearthandharvest.datagen.HHTagAdditions.addBlockTags(this::builder);
+
         builder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BFBlocks.FELDSPAR_BLOCK.get().builtInRegistryHolder().key())
                 .add(BFBlocks.CUT_FELDSPAR_BLOCK.get().builtInRegistryHolder().key())

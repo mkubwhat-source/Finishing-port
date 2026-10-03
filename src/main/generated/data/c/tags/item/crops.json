@@ -1,5 +1,29 @@
 {
   "values": [
+    "hearthandharvest:blueberries",
+    "hearthandharvest:cherry",
+    "hearthandharvest:raspberry",
+    "hearthandharvest:red_grapes",
+    "hearthandharvest:green_grapes",
+    "hearthandharvest:peanut",
+    "hearthandharvest:cotton",
+    "hearthandharvest:corn",
+    {
+      "id": "#c:crops/grain",
+      "required": false
+    },
+    {
+      "id": "#c:crops/cabbage",
+      "required": false
+    },
+    {
+      "id": "#c:crops/onion",
+      "required": false
+    },
+    {
+      "id": "#c:crops/tomato",
+      "required": false
+    },
     "bountifulfares:passion_fruit",
     "bountifulfares:elderberries",
     "bountifulfares:lapisberries",

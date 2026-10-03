@@ -1,0 +1,19 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 48000,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "fabric:type": "hearthandharvest:vintage",
+      "base": "hearthandharvest:hard_cider",
+      "vintage": 1
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "components": {
+      "hearthandharvest:vintage": 2
+    },
+    "id": "hearthandharvest:hard_cider"
+  }
+}

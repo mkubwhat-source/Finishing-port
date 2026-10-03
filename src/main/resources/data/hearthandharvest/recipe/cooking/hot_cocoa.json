@@ -1,0 +1,14 @@
+{
+  "type": "hearthandharvest:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    "#c:drinks/milk",
+    "minecraft:sugar",
+    "minecraft:cocoa_beans",
+    "minecraft:cocoa_beans"
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "id": "hearthandharvest:hot_cocoa"
+  }
+}

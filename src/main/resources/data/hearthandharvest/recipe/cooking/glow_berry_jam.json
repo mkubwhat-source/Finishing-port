@@ -1,0 +1,20 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "hearthandharvest:jar"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    "minecraft:glow_berries",
+    "minecraft:glow_berries",
+    "minecraft:glow_berries",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:glow_berry_jam"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:bucket",
+    "hearthandharvest:milk_bottle",
+    "hearthandharvest:milk_bottle",
+    "hearthandharvest:milk_bottle",
+    "hearthandharvest:milk_bottle"
+  ],
+  "result": {
+    "id": "minecraft:milk_bucket"
+  }
+}

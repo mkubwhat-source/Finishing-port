@@ -1,0 +1,18 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:charcoal_block"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 9,
+        "id": "minecraft:charcoal"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "pickaxe_dig"
+  }
+}

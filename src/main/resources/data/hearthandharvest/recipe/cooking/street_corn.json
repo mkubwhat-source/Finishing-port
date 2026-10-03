@@ -1,0 +1,14 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    "hearthandharvest:cooked_corn_on_the_cob",
+    "minecraft:blaze_powder",
+    "#hearthandharvest:cheese_slices"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:street_corn"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 1.0,
+  "ingredients": [
+    "#c:dusts/salt",
+    "minecraft:potato",
+    "minecraft:potato",
+    "hearthandharvest:jar"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:pickled_potatoes"
+  }
+}

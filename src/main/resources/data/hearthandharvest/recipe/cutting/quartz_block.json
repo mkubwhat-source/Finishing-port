@@ -1,0 +1,18 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:quartz_block"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "minecraft:quartz"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "pickaxe_dig"
+  }
+}

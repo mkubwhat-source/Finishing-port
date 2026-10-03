@@ -1,0 +1,23 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:cherry_wood"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "minecraft:stripped_cherry_wood"
+      }
+    },
+    {
+      "item": {
+        "id": "hearthandharvest:tree_bark"
+      }
+    }
+  ],
+  "sound": "minecraft:item.axe.strip",
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "axe_strip"
+  }
+}

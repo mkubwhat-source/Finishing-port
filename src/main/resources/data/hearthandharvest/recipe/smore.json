@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:roasted_marshmallow_stick",
+    "flavored:chocolate",
+    "minecraft:cookie",
+    "minecraft:cookie"
+  ],
+  "result": {
+    "id": "hearthandharvest:smore"
+  }
+}

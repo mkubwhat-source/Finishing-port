@@ -1,0 +1,14 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:cooked_salmon"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "minecraft:bone_meal"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

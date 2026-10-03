@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:mangrove_slab",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "HSH",
+    "SSS",
+    "HSH"
+  ],
+  "result": {
+    "id": "hearthandharvest:mangrove_bottle_rack"
+  }
+}

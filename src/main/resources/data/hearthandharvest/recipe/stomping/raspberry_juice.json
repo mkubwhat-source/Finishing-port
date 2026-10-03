@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "#c:fruits/raspberry",
+    "#c:fruits/raspberry",
+    "#c:fruits/raspberry",
+    "#c:fruits/raspberry"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:raspberry_juice"
+  }
+}

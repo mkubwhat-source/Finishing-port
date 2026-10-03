@@ -48,7 +48,10 @@
 		"flavored.mixins.json",
 		"hearthandharvest.mixins.json",
 		"hearthandharvest.fd.mixins.json",
-		"hearthandharvest.client.mixins.json"
+		{
+			"config": "hearthandharvest.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
 		"fabricloader": ">=0.19.5",

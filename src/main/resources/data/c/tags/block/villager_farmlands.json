@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:farmland",
+    "hearthandharvest:rich_soil_farmland"
+  ]
+}

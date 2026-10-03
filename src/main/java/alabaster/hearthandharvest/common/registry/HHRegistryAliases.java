@@ -60,7 +60,8 @@ public final class HHRegistryAliases {
         FabricRegistry blocks = (FabricRegistry) BuiltInRegistries.BLOCK;
         RENAMES.forEach((from, to) -> {
             items.addAlias(hh(from), hh(to));
-            blocks.addAlias(hh(from), hh(to));
+            // cheese wheels are blocks too; street corn and cheese slices are items only
+            if (BuiltInRegistries.BLOCK.containsKey(hh(to))) blocks.addAlias(hh(from), hh(to));
         });
         MERGED_ITEMS.forEach((from, to) -> items.addAlias(hh(from), Identifier.parse(to)));
         MERGED_BLOCKS.forEach((from, to) -> blocks.addAlias(hh(from), Identifier.parse(to)));

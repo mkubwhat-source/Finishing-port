@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:raw_sausage",
+    "hearthandharvest:raw_skewered_sausage",
+    "#c:foods/raw_chicken",
+    "#c:foods/raw_pork",
+    "#c:foods/raw_beef",
+    "#c:foods/raw_mutton"
+  ]
+}

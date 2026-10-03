@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "flavored:butter",
+    "R": "#c:fruits/raspberry",
+    "S": "minecraft:sugar",
+    "W": "flavored:batter"
+  },
+  "pattern": [
+    " B ",
+    "RSR",
+    " W "
+  ],
+  "result": {
+    "id": "hearthandharvest:raspberry_scone"
+  }
+}

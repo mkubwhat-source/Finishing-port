@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chicken_cuts": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:cooked_chicken_drumstick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:chicken_pot_pie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chicken_cuts"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:chicken_pot_pie"
+    ]
+  }
+}

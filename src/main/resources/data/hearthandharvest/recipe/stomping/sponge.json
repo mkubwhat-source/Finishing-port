@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "minecraft:wet_sponge"
+  ],
+  "result_fluid": {
+    "amount": 1000,
+    "id": "minecraft:water"
+  },
+  "result_item": {
+    "id": "minecraft:sponge"
+  }
+}

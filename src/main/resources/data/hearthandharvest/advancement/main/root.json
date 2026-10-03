@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:block/spruce_planks",
+    "description": {
+      "translate": "advancement.hearthandharvest.root.desc"
+    },
+    "icon": {
+      "id": "hearthandharvest:blueberries"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.hearthandharvest.root"
+    }
+  },
+  "requirements": [
+    [
+      "root"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

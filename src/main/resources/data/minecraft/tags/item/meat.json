@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:raw_sausage",
+    "hearthandharvest:raw_skewered_sausage",
+    "hearthandharvest:cooked_sausage",
+    "hearthandharvest:skewered_sausage",
+    "hearthandharvest:jerky",
+    "flavored:cooked_ground_beef",
+    "flavored:chicken_drumstick",
+    "flavored:cooked_chicken_drumstick",
+    "flavored:pork_jowl",
+    "flavored:mutton_shank"
+  ]
+}

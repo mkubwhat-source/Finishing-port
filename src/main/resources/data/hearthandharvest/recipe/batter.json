@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:drinks/milk",
+    "#c:flours",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "flavored:batter"
+  }
+}

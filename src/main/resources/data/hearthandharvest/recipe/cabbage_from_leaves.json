@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "fd_cabbage",
+  "ingredients": [
+    "hearthandharvest:cabbage_leaf",
+    "hearthandharvest:cabbage_leaf"
+  ],
+  "result": {
+    "id": "hearthandharvest:cabbage"
+  }
+}

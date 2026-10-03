@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stairs",
+  "key": {
+    "#": "hearthandharvest:manure_bricks"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "hearthandharvest:manure_brick_stairs"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:apple",
+    "B": "minecraft:bone",
+    "C": "minecraft:carrot",
+    "F": "minecraft:salmon",
+    "H": "minecraft:hay_block",
+    "S": "minecraft:sweet_berries"
+  },
+  "pattern": [
+    "   ",
+    "HCF",
+    "ABS"
+  ],
+  "result": {
+    "count": 8,
+    "id": "hearthandharvest:universal_feed"
+  }
+}

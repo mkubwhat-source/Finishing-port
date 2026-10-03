@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "#c:fruits/cherry",
+    "#c:fruits/cherry",
+    "#c:fruits/cherry",
+    "#c:fruits/cherry"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:cherry_juice"
+  }
+}

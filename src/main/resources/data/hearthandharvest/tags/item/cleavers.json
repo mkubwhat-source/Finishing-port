@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:flint_cleaver",
+    "hearthandharvest:iron_cleaver",
+    "hearthandharvest:diamond_cleaver",
+    "hearthandharvest:golden_cleaver",
+    "hearthandharvest:netherite_cleaver"
+  ]
+}

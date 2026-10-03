@@ -1,6 +1,21 @@
 {
   "replace": false,
   "values": [
-    "flavored:wandering_trader/emerald_cinnamon"
+    "flavored:wandering_trader/emerald_cinnamon",
+    "hearthandharvest:wandering_trader/emerald_red_grapes",
+    "hearthandharvest:wandering_trader/emerald_green_grapes",
+    "hearthandharvest:wandering_trader/emerald_blueberries",
+    "hearthandharvest:wandering_trader/emerald_raspberry",
+    "hearthandharvest:wandering_trader/emerald_peanut",
+    "hearthandharvest:wandering_trader/emerald_cotton_seeds",
+    "hearthandharvest:wandering_trader/emerald_corn_kernels",
+    "hearthandharvest:wandering_trader/emerald_yellow_mum",
+    "hearthandharvest:wandering_trader/emerald_orange_mum",
+    "hearthandharvest:wandering_trader/emerald_red_mum",
+    "hearthandharvest:wandering_trader/emerald_blue_mum",
+    "hearthandharvest:wandering_trader/emerald_light_blue_mum",
+    "hearthandharvest:wandering_trader/emerald_purple_mum",
+    "hearthandharvest:wandering_trader/emerald_pink_mum",
+    "hearthandharvest:wandering_trader/emerald_white_mum"
   ]
 }

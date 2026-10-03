@@ -1,0 +1,32 @@
+{
+  "parent": "hearthandharvest:farming/shucks",
+  "criteria": {
+    "mulch_obliged": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "hearthandharvest:mulch"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.hearthandharvest.mulch_obliged.desc"
+    },
+    "icon": {
+      "id": "hearthandharvest:tree_bark"
+    },
+    "title": {
+      "translate": "advancement.hearthandharvest.mulch_obliged"
+    }
+  },
+  "requirements": [
+    [
+      "mulch_obliged"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

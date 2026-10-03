@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:tortilla",
+    "flavored:cooked_ground_beef",
+    "#hearthandharvest:cheese_slices",
+    "flavored:red_tomato",
+    "hearthandharvest:cabbage_leaf"
+  ],
+  "result": {
+    "id": "hearthandharvest:taco"
+  }
+}

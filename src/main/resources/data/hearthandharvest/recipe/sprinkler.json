@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "S": "#minecraft:wooden_slabs"
+  },
+  "pattern": [
+    "CCC",
+    " C ",
+    "SSS"
+  ],
+  "result": {
+    "id": "hearthandharvest:sprinkler"
+  }
+}

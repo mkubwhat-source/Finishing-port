@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "flavored:batter",
+    "E": "minecraft:egg",
+    "M": "#c:drinks/milk",
+    "S": "minecraft:sugar"
+  },
+  "pattern": [
+    "MMM",
+    "SES",
+    " B "
+  ],
+  "result": {
+    "id": "minecraft:cake"
+  }
+}

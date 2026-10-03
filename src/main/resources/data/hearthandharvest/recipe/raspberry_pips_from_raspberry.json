@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "berry_good"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hearthandharvest:raspberry"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "hearthandharvest:raspberry_pips"
+  }
+}

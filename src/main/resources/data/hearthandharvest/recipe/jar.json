@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "hearthandharvest:canvas",
+    "G": "minecraft:glass_pane"
+  },
+  "pattern": [
+    " C ",
+    "G G",
+    "GGG"
+  ],
+  "result": {
+    "count": 4,
+    "id": "hearthandharvest:jar"
+  }
+}

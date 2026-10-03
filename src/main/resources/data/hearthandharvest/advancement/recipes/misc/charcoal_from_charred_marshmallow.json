@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_charred_marshmallow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:charred_marshmallow_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:charcoal_from_charred_marshmallow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_charred_marshmallow"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:charcoal_from_charred_marshmallow"
+    ]
+  }
+}

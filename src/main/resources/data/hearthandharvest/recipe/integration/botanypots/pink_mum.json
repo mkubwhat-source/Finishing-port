@@ -1,0 +1,12 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_crop",
+  "block": "hearthandharvest:pink_mum"
+}

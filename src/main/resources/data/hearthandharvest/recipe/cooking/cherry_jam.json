@@ -1,0 +1,20 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "hearthandharvest:jar"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    "hearthandharvest:cherry",
+    "hearthandharvest:cherry",
+    "hearthandharvest:cherry",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:cherry_jam"
+  }
+}

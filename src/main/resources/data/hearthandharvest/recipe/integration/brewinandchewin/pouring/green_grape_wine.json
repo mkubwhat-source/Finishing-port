@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "brewinandchewin"
+      ]
+    }
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:green_grape_wine"
+  },
+  "output": {
+    "count": 1,
+    "id": "hearthandharvest:green_grape_wine"
+  },
+  "unit": "millibuckets"
+}

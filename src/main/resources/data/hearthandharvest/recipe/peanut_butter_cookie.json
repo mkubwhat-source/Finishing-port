@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "hearthandharvest:peanut_butter"
+  ],
+  "result": {
+    "count": 8,
+    "id": "hearthandharvest:peanut_butter_cookie"
+  }
+}

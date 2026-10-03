@@ -1,0 +1,12 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 2400,
+  "experience": 1.0,
+  "ingredients": [
+    "flavored:glow_berry_juice"
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "id": "flavored:glow_berry_wine"
+  }
+}

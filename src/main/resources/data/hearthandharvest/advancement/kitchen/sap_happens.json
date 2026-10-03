@@ -1,0 +1,32 @@
+{
+  "parent": "hearthandharvest:main/root",
+  "criteria": {
+    "sap_happens": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "hearthandharvest:tree_tapper"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.hearthandharvest.sap_happens.desc"
+    },
+    "icon": {
+      "id": "hearthandharvest:tree_tapper"
+    },
+    "title": {
+      "translate": "advancement.hearthandharvest.sap_happens"
+    }
+  },
+  "requirements": [
+    [
+      "sap_happens"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

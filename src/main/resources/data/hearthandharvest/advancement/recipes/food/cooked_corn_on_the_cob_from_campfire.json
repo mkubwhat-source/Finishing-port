@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:cooked_corn_on_the_cob_from_campfire"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uncooked_corn_on_the_cob": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:uncooked_corn_on_the_cob"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_uncooked_corn_on_the_cob"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:cooked_corn_on_the_cob_from_campfire"
+    ]
+  }
+}

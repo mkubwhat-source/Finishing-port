@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:chocolate_milk_bottle",
+    "#c:drinks/alcohol",
+    "#hearthandharvest:drinks"
+  ]
+}

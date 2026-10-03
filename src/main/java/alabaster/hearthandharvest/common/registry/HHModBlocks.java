@@ -254,29 +254,29 @@ public class HHModBlocks {
 
     // Pies
     public static final Supplier<Block> RASPBERRY_PIE = register("raspberry_pie",
-            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.RASPBERRY_PIE_SLICE));
+            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.RASPBERRY_PIE_SLICE.get()));
     public static final Supplier<Block> BLUEBERRY_PIE = register("blueberry_pie",
-            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.BLUEBERRY_PIE_SLICE));
+            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.BLUEBERRY_PIE_SLICE.get()));
     public static final Supplier<Block> CHERRY_PIE = register("cherry_pie",
-            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.CHERRY_PIE_SLICE));
+            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.CHERRY_PIE_SLICE.get()));
     public static final Supplier<Block> GRAPE_PIE = register("grape_pie",
-            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.GRAPE_PIE_SLICE));
+            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.GRAPE_PIE_SLICE.get()));
     public static final Supplier<Block> PEANUT_BUTTER_PIE = register("peanut_butter_pie",
-            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.PEANUT_BUTTER_PIE_SLICE));
+            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.PEANUT_BUTTER_PIE_SLICE.get()));
     public static final Supplier<Block> CHICKEN_POT_PIE = register("chicken_pot_pie",
-            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.CHICKEN_POT_PIE_SLICE));
+            () -> new PieBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.CHICKEN_POT_PIE_SLICE.get()));
     public static final Supplier<Block> CARROT_CAKE = register("carrot_cake",
-            () -> new SliceableCakeBlock(BFProperties.blockCopy(Blocks.CAKE),  HHModItems.CARROT_CAKE_SLICE));
+            () -> new SliceableCakeBlock(BFProperties.blockCopy(Blocks.CAKE),  () -> HHModItems.CARROT_CAKE_SLICE.get()));
     public static final Supplier<Block> CHOCOLATE_CAKE = register("chocolate_cake",
-            () -> new SliceableCakeBlock(BFProperties.blockCopy(Blocks.CAKE),  HHModItems.CHOCOLATE_CAKE_SLICE));
+            () -> new SliceableCakeBlock(BFProperties.blockCopy(Blocks.CAKE),  () -> HHModItems.CHOCOLATE_CAKE_SLICE.get()));
 
     // Pizzas
     public static final Supplier<Block> MEAT_PIZZA = register("meat_pizza",
-            () -> new PizzaBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.MEAT_PIZZA_SLICE));
+            () -> new PizzaBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.MEAT_PIZZA_SLICE.get()));
     public static final Supplier<Block> VEGGIE_PIZZA = register("veggie_pizza",
-            () -> new PizzaBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.VEGGIE_PIZZA_SLICE));
+            () -> new PizzaBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.VEGGIE_PIZZA_SLICE.get()));
     public static final Supplier<Block> CHEESE_PIZZA = register("cheese_pizza",
-            () -> new PizzaBlock(BFProperties.blockCopy(Blocks.CAKE), HHModItems.CHEESE_PIZZA_SLICE));
+            () -> new PizzaBlock(BFProperties.blockCopy(Blocks.CAKE), () -> HHModItems.CHEESE_PIZZA_SLICE.get()));
 
     // Pancakes and Waffles
     public static final Supplier<Block> WAFFLE = register("waffle",
@@ -324,12 +324,12 @@ public class HHModBlocks {
     public static final Supplier<Block> UNRIPE_CHEESE_WHEEL = register("unripe_cheese_wheel",
             () -> new UnripeCheeseWheelBlock(HHModBlocks.CHEESE_WHEEL, BFProperties.blockCopy(Blocks.CAKE)));
     public static final Supplier<Block> CHEESE_WHEEL = register("cheese_wheel",
-            () -> new CheeseWheelBlock(HHModItems.CHEESE_SLICE, BFProperties.blockCopy(Blocks.CAKE)));
+            () -> new CheeseWheelBlock(() -> HHModItems.CHEESE_SLICE.get(), BFProperties.blockCopy(Blocks.CAKE)));
 
     public static final Supplier<Block> UNRIPE_GOAT_CHEESE_WHEEL = register("unripe_goat_cheese_wheel",
             () -> new UnripeCheeseWheelBlock(HHModBlocks.GOAT_CHEESE_WHEEL, BFProperties.blockCopy(Blocks.CAKE)));
     public static final Supplier<Block> GOAT_CHEESE_WHEEL = register("goat_cheese_wheel",
-            () -> new CheeseWheelBlock(HHModItems.GOAT_CHEESE_SLICE, BFProperties.blockCopy(Blocks.CAKE)));
+            () -> new CheeseWheelBlock(() -> HHModItems.GOAT_CHEESE_SLICE.get(), BFProperties.blockCopy(Blocks.CAKE)));
 
     // Salt Blocks
     public static final Supplier<Block> SALT_BLOCK = register("salt_block",

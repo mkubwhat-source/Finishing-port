@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:acacia_cabinet",
+    "hearthandharvest:acacia_cabinet"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:acacia_half_cabinet"
+  }
+}

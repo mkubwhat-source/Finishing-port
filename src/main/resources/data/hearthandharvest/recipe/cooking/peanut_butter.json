@@ -1,0 +1,20 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "hearthandharvest:jar"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    "hearthandharvest:peanut",
+    "hearthandharvest:peanut",
+    "hearthandharvest:peanut",
+    "#c:dusts/salt",
+    "minecraft:sugar",
+    "minecraft:sugar"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:peanut_butter"
+  }
+}

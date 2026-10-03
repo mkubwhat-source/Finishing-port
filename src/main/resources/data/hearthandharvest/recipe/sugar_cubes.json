@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:sugar",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "hearthandharvest:sugar_cubes"
+  }
+}

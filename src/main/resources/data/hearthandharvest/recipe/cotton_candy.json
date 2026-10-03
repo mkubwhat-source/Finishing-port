@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:sugar",
+    "C": "#c:crops/cotton",
+    "S": "minecraft:stick",
+    "W": "minecraft:wind_charge"
+  },
+  "pattern": [
+    " W ",
+    "#C#",
+    " S "
+  ],
+  "result": {
+    "id": "hearthandharvest:cotton_candy"
+  }
+}

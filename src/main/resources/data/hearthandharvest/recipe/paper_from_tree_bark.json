@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "hearthandharvest:tree_bark",
+    "hearthandharvest:tree_bark",
+    "hearthandharvest:tree_bark"
+  ],
+  "result": {
+    "id": "minecraft:paper"
+  }
+}

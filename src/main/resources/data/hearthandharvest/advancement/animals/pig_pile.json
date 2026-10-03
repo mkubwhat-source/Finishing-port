@@ -1,0 +1,26 @@
+{
+  "parent": "hearthandharvest:animals/plucky",
+  "criteria": {
+    "pig_pile": {
+      "trigger": "hearthandharvest:big_pig_litter"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.hearthandharvest.pig_pile.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:porkchop"
+    },
+    "title": {
+      "translate": "advancement.hearthandharvest.pig_pile"
+    }
+  },
+  "requirements": [
+    [
+      "pig_pile"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

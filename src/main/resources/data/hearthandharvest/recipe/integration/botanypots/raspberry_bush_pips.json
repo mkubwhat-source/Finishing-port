@@ -1,0 +1,16 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots",
+        "berry_good"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_crop",
+  "block": "hearthandharvest:raspberry_bush",
+  "input": {
+    "item": "hearthandharvest:raspberry_pips"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cocoa_bean_bag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:cocoa_bean_bag"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:cocoa_bean_from_bag"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cocoa_bean_bag"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:cocoa_bean_from_bag"
+    ]
+  }
+}

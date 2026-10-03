@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:grape_pie"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "hearthandharvest:grape_pie_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

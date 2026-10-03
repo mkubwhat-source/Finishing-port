@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": "minecraft:iron_ingot",
+    "n": "minecraft:iron_nugget",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "nnn",
+    "isi",
+    " s "
+  ],
+  "result": {
+    "id": "hearthandharvest:pitchfork"
+  }
+}

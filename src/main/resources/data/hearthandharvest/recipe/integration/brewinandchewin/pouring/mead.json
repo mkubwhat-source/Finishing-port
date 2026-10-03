@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "brewinandchewin"
+      ]
+    }
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "fluid": {
+    "amount": 500,
+    "id": "bountifulfares:mead_bottle"
+  },
+  "output": {
+    "count": 1,
+    "id": "bountifulfares:mead_bottle"
+  },
+  "unit": "millibuckets"
+}

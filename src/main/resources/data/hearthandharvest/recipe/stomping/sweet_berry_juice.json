@@ -1,0 +1,13 @@
+{
+  "type": "hearthandharvest:stomping",
+  "ingredients": [
+    "minecraft:sweet_berries",
+    "minecraft:sweet_berries",
+    "minecraft:sweet_berries",
+    "minecraft:sweet_berries"
+  ],
+  "result_fluid": {
+    "amount": 500,
+    "id": "hearthandharvest:sweet_berry_juice"
+  }
+}

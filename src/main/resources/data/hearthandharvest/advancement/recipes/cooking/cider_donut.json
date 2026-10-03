@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_apple_cider": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flavored:apple_juice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:cooking/cider_donut"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_apple_cider"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:cooking/cider_donut"
+    ]
+  }
+}

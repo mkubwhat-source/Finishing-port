@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:porkchop",
+    "#c:foods/raw_bacon"
+  ]
+}

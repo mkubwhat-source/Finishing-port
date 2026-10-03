@@ -1,0 +1,12 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    "#c:crops/tomato",
+    "#c:crops/tomato"
+  ],
+  "result": {
+    "id": "hearthandharvest:tomato_sauce"
+  }
+}

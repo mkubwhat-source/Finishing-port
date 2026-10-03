@@ -1,0 +1,23 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:water"
+        }
+      }
+    },
+    "minecraft:sugar",
+    "hearthandharvest:corn_meal",
+    "hearthandharvest:corn_meal"
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "id": "hearthandharvest:moonshine"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "hearthandharvest:cheese_pizza",
+    "M": "#c:mushrooms",
+    "S": "#c:foods/raw_meat",
+    "V": "#c:foods/vegetable"
+  },
+  "pattern": [
+    "SVM",
+    " C "
+  ],
+  "result": {
+    "id": "flavored:pizza"
+  }
+}

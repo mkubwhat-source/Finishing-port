@@ -1,0 +1,28 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "crabbersdelight"
+      ]
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "crabbersdelight:palm_cabinet"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "hearthandharvest:palm_half_cabinet"
+      }
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:item_ability",
+    "action": "axe_dig"
+  }
+}

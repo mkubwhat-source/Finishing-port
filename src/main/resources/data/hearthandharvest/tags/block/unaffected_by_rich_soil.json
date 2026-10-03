@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:grass_block",
+    "minecraft:short_grass",
+    "minecraft:moss_block",
+    "minecraft:crimson_nylium",
+    "minecraft:warped_nylium",
+    "minecraft:fern",
+    "minecraft:twisting_vines",
+    "minecraft:big_dripleaf",
+    "minecraft:pink_petals",
+    "minecraft:twisting_vines_plant",
+    "minecraft:big_dripleaf_stem",
+    "#hearthandharvest:wild_crops",
+    "#c:flowers/tall"
+  ]
+}

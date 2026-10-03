@@ -1,0 +1,20 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:chicken"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "flavored:chicken_drumstick"
+      }
+    },
+    {
+      "item": {
+        "id": "minecraft:bone_meal"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

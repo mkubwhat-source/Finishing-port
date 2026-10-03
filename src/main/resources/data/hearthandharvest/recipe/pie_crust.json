@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": "#c:drinks/milk",
+    "w": "#c:crops/wheat"
+  },
+  "pattern": [
+    "wMw",
+    " w "
+  ],
+  "result": {
+    "id": "hearthandharvest:pie_crust"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 1.0,
+  "ingredients": [
+    "hearthandharvest:unripe_cheese_wheel"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:cheese_wheel"
+  }
+}

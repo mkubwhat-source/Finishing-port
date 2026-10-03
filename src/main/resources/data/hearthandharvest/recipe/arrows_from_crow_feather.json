@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "hearthandharvest:crow_feather",
+    "F": "minecraft:flint",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "F",
+    "S",
+    "C"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:arrow"
+  }
+}

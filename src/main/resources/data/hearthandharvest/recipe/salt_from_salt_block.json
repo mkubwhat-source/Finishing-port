@@ -1,0 +1,18 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:salt_block"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "hearthandharvest:salt"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "pickaxe_dig"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:vegetables/corn",
+    "flavored:butter",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "hearthandharvest:uncooked_corn_on_the_cob"
+  }
+}

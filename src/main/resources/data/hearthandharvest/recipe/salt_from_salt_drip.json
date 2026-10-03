@@ -1,0 +1,23 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:salt_drip"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "hearthandharvest:salt"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "id": "hearthandharvest:salt"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "pickaxe_dig"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#hearthandharvest:cleavers",
+    "minecraft:mutton"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:raw_sausage"
+  }
+}

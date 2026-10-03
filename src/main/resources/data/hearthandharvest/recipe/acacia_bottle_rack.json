@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:acacia_slab",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "HSH",
+    "SSS",
+    "HSH"
+  ],
+  "result": {
+    "id": "hearthandharvest:acacia_bottle_rack"
+  }
+}

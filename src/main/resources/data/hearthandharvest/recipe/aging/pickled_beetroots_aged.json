@@ -1,0 +1,19 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 24000,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "fabric:type": "hearthandharvest:vintage",
+      "base": "bountifulfares:pickled_beetroot",
+      "vintage": 0
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "components": {
+      "hearthandharvest:vintage": 1
+    },
+    "id": "bountifulfares:pickled_beetroot"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stairs",
+  "key": {
+    "#": "hearthandharvest:salt_block"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "hearthandharvest:salt_stairs"
+  }
+}

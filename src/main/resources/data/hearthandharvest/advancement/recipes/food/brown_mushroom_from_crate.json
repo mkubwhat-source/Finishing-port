@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_mushroom_crate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:brown_mushroom_crate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:brown_mushroom_from_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brown_mushroom_crate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:brown_mushroom_from_crate"
+    ]
+  }
+}

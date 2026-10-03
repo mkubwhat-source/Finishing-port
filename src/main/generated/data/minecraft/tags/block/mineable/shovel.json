@@ -1,5 +1,10 @@
 {
   "values": [
+    "hearthandharvest:mulch",
+    "hearthandharvest:manure_block",
+    "hearthandharvest:organic_compost",
+    "hearthandharvest:rich_soil",
+    "hearthandharvest:rich_soil_farmland",
     "bountifulfares:walnut_mulch",
     "bountifulfares:walnut_mulch_block",
     "bountifulfares:palm_mulch",

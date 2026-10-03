@@ -1,0 +1,23 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:bamboo_block"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "minecraft:stripped_bamboo_block"
+      }
+    },
+    {
+      "item": {
+        "id": "hearthandharvest:straw"
+      }
+    }
+  ],
+  "sound": "minecraft:item.axe.strip",
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "axe_strip"
+  }
+}

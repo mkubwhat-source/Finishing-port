@@ -1,0 +1,31 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "hearthandharvest:red_grapes"
+    },
+    {
+      "item": "hearthandharvest:red_grapes"
+    },
+    {
+      "item": "hearthandharvest:red_grapes"
+    },
+    {
+      "item": "hearthandharvest:red_grapes"
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "hearthandharvest:red_grape_juice"
+    }
+  ]
+}

@@ -27,3 +27,4 @@ runs
 /common/src/main/generated/.cache/
 /libs
 /.vscode
+__pycache__/

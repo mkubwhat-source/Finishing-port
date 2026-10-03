@@ -1,5 +1,9 @@
 {
   "values": [
+    "hearthandharvest:salt_stairs",
+    "hearthandharvest:polished_salt_stairs",
+    "hearthandharvest:manure_brick_stairs",
+    "hearthandharvest:polished_manure_stairs",
     "bountifulfares:coir_brick_stairs",
     "bountifulfares:feldspar_brick_stairs",
     "bountifulfares:ceramic_tile_stairs",

@@ -1,0 +1,28 @@
+{
+  "type": "hearthandharvest:shapeless_remainder",
+  "ingredients": [
+    "#c:dusts/salt",
+    "#c:flours",
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:water"
+        }
+      }
+    }
+  ],
+  "remainders": [
+    {},
+    {},
+    {
+      "count": 1,
+      "id": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:tortilla"
+  }
+}

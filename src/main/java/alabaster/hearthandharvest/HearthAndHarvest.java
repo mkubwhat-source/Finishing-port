@@ -110,6 +110,8 @@ public class HearthAndHarvest implements ModInitializer {
         CabinetBlockEntity.init();
         CuttingBoardBlock.init();
         RichSoilBlock.init();
+        HHCompostables.register();
+        HHLootModifiers.register();
 
         // Events (1.21.1: NeoForge event bus subscribers)
         CapabilityRegistration.register();

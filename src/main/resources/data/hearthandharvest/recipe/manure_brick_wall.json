@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "walls",
+  "key": {
+    "#": "hearthandharvest:manure_bricks"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "hearthandharvest:manure_brick_wall"
+  }
+}

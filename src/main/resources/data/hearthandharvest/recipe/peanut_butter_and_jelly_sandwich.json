@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#hearthandharvest:jelly",
+    "hearthandharvest:peanut_butter",
+    "minecraft:bread"
+  ],
+  "result": {
+    "id": "hearthandharvest:peanut_butter_and_jelly_sandwich"
+  }
+}

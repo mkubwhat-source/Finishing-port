@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "n": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "n n",
+    "n n",
+    "nnn"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:horseshoe"
+  }
+}

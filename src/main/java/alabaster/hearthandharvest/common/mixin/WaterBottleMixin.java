@@ -1,24 +1,26 @@
 package alabaster.hearthandharvest.common.mixin;
 
 import alabaster.hearthandharvest.Config;
-import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
 
+/**
+ * "Stack water bottles" option: water bottles stack to 16, other potions stay unstackable.
+ * <p>
+ * 26.3: {@code getMaxStackSize} is a default method of {@code ItemInstance} that ItemStack no longer
+ * declares, so there is nothing to inject into; this mixin adds the override to ItemStack instead
+ * (same result as the interface default, {@code MAX_STACK_SIZE} or 1, when the rule doesn't apply).
+ */
 @Mixin(ItemStack.class)
 public abstract class WaterBottleMixin {
 
-    @ModifyReturnValue(
-            method = "getMaxStackSize",
-            at = @At("RETURN")
-    )
-    private int restrictNonWaterPotions(int original) {
-        ItemStack stack = (ItemStack)(Object)this;
+    public int getMaxStackSize() {
+        ItemStack stack = (ItemStack) (Object) this;
+        int original = stack.getOrDefault(DataComponents.MAX_STACK_SIZE, 1);
 
         if (!stack.is(Items.POTION)) {
             return original;

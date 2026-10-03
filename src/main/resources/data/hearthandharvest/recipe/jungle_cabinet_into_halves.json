@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:jungle_cabinet",
+    "hearthandharvest:jungle_cabinet"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:jungle_half_cabinet"
+  }
+}

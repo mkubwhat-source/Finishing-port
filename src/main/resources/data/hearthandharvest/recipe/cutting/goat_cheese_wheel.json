@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "hearthandharvest:goat_cheese_wheel"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "hearthandharvest:goat_cheese_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

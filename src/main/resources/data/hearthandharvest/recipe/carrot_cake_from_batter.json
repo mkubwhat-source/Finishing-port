@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "flavored:batter",
+    "C": "minecraft:carrot",
+    "E": "minecraft:egg",
+    "M": "#c:drinks/milk",
+    "S": "minecraft:sugar"
+  },
+  "pattern": [
+    "CMC",
+    "SES",
+    " B "
+  ],
+  "result": {
+    "id": "hearthandharvest:carrot_cake"
+  }
+}

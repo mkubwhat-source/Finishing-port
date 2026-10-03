@@ -1,0 +1,17 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "hearthandharvest:cooked_sausage",
+    "#c:dusts/salt",
+    "#c:drinks/milk",
+    "#c:flours"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:biscuits_and_gravy"
+  }
+}

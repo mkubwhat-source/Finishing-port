@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cherry_pie",
+  "key": {
+    "#": "hearthandharvest:cherry_pie_slice"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "hearthandharvest:cherry_pie"
+  }
+}

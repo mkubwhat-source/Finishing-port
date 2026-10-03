@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:spool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:string_from_spool"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spool"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:string_from_spool"
+    ]
+  }
+}

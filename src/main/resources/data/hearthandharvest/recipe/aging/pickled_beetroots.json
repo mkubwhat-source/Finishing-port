@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:aging",
+  "cookingtime": 1200,
+  "experience": 1.0,
+  "ingredients": [
+    "#c:dusts/salt",
+    "minecraft:beetroot",
+    "minecraft:beetroot",
+    "hearthandharvest:jar"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "bountifulfares:pickled_beetroot"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "flavored:cooked_chicken_drumstick",
+    "M": "#c:drinks/milk",
+    "O": "hearthandharvest:onion",
+    "P": "hearthandharvest:pie_crust",
+    "S": "#c:dusts/salt",
+    "T": "minecraft:potato",
+    "V": "minecraft:carrot"
+  },
+  "pattern": [
+    " C ",
+    "TVO",
+    "MPS"
+  ],
+  "result": {
+    "id": "hearthandharvest:chicken_pot_pie"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:crimson_slab",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "HSH",
+    "SSS",
+    "HSH"
+  ],
+  "result": {
+    "id": "hearthandharvest:crimson_bottle_rack"
+  }
+}

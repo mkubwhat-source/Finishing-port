@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "#c:fruits/blueberry",
+    "S": "minecraft:sugar",
+    "W": "flavored:batter"
+  },
+  "pattern": [
+    " B ",
+    "BSB",
+    " W "
+  ],
+  "result": {
+    "id": "hearthandharvest:blueberry_muffin"
+  }
+}

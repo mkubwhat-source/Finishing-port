@@ -1,0 +1,18 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "minecraft:stick"
+  },
+  "cookingtime": 100,
+  "experience": 2.0,
+  "ingredients": [
+    "hearthandharvest:caramel",
+    "hearthandharvest:caramel",
+    "hearthandharvest:caramel",
+    "minecraft:apple"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:caramel_apple"
+  }
+}

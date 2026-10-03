@@ -1,0 +1,23 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:gravel"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "minecraft:gravel"
+      }
+    },
+    {
+      "chance": 0.1,
+      "item": {
+        "id": "minecraft:flint"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "shovel_dig"
+  }
+}

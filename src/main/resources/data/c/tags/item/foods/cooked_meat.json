@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:cooked_sausage",
+    "hearthandharvest:skewered_sausage",
+    "hearthandharvest:jerky",
+    "#c:foods/cooked_chicken",
+    "#c:foods/cooked_pork",
+    "#c:foods/cooked_beef",
+    "#c:foods/cooked_mutton"
+  ]
+}

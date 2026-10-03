@@ -1,0 +1,32 @@
+{
+  "parent": "hearthandharvest:kitchen/salt_of_the_earth",
+  "criteria": {
+    "mood_lighting": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "hearthandharvest:salt_lamp"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.hearthandharvest.mood_lighting.desc"
+    },
+    "icon": {
+      "id": "hearthandharvest:salt_lamp"
+    },
+    "title": {
+      "translate": "advancement.hearthandharvest.mood_lighting"
+    }
+  },
+  "requirements": [
+    [
+      "mood_lighting"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

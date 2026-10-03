@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:blueberries",
+    "hearthandharvest:raspberry",
+    "hearthandharvest:peanut",
+    "hearthandharvest:onion"
+  ]
+}

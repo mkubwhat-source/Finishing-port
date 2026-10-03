@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:cherry_cabinet",
+    "hearthandharvest:cherry_cabinet"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hearthandharvest:cherry_half_cabinet"
+  }
+}

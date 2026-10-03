@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:mulch",
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "minecraft:podzol",
+    "minecraft:mycelium",
+    "hearthandharvest:organic_compost",
+    "hearthandharvest:rich_soil",
+    "hearthandharvest:rich_soil_farmland"
+  ]
+}

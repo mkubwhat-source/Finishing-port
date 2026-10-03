@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#hearthandharvest:cleavers",
+    "minecraft:chicken"
+  ],
+  "result": {
+    "id": "hearthandharvest:raw_sausage"
+  }
+}

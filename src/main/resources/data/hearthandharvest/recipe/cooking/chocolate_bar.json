@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredients": [
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:cocoa_beans",
+    "minecraft:cocoa_beans",
+    "hearthandharvest:milk_bottle"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "flavored:chocolate"
+  }
+}

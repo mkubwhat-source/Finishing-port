@@ -1,0 +1,36 @@
+{
+  "parent": "hearthandharvest:main/root",
+  "criteria": {
+    "climbing_the_walls": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bountifulfares:trellis",
+              "bountifulfares:bamboo_trellis"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.hearthandharvest.climbing_the_walls.desc"
+    },
+    "icon": {
+      "id": "bountifulfares:trellis"
+    },
+    "title": {
+      "translate": "advancement.hearthandharvest.climbing_the_walls"
+    }
+  },
+  "requirements": [
+    [
+      "climbing_the_walls"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

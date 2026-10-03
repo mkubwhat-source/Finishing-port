@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rope": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hearthandharvest:rope"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "hearthandharvest:rope_coil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rope"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hearthandharvest:rope_coil"
+    ]
+  }
+}

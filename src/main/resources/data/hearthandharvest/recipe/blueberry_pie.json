@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "#c:fruits/blueberry",
+    "P": "hearthandharvest:pie_crust",
+    "S": "minecraft:sugar",
+    "W": "minecraft:wheat"
+  },
+  "pattern": [
+    "WWW",
+    "FFF",
+    "SPS"
+  ],
+  "result": {
+    "id": "hearthandharvest:blueberry_pie"
+  }
+}

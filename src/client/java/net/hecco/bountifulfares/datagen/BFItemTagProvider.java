@@ -34,6 +34,9 @@ public class BFItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
+        // Hearth and Harvest entries of the tags this provider writes (see HHTagAdditions).
+        alabaster.hearthandharvest.datagen.HHTagAdditions.addItemTags(this::builder);
+
 
         builder(BFItemTags.C_FLOUR)
                 .add(BFItems.FLOUR.get().builtInRegistryHolder().key())

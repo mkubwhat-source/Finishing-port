@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "hearthandharvest:blueberry_bush",
+    "hearthandharvest:raspberry_bush",
+    "hearthandharvest:cotton",
+    "hearthandharvest:peanuts",
+    "hearthandharvest:corn_stalk",
+    "flavored:tomato_bush"
+  ]
+}

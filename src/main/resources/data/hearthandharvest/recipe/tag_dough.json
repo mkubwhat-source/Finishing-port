@@ -1,0 +1,14 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "#c:foods/dough"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "flavored:pasta"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

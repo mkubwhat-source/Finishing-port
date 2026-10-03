@@ -1,0 +1,18 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "minecraft:bricks"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "minecraft:brick"
+      }
+    }
+  ],
+  "tool": {
+    "fabric:type": "hearthandharvest:item_ability",
+    "action": "pickaxe_dig"
+  }
+}

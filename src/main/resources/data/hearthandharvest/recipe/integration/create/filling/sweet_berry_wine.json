@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 250,
+      "fluid": "flavored:sweet_berry_wine"
+    }
+  ],
+  "results": [
+    {
+      "id": "flavored:sweet_berry_wine"
+    }
+  ]
+}

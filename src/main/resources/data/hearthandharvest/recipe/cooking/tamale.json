@@ -1,0 +1,16 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "hearthandharvest:corn_husk"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "#c:foods/cooked_meat",
+    "#c:foods/vegetable",
+    "#hearthandharvest:cheese_slices"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:tamale"
+  }
+}

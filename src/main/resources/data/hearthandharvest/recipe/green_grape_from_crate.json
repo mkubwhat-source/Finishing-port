@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hearthandharvest:green_grape_crate"
+  ],
+  "result": {
+    "count": 9,
+    "id": "hearthandharvest:green_grapes"
+  }
+}

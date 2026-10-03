@@ -1,0 +1,15 @@
+{
+  "type": "hearthandharvest:cutting",
+  "ingredients": [
+    "flavored:pizza"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "flavored:pizza_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

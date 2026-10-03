@@ -1,0 +1,14 @@
+{
+  "type": "hearthandharvest:cooking",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredients": [
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "#c:dusts/salt"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:caramel"
+  }
+}

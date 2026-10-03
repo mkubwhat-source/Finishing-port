@@ -1,0 +1,18 @@
+{
+  "type": "hearthandharvest:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    "#c:vegetables/corn",
+    "#c:dusts/salt",
+    "minecraft:potato",
+    "#c:drinks/milk"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "hearthandharvest:corn_stew"
+  }
+}
